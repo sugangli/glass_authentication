@@ -1,0 +1,35 @@
+\section{Concluding Remarks}
+\label{sec:conc}
+
+We developed a system that uses head-movement patterns of users for direct
+authentication to a wearable device. We developed a light-weight approach that infers
+head-movements of users in response to music and generates signatures
+that are unique to every user.
+Experimental observations revealed that the head-movement signatures generated
+using the dynamic time-warping tool, in response to the same music track, were
+consistent in typical stationary environments such as user sitting or
+standing at one location while attempting to authenticate. We leveraged the
+consistency in the head-movement signatures to develop two classification
+algorithms, based on machine learning and adaptive thresholding, to
+efficiently and accurately label user signatures.
+Through a multiple user based experiment evaluation using the data collected
+by our sensor data collection app in Google Glass, we observed that the
+average true-acceptance rate of our approach is above 95.1$\%$ and the false
+detection rates is below 4.43$\%$. We have also optimized our algorithms to minimize the processing latencies and power consumption, making them suitable for wearable devices.
+The multi-user training data sets were validated and verified during the
+course of our evaluations and will be released for public use in near future.
+
+\iffalse
+In this paper, we present the design, implementation and evaluation
+of Headbanger, a head gesture based authentication system.
+Headbanger generates a signature from user's head-movements in
+response to short duration of audio track with fast beats, and uses
+this signature as the behavioral biometric for authentication.
+Through extensive experiments on the prototype on Google Glass
+involving ?? users, we demonstrated that Headbander can achieve **\%
+accuracy and thus with proper audio stimuli, head-movement alone
+will be reasonably sufficient to serve a effective behavioral
+biometric for authentication. We believe this work will be the basis
+for using audio catalyst to enrich more useful human contextual
+applications.
+\fi

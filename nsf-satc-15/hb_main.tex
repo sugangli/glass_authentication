@@ -1,0 +1,118 @@
+%\documentstyle[rotate,page,epsf,epsfig,url,subfigure,wrapfig,floatflt]{article}
+% Switching to Latex2e instead of 2.09
+\documentclass[10pt]{article}
+\usepackage{rotate,page,epsf,epsfig,url,subfigure,wrapfig,floatflt,algorithm2e}
+\usepackage[sc]{mathpazo}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+%\usepackage{verse}
+
+% Using 10.5 fonts over 11pt skips. (Actual lines/inch is achieved also with
+% the linespread above
+%\renewcommand{\normalsize}{\fontsize{10.5pt}{11pt}\selectfont}
+
+% removed times -- since apparently not allowed by NSF
+%\newcounter{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+%\def\proof{\noindent\hspace{2em}{\it Proof: }}
+
+\newcommand{\Geotags}{GLUE}
+
+\newcommand{\aiaaJGCD}{AIAA Journal of Guidance, Control and Dynamics}
+\newcommand{\ieeeTCST}{IEEE Transactions on Control Systems Technology}
+\newcommand{\ieeeTITS}{IEEE Transactions on on Intelligent Transportation Systems}
+\newcommand{\ieeeTAC}{IEEE Transactions on Automatic Control}
+\newcommand{\TransResB}{Transportation Research - B}
+\newcommand{\ieeeCSM}{IEEE Control Systems Magazine}
+\newcommand{\JCP}{Journal of Computational Physics}
+\newcommand{\JFM}{Journal of Fluid Mechanics}
+\newcommand{\ECC}{Proceedings of the European Control Conference}
+\newcommand{\ACCotwo}{American Control Conference}
+\newcommand{\ACCofour}{American Control Conference}
+\newcommand{\CDCothree}{Proceedings of the $42^{\text{nd}}$ IEEE Conference on Decision and Control}
+\newcommand{\CDCnintyfive}{Proceedings of the $34^{\text{th}}$ IEEE Conference on Decision and Control}
+\newcommand{\ESAIM}{ESAIM: {C}ontrol, {O}ptimisation and{C}alculus of {V}ariations}
+\newcommand{\SysContLet}{Systems \& Control Letters}
+\newcommand{\SIAMJCO}{SIAM Journal of Control Optimization}
+\newcommand{\procRSLsAMPS}{Proceedings of the Royal Society of London. Series A, Mathematical and Physical Sciences}
+\newcommand{\systemname}{{\em Headbanger}}
+\newenvironment{itemizer}{\begin{itemize}\setlength{\parsep}{0cm}\setlength{\itemsep}{-.3em}}{\end{itemize}}
+\newenvironment{enumerator}{\begin{enumerate}\setlength{\itemsep}{-0.15cm}}{\end{enumerate}}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+
+\input{remark}
+\remarkfalse
+
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmarginsrb{0.9in}{0.8in}{.9in}{.9in}%
+{0in}{0in}{0in}{0.0in}
+
+\linespread{1.029} %% use this to control line spacing
+
+\begin{document}
+
+
+
+\setcounter{page}{1}
+\def\mysection{A}
+\nsffoot \nsftitle{Project Summary}
+
+\begin{center}
+\vspace{-6mm}
+{\bf TWC: Small: Authenticating Smart Wearable Devices Using Unique Human Body Movement Patterns\\ Zhang, Rutgers University\\}
+\end{center}
+\vspace*{-2mm}
+
+\input{hb_summary}
+
+%\vspace*{-1mm}
+%\begin{center}
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%Yanyong Zhang, Wade Trappe, Richard Howard  & {\bf WINLAB, Rutgers University}\\
+%\end{tabular*}
+%\end{center}
+%%\vspace*{.1in}
+\pagebreak
+
+
+
+
+\setcounter{page}{1}
+\def\mysection{C}
+\nsffoot \nsftitle{PROJECT DESCRIPTION}
+\def\thesection{\arabic{section}}
+\def\thesubsection{\arabic{section}.\arabic{subsection}}
+\def\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+%\remark{
+%}
+\input{hb_intro}
+\input{hb_background}
+\input{hb_learning}
+\input{hb_system}
+\input{hb_system_prop}
+\input{hb_eval}
+\input{hb_education}
+%\input{WellMon_perspective}
+\input{hb_prior}
+\newpage
+
+\setcounter{page}{1}
+\def\mysection{D}
+\bibliographystyle{plain}
+\bibliography{../mobisys_paper/sugang,yyzhang,MG_prior}
+%\bibliography{../elder,../chenren,../audio,../yyzhang,../education,../ben,../lin,../system,../RefsForYanyong,../janneown,../nsf-hui,../WadeEAMonRefs,../hui1}
+
+\end{document}

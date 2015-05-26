@@ -1,0 +1,29 @@
+\BOOKMARK [1][-]{section.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{2 Background on Wearable Device Authentication}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{2.1 Head-movement as a Biometric}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{3 Headbanger System Design}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{3.1 Sensor Data Collection}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{3.2 Filtering}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.3}{3.3 Signature generation}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.4}{3.4 Classification}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.4.1}{3.4.1 SVM-Based Classification}{subsection.3.4}% 9
+\BOOKMARK [3][-]{subsubsection.3.4.2}{3.4.2 Adaptive thresholding-Based Classification}{subsection.3.4}% 10
+\BOOKMARK [2][-]{subsection.3.5}{3.5 Authentication}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{4 Evaluating Headbanger System}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{4.1 Dataset}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{4.2 Even Simple Body Movement is Hard to Imitate}{section.4}% 14
+\BOOKMARK [3][-]{subsubsection.4.2.1}{4.2.1 Experimental Setup}{subsection.4.2}% 15
+\BOOKMARK [3][-]{subsubsection.4.2.2}{4.2.2 Classification Metrics}{subsection.4.2}% 16
+\BOOKMARK [3][-]{subsubsection.4.2.3}{4.2.3 SVM Classification Results}{subsection.4.2}% 17
+\BOOKMARK [3][-]{subsubsection.4.2.4}{4.2.4 Thresholding-Based Classification}{subsection.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.3}{4.3 Head-movement Patterns are Repeatable}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.4}{4.4 Headbanger Authentication App Implementation}{section.4}% 20
+\BOOKMARK [1][-]{section.5}{5 Discussion and Future Work}{}% 21
+\BOOKMARK [2][-]{subsection.5.1}{5.1 Reliability}{section.5}% 22
+\BOOKMARK [2][-]{subsection.5.2}{5.2 Multi-Modality}{section.5}% 23
+\BOOKMARK [2][-]{subsection.5.3}{5.3 Seamless Protocol}{section.5}% 24
+\BOOKMARK [2][-]{subsection.5.4}{5.4 Processing/Battery Power Constraints}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.5}{5.5 Large-scale evaluation}{section.5}% 26
+\BOOKMARK [1][-]{section.6}{6 Related Work}{}% 27
+\BOOKMARK [1][-]{section.7}{7 Concluding Remarks}{}% 28
+\BOOKMARK [1][-]{section.8}{8 References}{}% 29

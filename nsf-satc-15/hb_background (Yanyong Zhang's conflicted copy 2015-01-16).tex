@@ -1,0 +1,188 @@
+\section{Background and Overview} \label{sec:background} \begin{figure*}[t]
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics [width=.33\linewidth]{../mobisys_paper/fig/raw_sub1.eps}&
+\includegraphics [width=.33\linewidth]{../mobisys_paper/fig/raw_sub8.eps}&
+\includegraphics [width=.33\linewidth]{../mobisys_paper/fig/raw_sub3.eps}\\
+(a) User 1& (b) User 2 & (c) User 3 \\
+\end{tabular}
+
+\begin{tabular}{cc}
+\includegraphics [width=.33\linewidth]{../mobisys_paper/fig/raw_sub4.eps}&
+\includegraphics [width=.33\linewidth]{../mobisys_paper/fig/raw_sub5.eps}\\
+(d) User 4& (e) User 5 \\
+\end{tabular}
+\end{center}
+\caption{\label{fig:raw} These plots show the raw accelerometer data in the
+time domain for five different users when they move their head in response to
+a music track wearing the same Google glass. The plots
+indicate that different users' head movement patterns appear distinctive from
+each other. The five users wore a Google Glass (in turns) and listened to a
+10 second audio snapshot of a pop song.}
+\end{figure*}
+
+\subsection{Background on Authenticating Wearable Devices}
+Authentication mechanisms for a wearable device can broadly be divided into two
+categories: (i) {\em Direct} authentication, where the users can directly
+authenticate themselves to their wearable device using the input/output
+interface and/or using signatures generated from the sensors available on the
+device, and (ii) {\em Indirect} authentication, where a secondary device --
+typically the user's smartphone -- is used as a medium for authentication.
+Today's commercially available wearable devices predominantly use the latter
+approach where users login to their wearable devices through their smartphone
+-- using a PIN or an email account.
+%A select few gadgets, for example the Google Glass or fitbit, require the
+%users to register their device to their user specific accounts (gmail for
+%Google Glass), which can also be perceived as an indirect mechanism for
+%authentication.
+
+
+Unlike the indirect approaches, that require a wearable device is registered to
+and connected (wireless) to a smartphone, direct
+mechanisms can leverage the built-in interfaces and sensors on the
+wearable device. The fact that wearable devices relate significantly to ``what we wear" on the
+human body, biometrics can play a key role for direct authentication to wearable
+devices. Biometrics allow a system to identify a user based upon ``who you
+are" (i.e., her physiology) instead of ``what you
+have'' (i.e., ID cards) or `` what you remember'' (i.e.,
+passwords)~\cite{jain2004introduction,o2003comparing,yampolskiy2007motor}.
+Physiological biometrics such as DNA, ear shape, face, fingerprint,
+hand/finger geometry,
+iris, odor, palm-print, retinal scan, and voice, have been very effective and
+widely used in many prototype and commercial authentication systems~\cite{***}.
+In addition, body shape such as body height, width, and body-part proportions
+can also be used as biometric cues to identify different
+people~\cite{collins2002silhouette}. Even ``soft'' characteristics such as
+body weight and fat percentage have been considered as secondary biometrics
+for authentication purposes~\cite{ailisto2006soft}. However, biometrics are
+not prominently used in wearable devices commercially available today, though
+there have been specific point commercial designs (e.g., Nymi~\cite{nymi}). This can be attributed to the
+fact that biometrics would require the specific hardware/sensor available on
+the wearable device. Also the overheads for physiological biometrics in
+wearable devices can be high, in both, cost for hardware as well as
+integration and computing.
+
+Another approach to direct authentication is using behavioral biometrics
+where unique signatures from human behavior (subconscious
+or in response to external stimulus) provide cues for differentiating and
+authenticating users. For example, it has been shown that gait (e.g.,
+stride length, the
+amount of arm swing) when the user is walking or
+running is a reliable identification cue, and irrespective of the
+environment~\cite{stevenage1999visual}. Okumura et.al.~\cite{okumura2006study}
+have shown that the human arm swing patterns can be used to create signatures
+to authenticate to their cell-phones. Monrose
+et.al.~\cite{monrose2000keystroke} show that keystroke rhythms, when
+users type on the keyboard, that include typing dynamics such as how
+long is a keystroke, how far is between consecutive strokes, and how is the
+pressure exerted on each key, can be used as a biometric to authenticate
+users. Similarly, mouse usage dynamics~\cite{jorgensen2011mouse} and touchpad
+touching dynamics~\cite{bo2013silentsense,de2012touch} have also been shown to
+serve as potential biometrics.
+
+In comparison to other means of authentication, behavioral biometric
+authentication can offer a more convenient (than physiological biometrics),
+and more secure (than indirect authentication) solution for wearable device
+authentication. With the increasing off-the-shelf
+availability and (almost) unlimited access to the sensors on the wearables, it
+has become possible to generate and/or infer unique behavioral signatures
+specific to users. We use these rationale as a motivation for our proposed
+design of a behavioral biometric based authentication that generates unique
+signatures from user's body movements.
+We design an authentication system, dubbed {\em Headbanger}, for wearable
+devices by monitoring user's unique body-movement patterns (e.g., head movements, arm movements, and hand movements) in response to an
+external audio stimulus.
+
+
+We can use accelerometer data to detect a person's movement context such as walking or running~\cite{karantonis2006implementation}, or to identify a person's gait characteristics~\cite{mantyjarvi2005identifying,derawi2010unobtrusive}. ***YZ: this needs to be moved. ***
+
+
+%\vspace{4pt}{\bf Head-movements as a behavioral biometric.}
+
+\subsection{Body Movement as a Behavioral Biometric}
+\label{subsec:headmovements}
+
+%As such, authenticating a user involves comparing her sensor
+%readings with the pre-recorded glass owner's sensor readings.
+%Our design assumes that there is only one owner per glass, and we can easily
+%extend our scheme to handle the cases with multiple owners.
+%Figure~\ref{fig:sysarch} presents the system architecture of the \systemname,
+%and in the following section, we will discuss each component of this design
+%in more detail.
+
+According to~\cite{jain2004introduction}, a human characteristic can be
+considered as biometric as long as it is \emph{universal}, \emph{distinctive},
+\emph{repeatable}, and \emph{collectible}. With the advancements in
+wearable computer designs it is becoming easier for collecting body movement
+patterns using the built-in sensors (e.g., accelerometer sensor, gyroscope sensor, motion sensor, etc). Such sensors are
+available on most wearable devices available today, thus
+making body movements that are both \emph{universal} and {\em collectible}.
+
+In this proposal, we will show that body movements are \emph{distinctive} and \emph{repeatable}, especially when body movements are combined with external stimuli such as music. It has also been shown~\cite{zentner2010rhythmic} that most people move
+their body as a natural response to external rhythmic stimuli such as music;
+even at a very early age, infants respond to music and their movements speed
+up with the increasing rhythm speed. Most adults naturally
+perform head movements or hand movements when listening to a fast beat audio track.  When combined with external rhythmic stimuli, we believe body movements become more distinctive -- not only a person's movement pattern is unique, but her response to rhythmic stimuli is also unique. In this way, the resulting authentication system will be more dependable.
+
+Before we present our body movement based authentication system, we first conducted a preliminary analysis of the accelerometer signals from five Google glass
+users' head movements, and show the raw signals in Figure~\ref{fig:raw} (a)-(e). A quick glance at the raw signals reveals that these users
+{\em repeatedly} showed unique and {\em distinctive} head-movement patterns, when listening to the same music beats on the head-worn device. Motivated by this observation we hypothesize that \emph{body movements can be a good behavioral biometric characteristic to authenticate
+users to their smart glass}.
+%We next formally present the design of our system that
+%utilizes head-movement patterns as behavioral biometric signature
+
+\vspace{4pt}\textbf{Example Body Movement Patterns:} Depending upon the wearable device to be authenticated, we can focus on the movements of different body parts. For example, head-mounted devices such as smart glasses can easily capture a user's head movement or eye lid movements; wrist-mounted devices such as smart watches can easily capture a user's arm/hand movements; shoe-based smart devices can easily capture a user's gait; smart rings can easily capture a user's finger/palm movements.
+
+To facilitate natural and repeatable body movements, and to further set users apart from each other (by observing how their motor system responds to external stimuli), we can play short, fast-tempo music tracks on the wearable devices, and then measure the corresponding body movements using built-in sensors such as accelerometer sensor, gyroscope sensor, infrared sensor, etc.
+
+\vspace{4pt}\textbf{Related Work on Body Gesture Based Activity Detection and Authentication:?Head gestures and eye blinking patterns have been 
+
+Harwin et al.~\cite{harwin1990analysis} was considered the first that
+proposed to use head gestures by combining pointing and movements for human computer interaction. In addition to head gestures, eye blinking patterns have also been studied.  In~\cite{westeyn2004recognizing}, eye blinking pattern was used as a unique feature for
+authentication.  Compared to eye blinking patterns, head-movements provide much more entropy, therefore a more suitable biometric characteristic. 
+Ishimaru et al.~\cite{ishimaru2014blink} proposed to combine the eye blinking frequency from the infrared proximity sensor and head motion patterns from accelerometer sensor on Google Glass
+to recognize activities (e.g., reading, talking, watching TV,
+math problem solving), and achieved 82\% recognition
+accuracy. While their approach looked at common patterns when people employ the same activities, ours took a deeper look at the head-movements and found that everyone's head-movements are unique. There are also a number of head
+motion based activity recognition studies using computer vision, such
+as the one in~\cite{kjeldsen2001head}. BioGlass~\cite{hernandezbioglass}
+combines Google Glass's accelerometers, gyroscope, and camera to
+extract physiological signals of the wearer such as pulse
+and respiratory rates.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=.75\columnwidth]{../mobisys_paper/fig/headbanger-illustrate.png}
+\caption{Illustration of Headbanger. The head-worn device authenticates the
+right user based on signatures generated from head-movement patterns in
+response to an audio snapshot played on the device.}
+\label{fig:illustrate}
+\end{figure}
+
+
+
+\subsection{Overview of ~\systemname}
+
+We refer to the proposed body-movement based authentication as~\systemname. We envision that~\systemname~will be used as an authentication interface on the wearable device, which will run upon device power-up, similar to the screen-lock in smartphones or the head-nod interface on Google Glass~\cite{googleglass}. The device keeps movement features of its legitimate users. Every time when a user tries to unlock the device, she is first asked to claim her user ID from the list of legitimate users. Next, the user is asked to pick a music track from a preset music list: if her pick does not match the claimed user's pick, then the authentication process exits immediately. Otherwise,~\systemname~continues to go through the following steps:
+\begin{itemize}
+\item {\em Test sample collection}: In this step, we play the chosen music track for a few seconds (usually for up to 10 seconds), and ask the user to move her body along with the music. We then records the raw sensor signals (e.g., from built-in accelerometer sensor or gyroscope sensor) during the music period. We refer to the raw sensor data during a music track duration as a sample, e.g., an $ACC$ sample is the accelerometer data collected during the music period, and a $GYRO$ sample is the gyroscope data collected during the music period. After collecting the raw samples, we filter the samples to remove records of spurious motion.
+
+\item {\em Signature generation}: In this step, we process the filtered signals to extract appropriate features and establish the user's movement signature.
+
+\item {\em Classification}: In this step, we classify the user's movement signatures against the signatures stored in the system to determine whether the user is who she claims. If there is a plausible match, the user is authenticated access; otherwise, she is rejected.
+
+\end{itemize}
+
+The illustration of~\systemname~is shown in Figure~\ref{fig:illustrate}.
+
+
+
+
+\subsection{Research Challenges}
+Specifically, the proposed research effort consists of the following thrusts:
+\begin{itemize}
+\item Developing signal processing and learning algorithms that can accurately identifying each user's body movement patterns.
+
+\item Developing a light-weight, low-cost authentication system that can run on wearable devices efficiently.
+
+\end{itemize}

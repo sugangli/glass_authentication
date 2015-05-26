@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: sugang.bib
+Repeated entry---line 786 of file sugang.bib
+ : @article{gafurov2006biometric
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in googleglass
+Warning--to sort, need author or key in smartwatch
+Warning--to sort, need author or key in fitbit
+Warning--to sort, need author or key in nymi
+Warning--empty journal in hoyle2015sensitive
+You've used 48 entries,
+            2118 wiz_defined-function locations,
+            705 strings with 11510 characters,
+and the built_in function-call counts, 14389 in all, are:
+= -- 1223
+> -- 947
+< -- 0
++ -- 381
+- -- 326
+* -- 909
+:= -- 2511
+add.period$ -- 142
+call.type$ -- 48
+change.case$ -- 307
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 573
+empty$ -- 1127
+format.name$ -- 326
+if$ -- 2931
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 44
+newline$ -- 239
+num.names$ -- 88
+pop$ -- 445
+preamble$ -- 1
+purify$ -- 259
+quote$ -- 0
+skip$ -- 336
+stack$ -- 0
+substring$ -- 247
+swap$ -- 72
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 192
+warning$ -- 5
+while$ -- 88
+width$ -- 50
+write$ -- 471
+(There was 1 error message)

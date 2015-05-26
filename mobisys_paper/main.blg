@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: sugang.bib
+I was expecting a `,' or a `}'---line 159 of file sugang.bib
+ : @misc{NYMI 
+ :            Band,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "fitbit"
+Warning--I didn't find a database entry for "smartwatch"
+Warning--I didn't find a database entry for "googleglass"
+Warning--I didn't find a database entry for "dtw"
+Warning--I didn't find a database entry for "proakis-dspbook"
+Warning--I didn't find a database entry for "***"
+Warning--to sort, need author or key in nymi
+(There was 1 error message)

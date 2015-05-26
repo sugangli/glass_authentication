@@ -1,0 +1,232 @@
+\begin{thebibliography}{10}
+
+\bibitem{fitbit}
+Fitbit.
+\newblock \url{http://en.wikipedia.org/wiki/Fitbit}.
+
+\bibitem{googleglass}
+Google glass.
+\newblock \url{http://en.wikipedia.org/wiki/Google\_Glass}.
+
+\bibitem{nymi}
+Nymi band.
+\newblock \url{http://www.nymi.com/}.
+
+\bibitem{smartwatch}
+Smart watch.
+\newblock \url{http://en.wikipedia.org/wiki/Smartwatch}.
+
+\bibitem{ailisto2006soft}
+H.~Ailisto, E.~Vildjiounaite, M.~Lindholm, S.-M. Makela, and J.~Peltola.
+\newblock Soft biometrics -- combining body weight and fat measurements with
+  fingerprint biometrics.
+\newblock {\em Pattern Recognition Letters}, 2006.
+
+\bibitem{ailisto2005identifying}
+H.~J. Ailisto, M.~Lindholm, J.~Mantyjarvi, E.~Vildjiounaite, and S.-M. Makela.
+\newblock Identifying people from gait pattern with accelerometers.
+\newblock In {\em Defense and Security}. International Society for Optics and
+  Photonics, 2005.
+
+\bibitem{dtw}
+D.~J. Berndt and J.~Clifford.
+\newblock Using dynamic time warping to find patterns in time series.
+\newblock In {\em KDD workshop}, 1994.
+
+\bibitem{biddle2012graphical}
+R.~Biddle, S.~Chiasson, and P.~C. Van~Oorschot.
+\newblock Graphical passwords: Learning from the first twelve years.
+\newblock {\em ACM Computing Surveys}, 2012.
+
+\bibitem{bo2013silentsense}
+C.~Bo, L.~Zhang, X.-Y. Li, Q.~Huang, and Y.~Wang.
+\newblock Silentsense: silent user identification via touch and movement
+  behavioral biometrics.
+\newblock In {\em ACM MobiCom}, 2013.
+
+\bibitem{bowyer2006survey}
+K.~W. Bowyer, K.~Chang, and P.~Flynn.
+\newblock A survey of approaches and challenges in 3d and multi-modal 3d+ 2d
+  face recognition.
+\newblock {\em Computer vision and image understanding}, 2006.
+
+\bibitem{cai2013mobile}
+Z.~Cai, C.~Shen, M.~Wang, Y.~Song, and J.~Wang.
+\newblock Mobile authentication through touch-behavior features.
+\newblock In {\em Biometric Recognition}. Springer, 2013.
+
+\bibitem{challis1983design}
+R.~Challis and R.~Kitney.
+\newblock The design of digital filters for biomedical signal processing part
+  3: The design of butterworth and chebychev filters.
+\newblock {\em Journal of biomedical engineering}, 1983.
+
+\bibitem{collins2002silhouette}
+R.~T. Collins, R.~Gross, and J.~Shi.
+\newblock Silhouette-based human identification from body shape and gait.
+\newblock In {\em IEEE FGR}, 2002.
+
+\bibitem{cornelius2014wearable}
+C.~Cornelius, R.~Peterson, J.~Skinner, R.~Halter, and D.~Kotz.
+\newblock A wearable system that knows who wears it.
+\newblock In {\em Proceedings of the 12th annual international conference on
+  Mobile systems, applications, and services}, pages 55--67. ACM, 2014.
+
+\bibitem{de2012touch}
+A.~De~Luca, A.~Hang, F.~Brudy, C.~Lindner, and H.~Hussmann.
+\newblock Touch me once and i know it's you!: implicit authentication based on
+  touch screen patterns.
+\newblock In {\em ACM CHI}, 2012.
+
+\bibitem{feng2014tips}
+T.~Feng, J.~Yang, Z.~Yan, E.~M. Tapia, and W.~Shi.
+\newblock Tips: context-aware implicit user identification using touch screen
+  in uncontrolled environments.
+\newblock In {\em ACM HotMobile}, 2014.
+
+\bibitem{frank2013touchalytics}
+M.~Frank, R.~Biedert, E.~Ma, I.~Martinovic, and D.~Song.
+\newblock Touchalytics: On the applicability of touchscreen input as a
+  behavioral biometric for continuous authentication.
+\newblock {\em IEEE Transactions on Information Forensics and Security}, 2013.
+
+\bibitem{gafurov2011user}
+D.~Gafurov, P.~Bours, and E.~Snekkenes.
+\newblock User authentication based on foot motion.
+\newblock {\em Signal, Image and Video Processing}, 2011.
+
+\bibitem{gafurov2006biometric}
+D.~Gafurov, K.~Helkala, and T.~S{\o}ndrol.
+\newblock Biometric gait authentication using accelerometer sensor.
+\newblock {\em Journal of computers}, 2006.
+
+\bibitem{gafurov2007gait}
+D.~Gafurov, E.~Snekkenes, and P.~Bours.
+\newblock Gait authentication and identification using wearable accelerometer
+  sensor.
+\newblock In {\em IEEE AIAT}, 2007.
+
+\bibitem{gafurov2008arm}
+D.~Gafurov and E.~Snekkkenes.
+\newblock Arm swing as a weak biometric for unobtrusive user authentication.
+\newblock In {\em IEEE IIHMSP}, 2008.
+
+\bibitem{harwin1990analysis}
+W.~Harwin and R.~Jackson.
+\newblock Analysis of intentional head gestures to assist computer access by
+  physically disabled people.
+\newblock {\em Journal of biomedical engineering}, 1990.
+
+\bibitem{hernandezbioglass}
+J.~Hernandez, Y.~Li, J.~M. Rehg, and R.~W. Picard.
+\newblock Bioglass: Physiological parameter estimation using a head-mounted
+  wearable device.
+\newblock In {\em IEEE MobiHealth}, 2014.
+
+\bibitem{ishimaru2014blink}
+S.~Ishimaru, K.~Kunze, K.~Kise, J.~Weppner, A.~Dengel, P.~Lukowicz, and
+  A.~Bulling.
+\newblock In the blink of an eye: combining head motion and eye blink frequency
+  for activity recognition with google glass.
+\newblock In {\em ACM AH}, 2014.
+
+\bibitem{jain1997identity}
+A.~K. Jain, L.~Hong, S.~Pankanti, and R.~Bolle.
+\newblock An identity-authentication system using fingerprints.
+\newblock {\em Proceedings of the IEEE}, 1997.
+
+\bibitem{jain2004introduction}
+A.~K. Jain, A.~Ross, and S.~Prabhakar.
+\newblock An introduction to biometric recognition.
+\newblock {\em IEEE Transactions on Circuits and Systems for Video Technology},
+  2004.
+
+\bibitem{jorgensen2011mouse}
+Z.~Jorgensen and T.~Yu.
+\newblock On mouse dynamics as a behavioral biometric for authentication.
+\newblock In {\em ASIACCS}, 2011.
+
+\bibitem{kjeldsen2001head}
+R.~Kjeldsen.
+\newblock Head gestures for computer control.
+\newblock In {\em IEEE ICCV Workshop}, 2001.
+
+\bibitem{mann1997wearable}
+S.~Mann.
+\newblock Wearable computing: A first step toward personal imaging.
+\newblock {\em IEEE Computer}, 30(2):25--32, 1997.
+
+\bibitem{beats}
+R.~E. Milliman.
+\newblock Using background music to affect the behavior of supermarket
+  shoppers.
+\newblock {\em The Journal of Marketing}, 1982.
+
+\bibitem{monrose2000keystroke}
+F.~Monrose and A.~D. Rubin.
+\newblock Keystroke dynamics as a biometric for authentication.
+\newblock {\em Future Generation computer systems}, 2000.
+
+\bibitem{o2003comparing}
+L.~O'Gorman.
+\newblock Comparing passwords, tokens, and biometrics for user authentication.
+\newblock {\em Proceedings of the IEEE}, 2003.
+
+\bibitem{okumura2006study}
+F.~Okumura, A.~Kubota, Y.~Hatori, K.~Matsuo, M.~Hashimoto, and A.~Koike.
+\newblock A study on biometric authentication based on arm sweep action with
+  acceleration sensor.
+\newblock In {\em IEEE ISPACS}, 2006.
+
+\bibitem{rahman2014bodybeat}
+T.~Rahman, A.~T. Adams, M.~Zhang, E.~Cherry, B.~Zhou, H.~Peng, and
+  T.~Choudhury.
+\newblock Bodybeat: a mobile system for sensing non-speech body sounds.
+\newblock In {\em Proceedings of the 12th annual international conference on
+  Mobile systems, applications, and services}, pages 2--13. ACM, 2014.
+
+\bibitem{reynolds2000speaker}
+D.~A. Reynolds, T.~F. Quatieri, and R.~B. Dunn.
+\newblock Speaker verification using adapted gaussian mixture models.
+\newblock {\em Digital signal processing}, 2000.
+
+\bibitem{sae2012biometric}
+N.~Sae-Bae, K.~Ahmed, K.~Isbister, and N.~Memon.
+\newblock Biometric-rich gestures: a novel approach to authentication on
+  multi-touch devices.
+\newblock In {\em ACM CHI}, 2012.
+
+\bibitem{sherman2014user}
+M.~Sherman, G.~Clark, Y.~Yang, S.~Sugrim, A.~Modig, J.~Lindqvist,
+  A.~Oulasvirta, and T.~Roos.
+\newblock User-generated free-form gestures for authentication: Security and
+  memorability.
+\newblock In {\em ACM MobiSys}, 2014.
+
+\bibitem{stevenage1999visual}
+S.~V. Stevenage, M.~S. Nixon, and K.~Vince.
+\newblock Visual analysis of gait as a cue to identity.
+\newblock {\em Applied cognitive psychology}, 1999.
+
+\bibitem{westeyn2004recognizing}
+T.~Westeyn and T.~Starner.
+\newblock Recognizing song-based blink patterns: Applications for restricted
+  and universal access.
+\newblock In {\em IEEE FGR}, 2004.
+
+\bibitem{weston1999support}
+J.~Weston, C.~Watkins, et~al.
+\newblock Support vector machines for multi-class pattern recognition.
+\newblock In {\em ESANN}, 1999.
+
+\bibitem{yampolskiy2007motor}
+R.~V. Yampolskiy.
+\newblock Motor-skill based biometrics.
+\newblock In {\em Annual Security Conference}, 2007.
+
+\bibitem{zentner2010rhythmic}
+M.~Zentner and T.~Eerola.
+\newblock Rhythmic engagement with music in infancy.
+\newblock {\em Proceedings of the National Academy of Sciences}, 2010.
+
+\end{thebibliography}

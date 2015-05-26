@@ -1,0 +1,43 @@
+\section{Headbanger System Design}\label{sec:design}
+
+In this section, we explain how Headbanger authenticates smart glass users by monitoring their head movement patterns. In order to make head movement natural for users, we play (fast beat) music and record the sensor readings (e.g., accelerometer and gyroscope) while users move their head following the music rhythm. As such, authenticating a user involves comparing her sensor readings with the pre-recorded glass owner's sensor readings\footnote{In this section, we assume there is only one owner per glass, and we can easily extend our scheme to handle the cases with multiple owners.}. Figure~\cite{***} illustrates the entire authentication process.
+
+%Finally, we note that such a method can be easily extended to authenticating other wearable devices such as smart watches (by monitoring arm/hand movement).
+
+***SL: need a whole picture of the algorithm**
+
+
+\subsection{Collecting and Preprocessing Sensor Signals}
+
+To induce natural head movement, we provide several short songs that are popular and easy to follow. Users may choose one of these songs and move their head along the rhythm for $T$ seconds. During the duration of the song, we record the accelerometer and gyroscope data, resulting in one $ACC$ data sample and one $GYR$ data sample. For each subject, we collect $M$ $ACC$ samples and $M$ $GYR$ samples. The value of $T$ and $M$ has a bearing on the classification performance, and we will quantify their impact in the evaluation section. 
+We next need to preprocess the raw data samples before we can calculate the similarity between two samples. For example, Figure~\ref{fig:freq_resp} shows the histograms of the frequency of a user's $ACC$ samples in all three axes. The histograms show that most of the samples fall between 0 and 5 Hz. In addition, we note that most of the music pieces ***, making head movement frequency usually lower than ***Hz. As a result, we filter raw $ACC$ samples by adopting a low pass Butterworth filter~\cite{***} with a high cutoff frequency of 10Hz. The resulting accelerometer data is thus smoother. ***YZ: need to confirm this statement ***
+
+
+\begin{figure}[t]
+\centering
+\includegraphics [width=.95\linewidth]{fig/freq_resp.eps}
+\caption{\label{fig:freq_resp}Histograms of the frequency of a user's accelerometer data in all three axes}
+\end{figure}
+
+\subsection{Quantifying Signal Similarity}
+
+Next we investigate how we can accurately quantify the similarity level between two signals, whose results will be used to further classify the users. After testing various *** methods, we decide to adopt the Dynamic Time Warping (DTW) algorithm~\cite{***} that is often used to measure similarity between two waves based on temporal stimulation. Unlike other algorithms, DTW measures the similarity between two signals that are similar but with phase difference, which is well suited for our study. In our study, users often start head movement at a different angle, but perform similar, often periodic, movement for a similar amount of time.
+
+***YZ: Sugang, can you please explain how DTW works here? ***
+
+
+
+
+\subsection{Classifying Glass Users}
+
+In this study, we consider two ways of classifying smart glass users, the first one based on support vector machine (SVM) while the second one based on a much simpler thresholding scheme. Next we discuss these two methods in more detail.
+
+\subsubsection{SVM-Based Classification}
+
+In SVM-based classification, we need to select both true training data sets from the glass owner and false data training sets from a few random users. In order to have light-weight computation, we do not use the entire training data set in the testing set, but only a few representative samples. Here, we define representative training samples as those that are the most similar to the rest of training samples. Suppose the entire training data set has $N$ samples. For every training sample, we compute its distance to each of the rest of the samples using DTW. Then we choose the $K$ samples that have the lowest average distance to the rest of the training set, thus the most representative samples. If we choose a small $K$ value, say 3, the testing overhead will be made low enough to run on a smart glass efficiently.
+
+In the testing phase, as soon as the testing set is collected, we calculate its distance to each training set's top $K$ samples. Suppose we have $K$ true training samples, and $mK$ false training sets ($m$ is the number of false training sets), then we will have $(m+1)K$ distance values for the testing sample. We then input these distance values to the SVM classifier which will return the classification result -- $1$ means the user is classified as the owner while $o$ means the user is not classified as the owner.
+
+
+\subsubsection{Thresholding-Based Classification}
+As a alternative, we also propose global thresholding, since it only requires local training data set from one subject. Based on the process states above, we will evaluate YouMove in the next section. 

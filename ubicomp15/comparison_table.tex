@@ -1,0 +1,87 @@
+\begin{table}[h]
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{|l|}{Method/System} & \multicolumn{1}{l|}{Headbanger} & \multicolumn{1}{l|}{Gafurov et al~\cite{gafurov2006biometric}} & \multicolumn{1}{l|}{Derawi et al.~\cite{derawi2010improved}} \\ 
+\hline
+\multicolumn{1}{|l|}{Sensor Location} & \multicolumn{1}{l|} {head}                            & \multicolumn{1}{l|}{lower leg}                          &\multicolumn{1}{l|}{left hip} \\ \hline
+\multicolumn{1}{|l|}{EER}           & \multicolumn{1}{l|}{3.47}       & \multicolumn{1}{l|}{5}             & \multicolumn{1}{l|}{5.7}           \\ \hline
+\end{tabular}
+\caption{EERs for different behavioral biometric authentication systems}
+\end{table}
+
+
+
+% table for both exp1 and exp2
+\begin{table}[h]
+\begin{tabular}{|lll|}
+\hline
+                & \multicolumn{2}{c|}{Experiment} \\ \hline
+                & Repeatibility    & Imitation    \\ \hline
+\textbf{Gender} &                  &              \\
+Male            & 19               & 14           \\
+Female          & 11               & 16           \\ \hline
+\textbf{Age}    &                  &              \\
+Mean            & 29.7             & 26.9         \\
+Minimum         & 23               & 22           \\
+Maxinum         & 54               & 42           \\
+Std Dev         & 9.81             & 4.0          \\ \hline
+\end{tabular}
+\end{table}
+
+
+%table for exp2, "repeatibility" removed
+
+\begin{table}[h]
+\begin{tabular}{lclcl}
+\cline{2-5}
+       & \multicolumn{2}{c}{Male}                          & \multicolumn{2}{c}{Female}                             \\ \hline\hline
+Gender & \multicolumn{2}{c}{19}                            & \multicolumn{2}{c}{11}                                 \\ \hline
+       & \multicolumn{1}{l}{Mean} & \multicolumn{1}{l}{Mimimum}                & \multicolumn{1}{l}{Maxinum} & \multicolumn{1}{l}{Std Dev}                  \\ \hline\hline
+Age    & \multicolumn{1}{c}{29.7}                     & \multicolumn{1}{c}{23} & \multicolumn{1}{c}{54}                          & \multicolumn{1}{c}{9.81} \\ \hline
+\end{tabular}
+\end{table}
+
+
+%table for exp1, 
+\begin{table}[h]
+\begin{tabular}{lclcl}
+\cline{2-5}
+       & \multicolumn{2}{c}{Male}                          & \multicolumn{2}{c}{Female}                             \\ \hline\hline
+Gender & \multicolumn{2}{c}{14}                            & \multicolumn{2}{c}{16}                                 \\ \hline
+       & \multicolumn{1}{l}{Mean} & \multicolumn{1}{l}{Mimimum}                & \multicolumn{1}{l}{Maxinum} & \multicolumn{1}{l}{Std Dev}                  \\ \hline\hline
+Age   & \multicolumn{1}{c}{26.9}                     & \multicolumn{1}{c}{22} & \multicolumn{1}{c}{42}                          & \multicolumn{1}{c}{9.81}
+\end{tabular}
+\end{table}
+
+
+% power consumption
+\begin{table}[h]
+\begin{tabular}{lcc}
+\hline
+        & Power Consumption (mW) & Duration (s)      \\ \hline\hline
+Sensor  & ~29                    & 10, 6, 5       \\
+Speaker & 410                    & 10, 6, 5       \\
+CPU     & 1600                   & 14.4, 8.7, 7.4 \\ \hline
+\end{tabular}
+\caption{Power Consumption Estimation : Duration marks the time of each component functions for 10 sec, 6 sec, and 5 sec music length accordingly }
+\label{tab:pow}
+\end{table}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{|ccclc|}
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}music \\ cue \\ duration (s)\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}average \\ response\\ time (s)\end{tabular}}} & \multicolumn{3}{c|}{time breakdown (\%)}             \\ \cline{3-5} 
+\multicolumn{1}{|c|}{}                                                                                      & \multicolumn{1}{c|}{}                                                                                        & filtering & \multicolumn{1}{c}{DTW} & thresholding   \\ \hline
+10                                                                                                          & 4.47                                                                                                         & 0.20      & 99.80                   & \textless0.01  \\
+6                                                                                                           & 2.73                                                                                                         & 0.26      & 99.74                   & \textless0.01  \\
+5                                                                                                           & 2.44                                                                                                         & 0.28      & 99.72                   & \textless 0.01 \\ \hline
+\end{tabular}
+\caption{Measured response time of \systemname~app implementation on Google 
+Glass with different music cue durations and for $K = 1$. The averaging was done over 20 trials.
+\label{tab:glass}}
+\end{table}

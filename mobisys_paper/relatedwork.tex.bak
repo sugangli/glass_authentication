@@ -1,0 +1,104 @@
+\section{Related Work}\label{sec:related}
+Broadly speaking, Headbanger is a 3D behavioral biometric based
+activity recognition system. More specifically, it does the job of
+head gesture based authentication. To our best knowledge, it is the
+first wearable authentication system that only relies on
+accelerometers signature data from human \emph{head} motion. In this
+section, we briefly review the related literature on mobile device
+authentication.
+
+%in wearable/mobile device based schemes, infrastructure based
+%schemes, and biometric-rich based schemes.
+
+%\subsection{Wearable/mobile device based schemes}
+Harwin et al.~\cite{harwin1990analysis} was considered the first one
+proposed to use head gestures by combining pointing and movements
+for human computer interaction. The closest work to ours is
+Prescott~\cite{westeyn2004recognizing}, which used with human
+blinking pattern with the song as stimuli as a unique feature for
+authentication. They achieved 82.02\% accuracy among 9 individuals
+based on how they blink based on the same pattern. We share the same
+philosophy that users will generate their unique biometric signature
+with the song assistance, but use head motion instead for
+authentication. Ishimaru et al.~\cite{ishimaru2014blink} proposed to
+k combine the eye blink frequency from the infrared proximity sensor
+and head motion patterns from accelerometer sensor on Google Glass
+to recognize different activities (reading, talking, watching TV,
+math problem solving and sawing), and achieved 82\% recognition
+accuracy. Our approaches differ from theirs that we only use head
+motion and we focus on the problem of human verification under the
+same activity activity instead. There are also a number of head
+motion based activity recognition work using computer vision, such
+as~\cite{kjeldsen2001head}. BioGlass~\cite{hernandezbioglass}
+combines Google Glass's accelerometers, gyroscope, and camera to
+extract measure physiological signals of the wearer such as pulse
+and respiratory rates.
+
+Other than head, accelerometers have been placed in other parts of
+body for gait-based authentication purpose, such as
+waist~\cite{ailisto2005identifying}, pocket~\cite{gafurov2007gait},
+arm~\cite{okumura2006study,gafurov2008arm},
+leg~\cite{gafurov2006biometric} and ankle~\cite{gafurov2011user}.
+They share the same thread that collect the raw accelerometers data
+and apply signal processing and/or machine learning techniques on
+top of the data dynamics induced by human motion for authentication
+purpose.
+
+Hand gesture and touchscreen are often used naturally in pair for
+authenticating that device. They often take advantage of rich
+contexts including biometric features (e.g. swipe/zoon speed, click
+gap, contact size) and behavioral feature (e.g. touch location,
+swipe/zoom length, swipe/zoom curvature) to identify the device
+owner. TIPS~\cite{feng2014tips} combines and apply DTW to perform
+the user authentication in a uncontrolled environments -- as user
+naturally use the phone, rather than follow a pre-defined gesture
+patterns. The contexts such as are used in different combinations.
+
+
+Finally, we acknowledge that there are a number of other
+authentication using other techniques, such as
+speech~\cite{reynolds2000speaker}, computer vision and image
+~\cite{bowyer2006survey}, graphical
+password~\cite{biddle2012graphical,sherman2014user}, biometric
+fingerprints~\cite{jain1997identity}. Due to the space constraints
+and their indirect relevance to our work, we do not list them here.
+However, our approach can be used as a complementary scheme to most
+existing technique, which leaves space new scheme of multimodal
+approach design for future work.
+
+%It was extended by Kjeldsen~\cite{kjeldsen2001head} to more
+%categories such as continuous control, spatial selection and
+%symbolic selection
+
+%Gafurov et al.~\cite{gafurov2006biometric} developed a wearable
+%biometric gait authentication system. The sensor is attached to the
+%lower leg to extract the gait patterns -- accelerations in three
+%directions: vertical, forward-backward and sideways motion of the
+%lower leg. A combination of these accelerations is used for
+%authentication. ~\cite{gafurov2011user} ankle
+%\subsection{Infrastructure based schemes}
+
+%\subsection{Biometric-rich based schemes}
+%Fingerprints
+
+% are we the first one? the cloest work? how far we are going to reach out? categories in general: image? voice? touch?
+% on glass; body movement;
+mobisys 2014 papers
+
+%gesture based authentication
+
+%Music based movements -- GaTech
+
+%Japanese paper on google glass and eye-wink
+
+hardware fingerprinting -- check CCS 2014
+
+%acc-based authentication
+%http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5634532&sortType%3Dasc_p_Sequence%26filter%3DAND%28p_IS_Number%3A5634461%29
+
+%wearable security
+%http://gaia.cs.uiuc.edu/papers/wss.pdf
+
+%commercial solutions: Nymi -- eyewink blink pattern
+
+%BioNym -- heartbeat

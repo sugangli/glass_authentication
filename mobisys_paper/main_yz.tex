@@ -1,0 +1,103 @@
+%\documentclass{sigchi}
+\documentclass{sig-alternate-10pt}
+
+
+% llt: Define a global style for URLs, rather that the default one
+%\makeatletter
+%\def\url@leostyle{%
+%  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+%\makeatother
+%\urlstyle{leo}
+
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{balance}
+\usepackage{comment}
+\usepackage{times,epsfig,subfigure,endnotes,color,url,paralist,multirow,float}
+\usepackage[lined,ruled,linesnumbered,vlined]{algorithm2e}
+
+% Make sure hyperref comes last of your loaded packages,
+% to give it a fighting chance of not being over-written,
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    pdftitle={SIGCHI Conference Proceedings Format},
+    pdfauthor={LaTeX},
+    pdfkeywords={SIGCHI, proceedings, archival format},
+    bookmarksnumbered,
+    pdfstartview={FitH},
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\def\sharedaffiliation{\end{tabular}\newline\begin{tabular}{c}}
+
+\def\winlab{\superscript{\dag}}
+\def\cmu{\superscript{$\ast$}}
+\def\ut{\superscript{\S}}
+%\def\cornell{\superscript{$\star$}}
+
+%\makeatletter
+%\let\@copyrightspace\relax
+%\makeatother
+
+
+\begin{document}
+
+\title{Whose Move is it Anyway? : Authenticating Smart Wearable Devices Using Unique Human Body Movement Patterns}
+
+\numberofauthors{1}
+\author{
+\alignauthor
+Sugang Li\winlab, Ashwin Ashok\cmu, Yanyong Zhang\winlab, Chenren Xu\cmu, Macro Gruteser\winlab\\
+\vspace{4mm}
+        \affaddr{{\winlab}WINLAB, Rutgers University, North Brunswick,NJ, USA}\\
+          \vspace{1mm}
+        \affaddr{{\cmu}Carnegie Mellon University, Pittsburgh, PA, USA}\\
+}
+
+\maketitle
+% infer number of people, queue serving, traffic pattern,mood inference
+% add comparison of time convergence of cell and point, RSS signatures for
+%different phones, can we detect how many people when drive by? add wifi
+%receiver part.
+\newcommand{\systemname}{{\em Headbanger}}
+
+\input{abstract}
+\input{intro_yz}
+\input{background}
+\input{system_yz}
+%\input{recognizing}
+\input{evaluation_yz}
+\input{discussion}
+\input{relatedwork}
+\input{summary}
+
+\balance
+%\scriptsize
+%\footnotesize
+%\small
+%\bibliographystyle{acm-sigchi}
+\bibliographystyle{abbrv}
+\bibliography{sugang}
+\end{document}

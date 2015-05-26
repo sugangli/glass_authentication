@@ -1,0 +1,116 @@
+@article{zentner2010rhythmic,
+  title={Rhythmic engagement with music in infancy},
+  author={Zentner, Marcel and Eerola, Tuomas},
+  journal={Proceedings of the National Academy of Sciences},
+  year={2010},
+  publisher={National Acad Sciences}
+}
+
+@article{stevenage1999visual,
+  title={Visual analysis of gait as a cue to identity},
+  author={Stevenage, Sarah V and Nixon, Mark S and Vince, Kate},
+  journal={Applied cognitive psychology},
+  year={1999},
+  publisher={Wiley Online Library}
+}
+
+@inproceedings{collins2002silhouette,
+  title={Silhouette-based human identification from body shape and gait},
+  author={Collins, Robert T and Gross, Ralph and Shi, Jianbo},
+  booktitle={IEEE FGR},
+  year={2002},
+}
+
+@article{jain2004introduction,
+  title={An introduction to biometric recognition},
+  author={Jain, Anil K and Ross, Arun and Prabhakar, Salil},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2004},
+}
+
+@article{loula2005recognizing,
+  title={Recognizing people from their movement.},
+  author={Loula, Fani and Prasad, Sapna and Harber, Kent and Shiffrar, Maggie},
+  journal={Journal of Experimental Psychology: Human Perception and Performance},
+  year={2005},
+  publisher={American Psychological Association}
+}
+
+@article{monrose2000keystroke,
+  title={Keystroke dynamics as a biometric for authentication},
+  author={Monrose, Fabian and Rubin, Aviel D},
+  journal={Future Generation computer systems},
+  year={2000},
+  publisher={Elsevier}
+}
+
+@article{ailisto2006soft,
+  title={Soft biometrics—combining body weight and fat measurements with fingerprint biometrics},
+  author={Ailisto, Heikki and Vildjiounaite, Elena and Lindholm, Mikko and M{\"a}kel{\"a}, Satu-Marja and Peltola, Johannes},
+  journal={Pattern Recognition Letters},
+  year={2006},
+  publisher={Elsevier}
+}
+
+@inproceedings{okumura2006study,
+  title={A study on biometric authentication based on arm sweep action with acceleration sensor},
+  author={Okumura, Fuminori and Kubota, Akira and Hatori, Yoshinori and Matsuo, Kenji and Hashimoto, Masayuki and Koike, Atsushi},
+  booktitle={IEEE ISPACS},
+  year={2006},
+  organization={IEEE}
+}
+
+@article{o2003comparing,
+  title={Comparing passwords, tokens, and biometrics for user authentication},
+  author={O'Gorman, Lawrence},
+  journal={Proceedings of the IEEE},
+  year={2003},
+}
+
+@inproceedings{jorgensen2011mouse,
+  title={On mouse dynamics as a behavioral biometric for authentication},
+  author={Jorgensen, Zach and Yu, Ting},
+  booktitle={ASIACCS},
+  year={2011},
+}
+
+@inproceedings{yampolskiy2007motor,
+  title={Motor-skill based biometrics},
+  author={Yampolskiy, Roman V},
+  booktitle={Annual Security Conference},
+  year={2007}
+}
+
+@inproceedings{bo2013silentsense,
+  title={SilentSense: silent user identification via touch and movement behavioral biometrics},
+  author={Bo, Cheng and Zhang, Lan and Li, Xiang-Yang and Huang, Qiuyuan and Wang, Yu},
+  booktitle={ACM MobiCom},
+  year={2013},
+}
+
+@inproceedings{de2012touch,
+  title={Touch me once and i know it's you!: implicit authentication based on touch screen patterns},
+  author={De Luca, Alexander and Hang, Alina and Brudy, Frederik and Lindner, Christian and Hussmann, Heinrich},
+  booktitle={ACM CHI},
+  year={2012},
+}
+
+@inproceedings{kjeldsen2001head,
+  title={Head gestures for computer control},
+  author={Kjeldsen, Rick},
+  booktitle={IEEE ICCV Workshop},
+  year={2001},
+}
+
+@article{palanivel2008multimodal,
+  title={Multimodal person authentication using speech, face and visual speech},
+  author={Palanivel, S and Yegnanarayana, B},
+  journal={Computer Vision and Image Understanding},
+  year={2008},
+  publisher={Elsevier}
+}
+
+@article{hernandezbioglass,
+  title={BioGlass: Physiological Parameter Estimation Using a Head-mounted Wearable Device},
+  author={Hernandez, Javier and Li, Yin and Rehg, James M and Picard, Rosalind W}
+}
