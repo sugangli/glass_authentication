@@ -1,0 +1,14 @@
+// below are added by Yanyong
+
+(1) intuitively, why is each person's head movement unique? Can we explain the uniqueness? Can we prove it (in addition to use DTW)? Biometric vs gesture?
+(2) One reviewer said that that DTW is more for guesture-based passwords insead of intrinsic headmovement characteristics. Is that true?
+(3) more computation-efficient DTW
+(4) non-DTW-based methods can work with partial input data
+
+
+(5) the study procedure is incomplete
+(6) unsupported claims about behavior biometrics
+(7) applications/usecases of headbanger (unlock of the device, fallback authentication, accessing high security content)?
+
+(8) detailed training process is missing
+
