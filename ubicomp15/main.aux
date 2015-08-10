@@ -40,59 +40,65 @@
 \@writefile{toc}{\contentsline {subsection}{Wearable Device Authentication}{\thepage }{section*.4}}
 \citation{jain2004introduction}
 \citation{zentner2010rhythmic}
-\citation{googleglass}
 \@writefile{toc}{\contentsline {subsection}{Head-movement as a Biometric}{\thepage }{section*.5}}
 \newlabel{subsec:headmovements}{{}{\thepage }{Head-movement as a Biometric}{section*.5}{}}
-\@writefile{toc}{\contentsline {section}{Headbanger System Design}{\thepage }{section*.6}}
-\newlabel{sec:design}{{}{\thepage }{Headbanger System Design}{section*.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces {\em  Headbanger}\nobreakspace  {}system design flow. The online authentication phase of {\em  Headbanger}\nobreakspace  {}consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result.}}{\thepage }{figure.3}}
-\newlabel{fig:sysarch}{{3}{\thepage }{\systemname ~system design flow. The online authentication phase of \systemname ~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{Feature}{\thepage }{section*.6}}
+\@writefile{toc}{\contentsline {section}{Headbanger System Design}{\thepage }{section*.7}}
+\newlabel{sec:design}{{}{\thepage }{Headbanger System Design}{section*.7}{}}
+\citation{googleglass}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song.}}{\thepage }{figure.2}}
+\newlabel{fig:raw}{{2}{\thepage }{These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Wave Amplitude and Width Boxplot}}{\thepage }{figure.3}}
+\newlabel{fig:width_amp}{{3}{\thepage }{Wave Amplitude and Width Boxplot}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  SRT DTW Similarity for All Subjects}}{\thepage }{figure.4}}
+\newlabel{fig:resp_time_dtw}{{4}{\thepage }{SRT DTW Similarity for All Subjects}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces {\em  Headbanger}\nobreakspace  {}system design flow. The online authentication phase of {\em  Headbanger}\nobreakspace  {}consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result.}}{\thepage }{figure.5}}
+\newlabel{fig:sysarch}{{5}{\thepage }{\systemname ~system design flow. The online authentication phase of \systemname ~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result}{figure.5}{}}
 \citation{dtw}
 \citation{beats}
 \citation{challis1983design}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song.}}{\thepage }{figure.2}}
-\newlabel{fig:raw}{{2}{\thepage }{These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users.}}{\thepage }{figure.4}}
-\newlabel{fig:raw_freq}{{4}{\thepage }{Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{Sensor Data Collection}{\thepage }{section*.7}}
-\@writefile{toc}{\contentsline {subsection}{Filtering}{\thepage }{section*.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users.}}{\thepage }{figure.6}}
+\newlabel{fig:raw_freq}{{6}{\thepage }{Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{Sensor Data Collection}{\thepage }{section*.8}}
+\@writefile{toc}{\contentsline {subsection}{Filtering}{\thepage }{section*.9}}
 \citation{dtw}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz. }}{\thepage }{figure.5}}
-\newlabel{fig:filteredacc}{{5}{\thepage }{Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsection}{Signature generation}{\thepage }{section*.9}}
-\@writefile{toc}{\contentsline {subsection}{Classification}{\thepage }{section*.10}}
-\@writefile{toc}{\contentsline {section}{Evaluation}{\thepage }{section*.11}}
-\newlabel{sec:results}{{}{\thepage }{Evaluation}{section*.11}{}}
-\@writefile{toc}{\contentsline {subsection}{Method}{\thepage }{section*.12}}
-\@writefile{toc}{\contentsline {paragraph}{Participants}{\thepage }{section*.13}}
-\@writefile{toc}{\contentsline {paragraph}{Procedure}{\thepage }{section*.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.6}}
-\newlabel{fig:roc-top1}{{6}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.6}{}}
-\@writefile{toc}{\contentsline {subsection}{Accuracy}{\thepage }{section*.15}}
-\@writefile{toc}{\contentsline {paragraph}{Impact music cue duration and $K$ value}{\thepage }{section*.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz. }}{\thepage }{figure.7}}
+\newlabel{fig:filteredacc}{{7}{\thepage }{Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{Signature generation}{\thepage }{section*.10}}
+\@writefile{toc}{\contentsline {subsection}{Classification}{\thepage }{section*.11}}
+\@writefile{toc}{\contentsline {section}{Evaluation}{\thepage }{section*.12}}
+\newlabel{sec:results}{{}{\thepage }{Evaluation}{section*.12}{}}
 \citation{von2013patterns}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.7}}
-\newlabel{fig:roc-top3}{{7}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}}{\thepage }{figure.8}}
-\newlabel{fig:eer-length}{{8}{\thepage }{Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}{figure.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}}{\thepage }{figure.9}}
-\newlabel{fig:eer-size}{{9}{\thepage }{Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}{figure.9}{}}
-\@writefile{toc}{\contentsline {paragraph}{Impact of Training set size}{\thepage }{section*.17}}
-\@writefile{toc}{\contentsline {subsection}{Headbanger Google Glass App Implementation}{\thepage }{section*.18}}
+\@writefile{toc}{\contentsline {subsection}{Method}{\thepage }{section*.13}}
+\@writefile{toc}{\contentsline {paragraph}{Participants}{\thepage }{section*.14}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{\thepage }{section*.15}}
+\@writefile{toc}{\contentsline {subsection}{Accuracy}{\thepage }{section*.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.8}}
+\newlabel{fig:roc-top1}{{8}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Impact music cue duration and $K$ value}{\thepage }{section*.17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.9}}
+\newlabel{fig:roc-top3}{{9}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}}{\thepage }{figure.10}}
+\newlabel{fig:eer-length}{{10}{\thepage }{Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}}{\thepage }{figure.11}}
+\newlabel{fig:eer-size}{{11}{\thepage }{Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Software modules of {\em  Headbanger}\nobreakspace  {}implementation}}{\thepage }{figure.12}}
+\newlabel{fig:glass-softwarearch}{{12}{\thepage }{Software modules of \systemname ~implementation}{figure.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of Training set size}{\thepage }{section*.18}}
+\@writefile{toc}{\contentsline {subsection}{Headbanger Google Glass App Implementation}{\thepage }{section*.19}}
 \citation{von2013patterns,egelman2014you}
 \citation{salvador2007toward}
 \citation{ha2014towards}
 \citation{likamwa2014draining}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Software modules of {\em  Headbanger}\nobreakspace  {}implementation}}{\thepage }{figure.10}}
-\newlabel{fig:glass-softwarearch}{{10}{\thepage }{Software modules of \systemname ~implementation}{figure.10}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  Measured response time of {\em  Headbanger}\nobreakspace  {}app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials.}}{\thepage }{table.1}}
 \newlabel{tab:glass}{{1}{\thepage }{Measured response time of \systemname ~app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials}{table.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Response time}{\thepage }{section*.19}}
+\@writefile{toc}{\contentsline {subsubsection}{Response time}{\thepage }{section*.20}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Power consumption on Google Glass of components relevant to {\em  Headbanger}. The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}}{\thepage }{table.2}}
 \newlabel{tab:pow}{{2}{\thepage }{Power consumption on Google Glass of components relevant to \systemname . The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}{table.2}{}}
-\@writefile{toc}{\contentsline {section}{Discussion}{\thepage }{section*.20}}
-\newlabel{sec:disc}{{}{\thepage }{Discussion}{section*.20}{}}
-\@writefile{toc}{\contentsline {subsection}{Power consumption}{\thepage }{section*.21}}
+\@writefile{toc}{\contentsline {section}{Discussion}{\thepage }{section*.21}}
+\newlabel{sec:disc}{{}{\thepage }{Discussion}{section*.21}{}}
+\@writefile{toc}{\contentsline {subsection}{Power consumption}{\thepage }{section*.22}}
+\@writefile{toc}{\contentsline {subsection}{Is this secure?}{\thepage }{section*.23}}
 \citation{hernandezbioglass,nymi}
 \citation{harwin1990analysis}
 \citation{westeyn2004recognizing}
@@ -108,11 +114,6 @@
 \citation{okumura2006study,gafurov2008arm}
 \citation{gafurov2006biometric}
 \citation{gafurov2011user}
-\@writefile{toc}{\contentsline {subsection}{Is this secure?}{\thepage }{section*.22}}
-\@writefile{toc}{\contentsline {subsection}{Multi-Modality}{\thepage }{section*.23}}
-\@writefile{toc}{\contentsline {subsection}{Large Scale User Study}{\thepage }{section*.24}}
-\@writefile{toc}{\contentsline {section}{Related Work}{\thepage }{section*.25}}
-\newlabel{sec:related}{{}{\thepage }{Related Work}{section*.25}{}}
 \citation{sae2012biometric}
 \citation{frank2013touchalytics,cai2013mobile,feng2014tips}
 \citation{feng2014tips}
@@ -121,6 +122,10 @@
 \citation{biddle2012graphical}
 \citation{sherman2014user}
 \citation{jain1997identity}
+\@writefile{toc}{\contentsline {subsection}{Multi-Modality}{\thepage }{section*.24}}
+\@writefile{toc}{\contentsline {subsection}{Large Scale User Study}{\thepage }{section*.25}}
+\@writefile{toc}{\contentsline {section}{Related Work}{\thepage }{section*.26}}
+\newlabel{sec:related}{{}{\thepage }{Related Work}{section*.26}{}}
 \bibstyle{abbrv}
 \bibdata{sugang}
 \bibcite{fitbit}{1}
@@ -140,14 +145,14 @@
 \bibcite{de2012touch}{15}
 \bibcite{egelman2014you}{16}
 \bibcite{feng2014tips}{17}
-\@writefile{toc}{\contentsline {section}{Concluding Remarks}{\thepage }{section*.26}}
-\newlabel{sec:conc}{{}{\thepage }{Concluding Remarks}{section*.26}{}}
-\@writefile{toc}{\contentsline {section}{{REFERENCES} }{\thepage }{section*.27}}
 \bibcite{frank2013touchalytics}{18}
 \bibcite{gafurov2011user}{19}
 \bibcite{gafurov2006biometric}{20}
 \bibcite{gafurov2007gait}{21}
 \bibcite{gafurov2008arm}{22}
+\@writefile{toc}{\contentsline {section}{Concluding Remarks}{\thepage }{section*.27}}
+\newlabel{sec:conc}{{}{\thepage }{Concluding Remarks}{section*.27}{}}
+\@writefile{toc}{\contentsline {section}{{REFERENCES} }{\thepage }{section*.28}}
 \bibcite{ha2014towards}{23}
 \bibcite{harwin1990analysis}{24}
 \bibcite{hernandezbioglass}{25}

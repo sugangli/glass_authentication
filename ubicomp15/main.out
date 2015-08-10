@@ -2,21 +2,22 @@
 \BOOKMARK [1][-]{section*.3}{Background}{}% 2
 \BOOKMARK [2][-]{section*.4}{Wearable Device Authentication}{section*.3}% 3
 \BOOKMARK [2][-]{section*.5}{Head-movement as a Biometric}{section*.3}% 4
-\BOOKMARK [1][-]{section*.6}{Headbanger System Design}{}% 5
-\BOOKMARK [2][-]{section*.7}{Sensor Data Collection}{section*.6}% 6
-\BOOKMARK [2][-]{section*.8}{Filtering}{section*.6}% 7
-\BOOKMARK [2][-]{section*.9}{Signature generation}{section*.6}% 8
-\BOOKMARK [2][-]{section*.10}{Classification}{section*.6}% 9
-\BOOKMARK [1][-]{section*.11}{Evaluation}{}% 10
-\BOOKMARK [2][-]{section*.12}{Method}{section*.11}% 11
-\BOOKMARK [2][-]{section*.15}{Accuracy}{section*.11}% 12
-\BOOKMARK [2][-]{section*.18}{Headbanger Google Glass App Implementation}{section*.11}% 13
-\BOOKMARK [3][-]{section*.19}{Response time}{section*.18}% 14
-\BOOKMARK [1][-]{section*.20}{Discussion}{}% 15
-\BOOKMARK [2][-]{section*.21}{Power consumption}{section*.20}% 16
-\BOOKMARK [2][-]{section*.22}{Is this secure?}{section*.20}% 17
-\BOOKMARK [2][-]{section*.23}{Multi-Modality}{section*.20}% 18
-\BOOKMARK [2][-]{section*.24}{Large Scale User Study}{section*.20}% 19
-\BOOKMARK [1][-]{section*.25}{Related Work}{}% 20
-\BOOKMARK [1][-]{section*.26}{Concluding Remarks}{}% 21
-\BOOKMARK [1][-]{section*.27}{REFERENCES }{}% 22
+\BOOKMARK [1][-]{section*.6}{Feature}{}% 5
+\BOOKMARK [1][-]{section*.7}{Headbanger System Design}{}% 6
+\BOOKMARK [2][-]{section*.8}{Sensor Data Collection}{section*.7}% 7
+\BOOKMARK [2][-]{section*.9}{Filtering}{section*.7}% 8
+\BOOKMARK [2][-]{section*.10}{Signature generation}{section*.7}% 9
+\BOOKMARK [2][-]{section*.11}{Classification}{section*.7}% 10
+\BOOKMARK [1][-]{section*.12}{Evaluation}{}% 11
+\BOOKMARK [2][-]{section*.13}{Method}{section*.12}% 12
+\BOOKMARK [2][-]{section*.16}{Accuracy}{section*.12}% 13
+\BOOKMARK [2][-]{section*.19}{Headbanger Google Glass App Implementation}{section*.12}% 14
+\BOOKMARK [3][-]{section*.20}{Response time}{section*.19}% 15
+\BOOKMARK [1][-]{section*.21}{Discussion}{}% 16
+\BOOKMARK [2][-]{section*.22}{Power consumption}{section*.21}% 17
+\BOOKMARK [2][-]{section*.23}{Is this secure?}{section*.21}% 18
+\BOOKMARK [2][-]{section*.24}{Multi-Modality}{section*.21}% 19
+\BOOKMARK [2][-]{section*.25}{Large Scale User Study}{section*.21}% 20
+\BOOKMARK [1][-]{section*.26}{Related Work}{}% 21
+\BOOKMARK [1][-]{section*.27}{Concluding Remarks}{}% 22
+\BOOKMARK [1][-]{section*.28}{REFERENCES }{}% 23
