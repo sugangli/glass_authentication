@@ -1,0 +1,203 @@
+\section{Discussion}\label{sec:disc}
+
+In this study, we showed that head-movements have the potential to be used as
+a reliable behavioral signature for user authentication.
+We will now discuss some of the limitations that we identified from this work
+and prospects for future work as below.
+
+\iffalse
+\subsection{Reliability}
+Our work in this paper shows that head-movements are distinctive and
+repeatable in controlled settings. However, in reality, the behavior of
+head-movement signatures over chaotic settings will be a key factor to decide
+on the effectiveness of this approach. Our work only evaluates the case when a
+user is in a stationary setting when attempting to login, such as when sitting
+on the chair or standing still. The performance of this approach in realistic
+mobile settings such as walking or in a vehicle is yet unknown. It is also
+unclear if the head-movement patterns are repeatable in such a mobile environment, or
+if the ambiguities of vehicle motion versus head-motion can be separated. 
+%%For example, we don't know whether a person's
+%%head-movement signature will be the same no matter whether she is sitting,
+%%standing still, walking, running, or driving.
+%%The most important concern is the reliability of human head-movements. Even
+%%though we have shown that head-movements are rather distinctive and
+%%repeatable
+%%in a controlled setting, it is yet unclear how it will perform in realistic,
+%%but chaotic settings. For example, we don't know whether a person's
+%%head-movement signature will be the same no matter whether she is sitting,
+%%standing still, walking, running, or driving.
+Similarly, a person's head-movement signature may also depend on the mood/energy level of
+the person; for example, a fresh and energetic user may provide significant
+head-movements as compared to a sick or tired user whose signatures may not
+even be detectable. Inconsistencies in the accelerometer sensor such as drift and temporal bias can
+significantly affect the nature of inferred head-movement signature.
+Head-movements, on the other hand, may also evolve over time for a person
+which call for periodic calibration of the system and/or the training data.
+%To address these two temporal changes, we may need to periodically
+%recalibrate
+%the sensors and dynamically adjust our training data to reflect new movement
+%trends.
+While reliability metric was out of the main scope of this paper, we are keen
+to address the same in future work.
+\fi
+
+\subsection{Power consumption}
+
+\begin{table}
+\begin{tabular}{lccc}
+\hline
+Component    & Power Consumption (mW) & Duration (s)       \\ \hline\hline
+Sensor  & 29                    & 10       \\
+Speaker & 410                    & 10      \\
+CPU      & 1600                   & 14.4 \\ \hline
+\end{tabular}
+\caption{Power consumption on Google Glass of components relevant to 
+\systemname.  The CPU (running at 
+maximum frequency) power consumption includes that of the heads-up display 
+screen being ON as well. Duration marks the time for which
+component was ON during the a 10 sec music cue length trial}
+\label{tab:pow}
+\end{table}
+
+Google Glass is an example of a wearable device that is heavily battery power 
+constrained. Measuring the power consumption of the Glass's battery is a 
+challenging task as that requires physically dismantling the device. 
+We refer to the measurement paper on Google Glass by Robert et. 
+al~\cite{likamwa2014draining} for the power consumption of the 
+key components relevant to \systemname~implementation on Glass: the speaker 
+for music cue playback, the accelerometer sensor and the CPU being ON during 
+the entire authentication process. We report the relevant numbers in 
+Table~\ref{tab:pow}. While the high CPU power consumption may not necessarily 
+be surprising, the speakers also extrude considerable energy from the battery. 
+We note that one possible solution for future consideration would be to play 
+the music cue as intermittent notes over the duration, for example a ping or a 
+beat sound periodically, where the speaker would be switched ON only during 
+playback.
+
+\subsection{Is this secure?}
+An authentication system must have an effective protocol ensuring security of 
+the authenticating user's data. Our system runs an implicit
+authentication protocol where the user is given a finite set of (calibrated) 
+music tracks to pick, based on which the user makes head-movements that are 
+used as unique signatures for authentication.
+Our design assumes implicit security of the user's data, as a
+user voluntarily accepts the enforcement of conducting head-movements  
+in response to the music. It is arguable that such enforcements are an 
+integral part of most commonly used authentication systems; for example, 
+typing a password, swiping the finger on the fingerprint sensor, approving of 
+the camera recognizing the face. In all these cases the user is aware 
+that he/she is inputing data into the system for authentication.
+
+One way of compromising security would be a successful spoof of the 
+head-movement by an adversary. For example, head-movements from an authorized 
+user may be imitated by an adversary attempting to login to the device. 
+%However, this requires that the wearable device is physically accessible to 
+%the adversary. Since head-worn devices are at the visual field of view of the 
+%user the chances of it getting lost or being stolen will be lower than other 
+%wearable devices such as smart-watch or smart-necklaces. 
+If the head-movements from the user is regular (such as a nod), it may be 
+easily imitated as opposed to a random head-shake such as a head-bang.
+To understand the effect of imitation on the accuracy of authenticating a user 
+to \systemname, we conducted an experiment (under the same set up as  
+described in section~\ref{sec:results}) where 29 volunteer participants 
+were asked to imitate the head-nod movements of one user (one of the authors) 
+who was trying to authenticate to the device using a 10 sec music cue. A total 
+of 30 trials were conducted of which 10 samples were used as test data and 20 
+for training. Our evaluations of this dataset resulted in reasonable accuracy 
+values of, an 
+EER of 7.2\% and a balanced 
+accuracy $BAC = 1 - ((FAR+FRR)/2)$ of 94.5\% for the authorized user. Our 
+results indicate that attacking the system through imitation of a simple 
+head-gesture can still be challenging.
+
+%A seamless design
+%would ensure that the system captures even the slightest of the subconscious
+%head-movements in the event that the user does not make any enforced
+%head-movements. In such cases the head-movement signatures will have to be
+%much more elaborate with multiple attributes that correspond to the different
+%realistic use-cases of the system.
+
+\subsection{Multi-Modality}
+Inconsistencies in the accelerometer sensor such as drift and temporal bias can
+significantly affect the nature of inferred head-movement signature.
+Head-movements, on the other hand, may also evolve over time for a person
+which call for periodic calibration of the system and/or the training data.
+The array of motion sensors (accelerometer, gyroscope, inertial measurement 
+unit) open up opportunities for multi-modal motion sensing. For example,
+in Glass, accelerometer data can be combined with gyroscope measurements to 
+provide multi-dimensional head-movement features that can improve the quality 
+of the inferred signatures. Head movements can also be combined with other 
+body movements to generate valuable, reliable signatures for authentication. 
+%Additionally, head-movement is just one type of body movements, and we can
+%investigate other types of body movements as well.
+For example, through a simple test experiment using the Google Glass
+infra-red (IR) light sensor (we had to root the Google Glass to access the
+IR sensor unit) we observed that the blinking and winking patterns of users in
+response to the music stimulus were reasonably differentiable among users.
+Such patterns may also independently serve as another biometric that can be
+used for authentication purpose, or can be combined with head-movements for better results.
+Recent studies have shown that heart beat or pulse can also serve as reliable
+biometric for authentication purposes~\cite{hernandezbioglass,nymi}.
+We reserve such potential enhancements to our system for future implementation.
+%A recent study has shown that Google glass can detect human heart
+%beat~\cite{hernandezbioglass}; heartbeats can thus be
+%used as another biometric.
+%If extra hardware can be introduced, then more movement patterns,
+%such as eye movement, can be leveraged as well.
+
+\iffalse
+\subsection{Seamless Protocol}
+An authentication system must have an effective protocol for authenticating
+users seamlessly to their device. Our system runs a simple authentication
+protocol where the user is given a finite set of (calibrated) music
+tracks to pick, and based on which the user makes head-movements in response.
+Our design assumes that the user voluntarily accepts the enforcement of the
+requirement of head-movements in response to the music. A seamless design
+would ensure that the system captures even the slightest of the subconscious
+head-movements in the event that the user does not make any enforced
+head-movements. In such cases the head-movement signatures will have to be
+much more elaborate with multiple attributes that correspond to the different
+realistic use-cases of the system.
+%Our protocol can consist of several steps. In the first step, the user will
+%be
+%asked to choose a user name from all the legitimate users of the device.
+%Then,
+%the user will be asked to select the favorite music track of the claimed
+%user.
+%If the selection is correct, the device will play the music and ask the user
+%to move along (including head movement, eye blinking/winking, etc). ***YZ:
+%what else??? ***
+\fi
+
+\iffalse
+\subsection{Processing/Battery Power Constraints}
+Battery power consumption and computing power are very important parameters
+for consideration when optimizing a design to accommodate to wearable devices.
+Wearables usually have serious resource limitations, especially in terms of
+processing power and battery power.
+This paper, addresses these concerns through optimization strategies in the
+head-movement signature classification stage of the proposed authentication
+algorithm. For wearables it is important that such optimization strategies are
+taken to next levels until a roadblock is reached.
+%In this paper, we have considered a set of
+%optimization techniques to reduce the processing demand as well as power
+%consumption, e.g., testing against top $K$ samples instead of  the entire
+%training set, using thresholding-based classifier instead of SVM classifier.
+For example, one such strategy extension in this work can be that, after a
+short duration, before the entire music is played, if it is found that a
+user's movement does not match the signature of the claimed user
+with sufficient confidence level, then the on-site classification may be
+terminated  instead of waiting for the entire duration to yield the rejection.
+Another example, may include cyber-foraging strategies to offload heavy
+computation tasks, such as classification, to the user's Bluetooth paired
+smartphone.
+\fi
+
+\subsection{Large Scale User Study}
+To be adopted as a primary authentication mechanism on smart-glass devices,
+the technique will have to be evaluated over a large number of usage and
+and over a large user base. Conducting such rigorous large-scale experiments
+is typically infeasible in academic laboratory settings. We reserve such
+large scale experiments for future work, and hope to accomplish through
+industry collaborations. We will, however, be releasing our data-sets to the 
+public in the near future.
