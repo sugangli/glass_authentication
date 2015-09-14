@@ -1,0 +1,140 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{googleglass,smartwatch,fitbit}
+\citation{hoyle2015sensitive,hoyle2014privacy,jana2013scanner}
+\citation{fitbit,smartwatch}
+\citation{googleglass}
+\citation{fitbit}
+\citation{rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,bo2013silentsense,de2012touch}
+\@writefile{toc}{\contentsline {section}{Introduction}{\thepage }{section*.2}}
+\newlabel{sec:intro}{{}{\thepage }{Introduction}{section*.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of Headbanger. The head-worn device authenticates the users based on signatures generated from head-movement patterns. These patterns are created in response to an audio snapshot played on the device.}}{\thepage }{figure.1}}
+\newlabel{fig:headbanger-illustrate}{{1}{\thepage }{Illustration of Headbanger. The head-worn device authenticates the users based on signatures generated from head-movement patterns. These patterns are created in response to an audio snapshot played on the device}{figure.1}{}}
+\citation{jain2004introduction,o2003comparing,yampolskiy2007motor}
+\citation{collins2002silhouette}
+\citation{ailisto2006soft}
+\citation{nymi}
+\citation{stevenage1999visual}
+\citation{okumura2006study}
+\citation{monrose2000keystroke}
+\citation{jorgensen2011mouse}
+\citation{bo2013silentsense,de2012touch}
+\@writefile{toc}{\contentsline {section}{Background}{\thepage }{section*.3}}
+\newlabel{sec:background}{{}{\thepage }{Background}{section*.3}{}}
+\@writefile{toc}{\contentsline {subsection}{Wearable Device Authentication}{\thepage }{section*.4}}
+\citation{jain2004introduction}
+\citation{zentner2010rhythmic}
+\citation{eyeblink}
+\citation{tapbeat}
+\citation{citedtw}
+\@writefile{toc}{\contentsline {subsection}{Head-movement as a Biometric}{\thepage }{section*.5}}
+\newlabel{subsec:headmovements}{{}{\thepage }{Head-movement as a Biometric}{section*.5}{}}
+\@writefile{toc}{\contentsline {section}{Feature}{\thepage }{section*.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Wave Amplitude and Width Boxplot}}{\thepage }{figure.3}}
+\newlabel{fig:width_amp}{{3}{\thepage }{Wave Amplitude and Width Boxplot}{figure.3}{}}
+\citation{googleglass}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song.}}{\thepage }{figure.2}}
+\newlabel{fig:raw}{{2}{\thepage }{These plots show the raw accelerometer data in the time domain for five different users when they move their head in response to the same music track wearing the same Google glass. The plots indicate that different users' head movement patterns appear distinctive from each other. The three users wore a Google Glass (in turns) and listened to a 10 second audio snapshot of a pop song}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  The similarity score is computed over N (N = 20) sample data for each subject, and 28 subjects in total. For each column, a red dot represents the average similarity score of that subject's own SRT, i.e., each of his sample data compared with the other N-1 SRTs from him, hence we have the average similarity score over all these comparison. Similarly, a blue dot on the same column represents the similarity score of that subject's SRTs compares with another subject's SRTs.}}{\thepage }{figure.4}}
+\newlabel{fig:distance}{{4}{\thepage }{The similarity score is computed over N (N = 20) sample data for each subject, and 28 subjects in total. For each column, a red dot represents the average similarity score of that subject's own SRT, i.e., each of his sample data compared with the other N-1 SRTs from him, hence we have the average similarity score over all these comparison. Similarly, a blue dot on the same column represents the similarity score of that subject's SRTs compares with another subject's SRTs}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{Headbanger System Design}{\thepage }{section*.7}}
+\newlabel{sec:design}{{}{\thepage }{Headbanger System Design}{section*.7}{}}
+\citation{dtw}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users.}}{\thepage }{figure.6}}
+\newlabel{fig:raw_freq}{{6}{\thepage }{Accelerometer data from three users, in the frequency domain. The data show that the spectrum is significantly concentrated within 5Hz for all three users}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces {\em  Headbanger}\nobreakspace  {}system design flow. The online authentication phase of {\em  Headbanger}\nobreakspace  {}consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result.}}{\thepage }{figure.5}}
+\newlabel{fig:sysarch}{{5}{\thepage }{\systemname ~system design flow. The online authentication phase of \systemname ~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates that DTW provides a large enhancement over the other two metrics. }}{\thepage }{figure.7}}
+\newlabel{fig:roc_dtw_cos_cor}{{7}{\thepage }{Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates that DTW provides a large enhancement over the other two metrics}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces  Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}}{\thepage }{figure.8}}
+\newlabel{fig:roc_dtw_diff_freq}{{8}{\thepage }{Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time}{figure.8}{}}
+\citation{beats}
+\citation{challis1983design}
+\citation{dtw}
+\@writefile{toc}{\contentsline {subsection}{Sensor Data Collection}{\thepage }{section*.8}}
+\@writefile{toc}{\contentsline {subsection}{Filtering}{\thepage }{section*.9}}
+\@writefile{toc}{\contentsline {subsection}{Signature generation}{\thepage }{section*.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz. }}{\thepage }{figure.9}}
+\newlabel{fig:filteredacc}{{9}{\thepage }{Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsection}{Classification}{\thepage }{section*.11}}
+\@writefile{toc}{\contentsline {section}{Evaluation}{\thepage }{section*.12}}
+\newlabel{sec:results}{{}{\thepage }{Evaluation}{section*.12}{}}
+\@writefile{toc}{\contentsline {subsection}{Method}{\thepage }{section*.13}}
+\@writefile{toc}{\contentsline {paragraph}{Participants}{\thepage }{section*.14}}
+\@writefile{toc}{\contentsline {paragraph}{Procedure}{\thepage }{section*.15}}
+\@writefile{toc}{\contentsline {subsection}{Accuracy}{\thepage }{section*.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.10}}
+\newlabel{fig:roc-top1}{{10}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of similarity algorithm}{\thepage }{section*.17}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of music cue duration and $K$ value}{\thepage }{section*.18}}
+\citation{von2013patterns}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{\thepage }{figure.11}}
+\newlabel{fig:roc-top3}{{11}{\thepage }{Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}}{\thepage }{figure.12}}
+\newlabel{fig:eer-length}{{12}{\thepage }{Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}}{\thepage }{figure.13}}
+\newlabel{fig:eer-size}{{13}{\thepage }{Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Software modules of {\em  Headbanger}\nobreakspace  {}implementation}}{\thepage }{figure.14}}
+\newlabel{fig:glass-softwarearch}{{14}{\thepage }{Software modules of \systemname ~implementation}{figure.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Impact of Training set size}{\thepage }{section*.19}}
+\citation{von2013patterns,egelman2014you}
+\citation{salvador2007toward}
+\citation{ha2014towards}
+\citation{likamwa2014draining}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  Measured response time of {\em  Headbanger}\nobreakspace  {}app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials.}}{\thepage }{table.1}}
+\newlabel{tab:glass}{{1}{\thepage }{Measured response time of \systemname ~app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{Headbanger Google Glass App Implementation}{\thepage }{section*.20}}
+\@writefile{toc}{\contentsline {subsubsection}{Response time}{\thepage }{section*.21}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Power consumption on Google Glass of components relevant to {\em  Headbanger}. The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}}{\thepage }{table.2}}
+\newlabel{tab:pow}{{2}{\thepage }{Power consumption on Google Glass of components relevant to \systemname . The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{Discussion}{\thepage }{section*.22}}
+\newlabel{sec:disc}{{}{\thepage }{Discussion}{section*.22}{}}
+\@writefile{toc}{\contentsline {subsection}{Power consumption}{\thepage }{section*.23}}
+\citation{hernandezbioglass,nymi}
+\citation{harwin1990analysis}
+\citation{westeyn2004recognizing}
+\citation{ishimaru2014blink}
+\citation{ishimaru2014blink}
+\citation{ishimaru2014blink}
+\citation{kjeldsen2001head,hernandezbioglass}
+\citation{kjeldsen2001head}
+\citation{hernandezbioglass}
+\citation{likamwa2014draining}
+\citation{ailisto2005identifying}
+\citation{gafurov2007gait}
+\citation{okumura2006study,gafurov2008arm}
+\citation{gafurov2006biometric}
+\citation{gafurov2011user}
+\citation{sae2012biometric}
+\citation{frank2013touchalytics,cai2013mobile,feng2014tips}
+\citation{feng2014tips}
+\@writefile{toc}{\contentsline {subsection}{Is this secure?}{\thepage }{section*.24}}
+\@writefile{toc}{\contentsline {subsection}{Multi-Modality}{\thepage }{section*.25}}
+\@writefile{toc}{\contentsline {subsection}{Large Scale User Study}{\thepage }{section*.26}}
+\@writefile{toc}{\contentsline {section}{Related Work}{\thepage }{section*.27}}
+\newlabel{sec:related}{{}{\thepage }{Related Work}{section*.27}{}}
+\citation{reynolds2000speaker}
+\citation{bowyer2006survey}
+\citation{biddle2012graphical}
+\citation{sherman2014user}
+\citation{jain1997identity}
+\bibstyle{abbrv}
+\bibdata{sugang}
+\@writefile{toc}{\contentsline {section}{Concluding Remarks}{\thepage }{section*.28}}
+\newlabel{sec:conc}{{}{\thepage }{Concluding Remarks}{section*.28}{}}
