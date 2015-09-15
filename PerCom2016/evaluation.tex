@@ -63,7 +63,7 @@ Age (yrs)    & \multicolumn{1}{c}{29.7}                     &
 \fi
 
 \paragraph{Participants}
-
+** LS: need to update these data **
 We had total of 30 volunteer participants. The participants list included a total of 19 males and 11 females. 
 The average age of the participants was 29.7 years with a standard deviation 
 of 9.81 years. The youngest participant was 23 years old while the eldest was 
@@ -108,7 +108,7 @@ subject.
 The experiment yielded three sets of data traces that each correspond to 
 the three music cue durations we selected. 
 
-Our second experiment aimed at an practical imitation attack field test scenario. In this experiment, there were three subjects being taken video while they were performing their login movement. The participants were divided into three group, and each group was asked to imitated one of the three users above. During the test, the participants can watch the video for as many time as they want at anytime between two trials. A feedback from our system will be provided after each trail so that the participants can decide whether they need to adjust their movement. After total number of trials reached 30 for each participant, the experiment will stop no mater whether the participant succeed or not. This experiment is conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail.
+Our second experiment aimed at an practical imitation attack field test scenario. In this experiment, there were three subjects being taken video while they were performing their login movement. The participants were divided into three group, and each group was asked to imitated one of the three users above. During the test, the participants can watch the video for as many time as they want at anytime between two trials. A feedback from our system will be provided after each trail so that the participants can decide whether they need to adjust their movement or not. After total number of trials reached 30 for each participant, the experiment will stop no regardless the participant succeed or not. The investigator was not only recording the total number of successes, but also the number of trail before the first successful login. This experiment is conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail. 
 
 \iffalse
 \begin{figure*}[t]
@@ -159,6 +159,16 @@ sec) with a fixed n value of 2.7}
 \label{fig:eer-length}
 \end{figure}
 
+\begin{figure}
+\includegraphics[width=\columnwidth]{figure/roc_dtw_cos_cor.png}
+\caption{\label{fig:roc_dtw_cos_cor} Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates  that DTW provides a large enhancement over the other two metrics. }
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figure/roc_dtw_diff_freq.png}
+\caption{\label{fig:roc_dtw_diff_freq} Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}
+\end{figure}
+
 
 \subsection{Accuracy}
 We evaluate the accuracy of \systemname~using metrics that are commonly used 
@@ -189,8 +199,8 @@ used for training with a thresholding parameter value $n = 2.7$ with DTW.
 We will now discuss the results and the impact of such parameter choices 
 on accuracy in more detail.
 \paragraph{Impact of similarity algorithm}
-In previous preliminary study, we find that DTW, Cosine Distance, and Correlation are giving promising results, hence we will evaluate these three algorithms in our end-to-end system. In this  experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC 
-(receiver operating characteristic) curves in Figure~\ref{fig:roc-curves}
+In previous preliminary study, we find that DTW, Cosine Distance, and Correlation are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC 
+(receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our preserves all characteristics of the data, which includes the response time to the music beat and the waveform of 3 axis. In term of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms. 
 \paragraph{Impact of music cue duration and $K$ value}
 
 The classification algorithm in \systemname~generates the classification result (YES or NO) by voting among the individual results each generated by the top-K samples in the truing set. We can observe from the ROC curves in Figure~\ref{fig:roc-top1} and \ref{fig:roc-top3} that 
@@ -264,6 +274,8 @@ offline on a more compute efficient device (smartphone, PC or server) and that
 the wearable device can pre-fetch the trained data (for example, an XML file), 
 prior-to or during data collection phase, through a wireless link.
 
+\subsection{Is it Secured?}
+We evaluated the vulnerability by conducting a imitation attack experiment. The reason that these three subjects chosen to become imitated subjects is as following: $Subject A$ performed a simple nodding movement by naturally following the music flow. $Subject B$ also performed a simple nodding, but his response to the music beat always delayed for a certain time, hence other people are not easy to follow. $Subject C$ performed a movement combined with nodding and shaking, and he only nodded/shake at certain beats instead of every beat, which makes his movement is relatively difficult to learn. As shown in Table~\ref{tab:imitation}, 
 
 \subsection{Headbanger Google Glass App Implementation}
 
@@ -390,39 +402,3 @@ Another example, may include cyber-foraging strategies to offload heavy
 computation tasks, such as online training and classification, to the user's 
 Bluetooth paired smartphone or a nearby cloudlet~\cite{ha2014towards}.
 
-\iffalse
-\paragraph{Power consumption}
-
-\begin{table}
-\begin{tabular}{lccc}
-\hline
-Component    & Power Consumption (mW) & Duration       \\ \hline\hline
-Sensor  & 29                    & 10       \\
-Speaker & 410                    & 10      \\
-CPU      & 1600                   & 14.4 \\ \hline
-\end{tabular}
-\caption{\label{tab:pow}Power consumption on Google Glass~\cite{likamwa2014draining} of components relevant to 
-\systemname.  The CPU (running at 
-maximum frequency) power consumption includes that of the heads-up display 
-screen being ON as well. Duration marks the time for which
-component was ON during the a 10 sec music cue length trial}
-\end{table}
-% for 10 sec, 6 sec and 5 sec, the energy consumption are 27.43 J, 16.6 J, and 
-%14.0 J. 
-
-Google Glass is an example of a wearable device that is heavily battery power 
-constrained. Measuring the power consumption of the Glass's battery is a 
-challenging task as that requires physically dismantling the device. 
-We refer to the measurement paper on Google Glass by Robert et. 
-al~\cite{LiKamWa:2014:DOG:2637166.2637230} for the power consumption of the 
-key components relevant to \systemname~implementation on Glass: the speaker 
-for music cue playback, the accelerometer sensor and the CPU being ON during 
-the entire authentication process. We report the relevant numbers in 
-Table~\ref{tab:pow}. While the high CPU power consumption may not necessarily 
-be surprising, the speakers also extrude considerable energy from the battery. 
-\fi
-
-\iffalse
-\subsection{Controlled Experiments: Can You Repeat Your Body Movement?}\label{sec:experiment1}
-We first investigate the consistency of the movement performed by each subject. Physical biometric such as fingerprint and iris, which are permanent characteristics that remains regardless environment, emotion, and time. However, behavioral biometric is combined with human controllable movement
-\fi

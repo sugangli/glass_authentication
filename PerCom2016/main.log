@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.21)  13 SEP 2015 23:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.21)  14 SEP 2015 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -479,7 +479,7 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 49.
 Package hyperref Info: Option `colorlinks' set `true' on input line 49.
 Package hyperref Info: Option `breaklinks' set `true' on input line 49.
 
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -497,7 +497,7 @@ LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -527,6 +527,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -590,7 +592,7 @@ LaTeX Warning: Citation `fitbit' on page \thepage  undefined on input line 48.
 Underfull \vbox (badness 1552) has occurred while \output is active []
 
 
-<figure/headbanger_illustrate.png, id=4, 931.98187pt x 286.06876pt>
+<figure/headbanger_illustrate.png, id=92, 931.98187pt x 286.06876pt>
 File: figure/headbanger_illustrate.png Graphic file (type png)
 
 <use figure/headbanger_illustrate.png>
@@ -706,24 +708,17 @@ nput line 108.
 LaTeX Warning: Citation `zentner2010rhythmic' on page \thepage  undefined on in
 put line 117.
 
-
-LaTeX Warning: Reference `fig:raw' on page \thepage  undefined on input line 12
-9.
-
 Package epstopdf Info: Source file: <figure/raw_x.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 79758 bytes
 (epstopdf)             Output file: <figure/raw_x-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:39
+(epstopdf)                    size: 35278 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/raw_x-eps-converted
 -to.pdf figure/raw_x.eps>
 (epstopdf)             \includegraphics on input line 144.
-runsystem(repstopdf --outfile=figure/raw_x-eps-converted-to.pdf figure/raw_x.ep
-s)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/raw_x-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:39
-(epstopdf)                    size: 35278 bytes.
-<figure/raw_x-eps-converted-to.pdf, id=25, 587.19376pt x 442.65375pt>
+Package epstopdf Info: Output file is already uptodate.
+<figure/raw_x-eps-converted-to.pdf, id=113, 587.19376pt x 442.65375pt>
 File: figure/raw_x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/raw_x-eps-converted-to.pdf>
@@ -734,17 +729,14 @@ Package epstopdf Info: Source file: <figure/raw_y.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 75434 bytes
 (epstopdf)             Output file: <figure/raw_y-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:40
+(epstopdf)                    size: 32896 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/raw_y-eps-converted
 -to.pdf figure/raw_y.eps>
 (epstopdf)             \includegraphics on input line 145.
-runsystem(repstopdf --outfile=figure/raw_y-eps-converted-to.pdf figure/raw_y.ep
-s)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/raw_y-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:40
-(epstopdf)                    size: 32896 bytes.
-
-<figure/raw_y-eps-converted-to.pdf, id=26, 587.19376pt x 442.65375pt>
+<figure/raw_y-eps-converted-to.pdf, id=114, 587.19376pt x 442.65375pt>
 File: figure/raw_y-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/raw_y-eps-converted-to.pdf>
@@ -755,17 +747,14 @@ Package epstopdf Info: Source file: <figure/raw_z.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 76541 bytes
 (epstopdf)             Output file: <figure/raw_z-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:40
+(epstopdf)                    size: 33958 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/raw_z-eps-converted
 -to.pdf figure/raw_z.eps>
 (epstopdf)             \includegraphics on input line 146.
-runsystem(repstopdf --outfile=figure/raw_z-eps-converted-to.pdf figure/raw_z.ep
-s)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/raw_z-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:40
-(epstopdf)                    size: 33958 bytes.
-
-<figure/raw_z-eps-converted-to.pdf, id=27, 587.19376pt x 442.65375pt>
+<figure/raw_z-eps-converted-to.pdf, id=115, 587.19376pt x 442.65375pt>
 File: figure/raw_z-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/raw_z-eps-converted-to.pdf>
@@ -792,28 +781,28 @@ LaTeX Warning: Citation `eyeblink' on page \thepage  undefined on input line 6.
 
 LaTeX Warning: Citation `tapbeat' on page \thepage  undefined on input line 6.
 
-<figure/width_amp_box.png, id=28, 1686.0591pt x 922.8879pt>
+<figure/width_amp_box.png, id=116, 1686.0591pt x 922.8879pt>
 File: figure/width_amp_box.png Graphic file (type png)
 
 <use figure/width_amp_box.png>
 Package pdftex.def Info: figure/width_amp_box.png used on input line 9.
 (pdftex.def)             Requested size: 243.98238pt x 133.54071pt.
 
-<figure/resp_time_cos.png, id=30, 586.8324pt x 442.2924pt>
+<figure/resp_time_cos.png, id=118, 586.8324pt x 442.2924pt>
 File: figure/resp_time_cos.png Graphic file (type png)
 
 <use figure/resp_time_cos.png>
 Package pdftex.def Info: figure/resp_time_cos.png used on input line 16.
 (pdftex.def)             Requested size: 169.0103pt x 127.37741pt.
 
-<figure/resp_time_cor.png, id=31, 586.8324pt x 442.2924pt>
+<figure/resp_time_cor.png, id=119, 586.8324pt x 442.2924pt>
 File: figure/resp_time_cor.png Graphic file (type png)
 
 <use figure/resp_time_cor.png>
 Package pdftex.def Info: figure/resp_time_cor.png used on input line 17.
 (pdftex.def)             Requested size: 169.0103pt x 127.37741pt.
 
-<figure/resp_time_dtw.png, id=32, 586.8324pt x 442.2924pt>
+<figure/resp_time_dtw.png, id=120, 586.8324pt x 442.2924pt>
 File: figure/resp_time_dtw.png Graphic file (type png)
 
 <use figure/resp_time_dtw.png>
@@ -824,17 +813,9 @@ Overfull \hbox (27.28127pt too wide) in paragraph at lines 15--21
  [] 
  []
 
-
-LaTeX Warning: Reference `fig:width_amp' on page \thepage  undefined on input l
-ine 27.
-
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-
-LaTeX Warning: Reference `fig:distance' on page \thepage  undefined on input li
-ne 27.
-
 
 LaTeX Warning: Citation `citedtw' on page \thepage  undefined on input line 27.
 
@@ -860,7 +841,7 @@ Package epstopdf Info: Source file: <figure/sysarch.eps>
 ed-to.pdf figure/sysarch.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
-<figure/sysarch-eps-converted-to.pdf, id=41, 240.9pt x 235.88126pt>
+<figure/sysarch-eps-converted-to.pdf, id=132, 240.9pt x 235.88126pt>
 File: figure/sysarch-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/sysarch-eps-converted-to.pdf>
@@ -877,16 +858,13 @@ Package epstopdf Info: Source file: <figure/freq_x.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 31680 bytes
 (epstopdf)             Output file: <figure/freq_x-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:41
+(epstopdf)                    size: 16424 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/freq_x-eps-converte
 d-to.pdf figure/freq_x.eps>
 (epstopdf)             \includegraphics on input line 14.
-runsystem(repstopdf --outfile=figure/freq_x-eps-converted-to.pdf figure/freq_x.
-eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <figure/freq_x-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:41
-(epstopdf)                    size: 16424 bytes.
-<figure/freq_x-eps-converted-to.pdf, id=42, 587.19376pt x 442.65375pt>
+Package epstopdf Info: Output file is already uptodate.
+<figure/freq_x-eps-converted-to.pdf, id=133, 587.19376pt x 442.65375pt>
 File: figure/freq_x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/freq_x-eps-converted-to.pdf>
@@ -897,17 +875,14 @@ Package epstopdf Info: Source file: <figure/freq_y.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 31688 bytes
 (epstopdf)             Output file: <figure/freq_y-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:42
+(epstopdf)                    size: 16496 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/freq_y-eps-converte
 d-to.pdf figure/freq_y.eps>
 (epstopdf)             \includegraphics on input line 15.
-runsystem(repstopdf --outfile=figure/freq_y-eps-converted-to.pdf figure/freq_y.
-eps)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/freq_y-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:42
-(epstopdf)                    size: 16496 bytes.
-
-<figure/freq_y-eps-converted-to.pdf, id=43, 587.19376pt x 442.65375pt>
+<figure/freq_y-eps-converted-to.pdf, id=134, 587.19376pt x 442.65375pt>
 File: figure/freq_y-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/freq_y-eps-converted-to.pdf>
@@ -918,17 +893,14 @@ Package epstopdf Info: Source file: <figure/freq_z.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 31690 bytes
 (epstopdf)             Output file: <figure/freq_z-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:42
+(epstopdf)                    size: 16424 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/freq_z-eps-converte
 d-to.pdf figure/freq_z.eps>
 (epstopdf)             \includegraphics on input line 16.
-runsystem(repstopdf --outfile=figure/freq_z-eps-converted-to.pdf figure/freq_z.
-eps)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/freq_z-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:42
-(epstopdf)                    size: 16424 bytes.
-
-<figure/freq_z-eps-converted-to.pdf, id=44, 587.19376pt x 442.65375pt>
+<figure/freq_z-eps-converted-to.pdf, id=135, 587.19376pt x 442.65375pt>
 File: figure/freq_z-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/freq_z-eps-converted-to.pdf>
@@ -940,27 +912,9 @@ Overfull \hbox (27.28127pt too wide) in paragraph at lines 13--19
  [] 
  []
 
-<figure/roc_dtw_cos_cor.png, id=45, 586.8324pt x 442.2924pt>
-File: figure/roc_dtw_cos_cor.png Graphic file (type png)
-
-<use figure/roc_dtw_cos_cor.png>
-Package pdftex.def Info: figure/roc_dtw_cos_cor.png used on input line 26.
-(pdftex.def)             Requested size: 243.98238pt x 183.88536pt.
-
-<figure/roc_dtw_diff_freq.png, id=46, 586.8324pt x 442.2924pt>
-File: figure/roc_dtw_diff_freq.png Graphic file (type png)
-
-<use figure/roc_dtw_diff_freq.png>
-Package pdftex.def Info: figure/roc_dtw_diff_freq.png used on input line 31.
-(pdftex.def)             Requested size: 243.98238pt x 183.88536pt.
-
 
 LaTeX Warning: Citation `googleglass' on page \thepage  undefined on input line
- 54.
-
-
-LaTeX Warning: Reference `fig:sysarch' on page \thepage  undefined on input lin
-e 69.
+ 44.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -969,115 +923,90 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 \vspace{-2pt}\item {
+l.67 \vspace{-2pt}\item {
                          \em Filtering}: The accelerometer signals are filte...
 [4 <./figure/raw_x-eps-converted-to.pdf> <./figure/raw_y-eps-converted-to.pdf> 
 <./figure/raw_z-eps-converted-to.pdf> <./figure/resp_time_cos.png> <./figure/re
 sp_time_cor.png> <./figure/resp_time_dtw.png>]
 
-LaTeX Warning: Citation `dtw' on page \thepage  undefined on input line 80.
+LaTeX Warning: Citation `dtw' on page \thepage  undefined on input line 70.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 \end{itemize}
-                   [5 <./figure/freq_x-eps-converted-to.pdf> <./figure/freq_y-e
-ps-converted-to.pdf> <./figure/freq_z-eps-converted-to.pdf> <./figure/sysarch-e
-ps-converted-to.pdf> <./figure/roc_dtw_cos_cor.png> <./figure/roc_dtw_diff_freq
-.png>]
-
-LaTeX Warning: Reference `fig:headbanger-illustrate' on page \thepage  undefine
-d on input line 116.
-
+l.92 \newpage
+              [5 <./figure/freq_x-eps-converted-to.pdf> <./figure/freq_y-eps-co
+nverted-to.pdf> <./figure/freq_z-eps-converted-to.pdf> <./figure/sysarch-eps-co
+nverted-to.pdf>]
 Package epstopdf Info: Source file: <figure/filtered_x.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 64865 bytes
 (epstopdf)             Output file: <figure/filtered_x-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:43
+(epstopdf)                    size: 30243 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/filtered_x-eps-conv
 erted-to.pdf figure/filtered_x.eps>
-(epstopdf)             \includegraphics on input line 136.
-runsystem(repstopdf --outfile=figure/filtered_x-eps-converted-to.pdf figure/fil
-tered_x.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/filtered_x-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:43
-(epstopdf)                    size: 30243 bytes.
-<figure/filtered_x-eps-converted-to.pdf, id=262, 587.19376pt x 442.65375pt>
+<figure/filtered_x-eps-converted-to.pdf, id=348, 587.19376pt x 442.65375pt>
 File: figure/filtered_x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_x-eps-converted-to.pdf>
 Package pdftex.def Info: figure/filtered_x-eps-converted-to.pdf used on input l
-ine 136.
+ine 126.
 (pdftex.def)             Requested size: 169.0103pt x 127.40717pt.
 Package epstopdf Info: Source file: <figure/filtered_y.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 62641 bytes
 (epstopdf)             Output file: <figure/filtered_y-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:44
+(epstopdf)                    size: 28716 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/filtered_y-eps-conv
 erted-to.pdf figure/filtered_y.eps>
-(epstopdf)             \includegraphics on input line 137.
-runsystem(repstopdf --outfile=figure/filtered_y-eps-converted-to.pdf figure/fil
-tered_y.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 127.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/filtered_y-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:44
-(epstopdf)                    size: 28716 bytes.
-
-<figure/filtered_y-eps-converted-to.pdf, id=263, 587.19376pt x 442.65375pt>
+<figure/filtered_y-eps-converted-to.pdf, id=349, 587.19376pt x 442.65375pt>
 File: figure/filtered_y-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_y-eps-converted-to.pdf>
 Package pdftex.def Info: figure/filtered_y-eps-converted-to.pdf used on input l
-ine 137.
+ine 127.
 (pdftex.def)             Requested size: 169.0103pt x 127.40717pt.
 Package epstopdf Info: Source file: <figure/filtered_z.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 60129 bytes
 (epstopdf)             Output file: <figure/filtered_z-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:44
+(epstopdf)                    size: 28445 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/filtered_z-eps-conv
 erted-to.pdf figure/filtered_z.eps>
-(epstopdf)             \includegraphics on input line 138.
-runsystem(repstopdf --outfile=figure/filtered_z-eps-converted-to.pdf figure/fil
-tered_z.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/filtered_z-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:44
-(epstopdf)                    size: 28445 bytes.
-
-<figure/filtered_z-eps-converted-to.pdf, id=264, 587.19376pt x 442.65375pt>
+<figure/filtered_z-eps-converted-to.pdf, id=350, 587.19376pt x 442.65375pt>
 File: figure/filtered_z-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_z-eps-converted-to.pdf>
 Package pdftex.def Info: figure/filtered_z-eps-converted-to.pdf used on input l
-ine 138.
+ine 128.
 (pdftex.def)             Requested size: 169.0103pt x 127.40717pt.
 
-Overfull \hbox (27.28127pt too wide) in paragraph at lines 135--141
+Overfull \hbox (27.28127pt too wide) in paragraph at lines 125--131
  [] 
  []
 
 
-LaTeX Warning: Reference `fig:raw_freq' on page \thepage  undefined on input li
-ne 166.
-
-
-LaTeX Warning: Citation `beats' on page \thepage  undefined on input line 172.
+LaTeX Warning: Citation `beats' on page \thepage  undefined on input line 162.
 
 
 LaTeX Warning: Citation `challis1983design' on page \thepage  undefined on inpu
-t line 179.
+t line 169.
 
 
-LaTeX Warning: Reference `fig:filteredacc' on page \thepage  undefined on input
- line 183.
-
-
-LaTeX Warning: Reference `fig:raw' on page \thepage  undefined on input line 18
-5.
-
-
-LaTeX Warning: Citation `dtw' on page \thepage  undefined on input line 199.
+LaTeX Warning: Citation `dtw' on page \thepage  undefined on input line 189.
 
 
 Underfull \vbox (badness 1859) has occurred while \output is active []
@@ -1086,29 +1015,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223 
-       [6]) (./evaluation.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.72 \paragraph{Procedure}
-                           [7 <./figure/filtered_x-eps-converted-to.pdf> <./fig
-ure/filtered_y-eps-converted-to.pdf> <./figure/filtered_z-eps-converted-to.pdf>
-]
+l.379 \end{enumerate}
+                      [6]) (./evaluation.tex
 Package epstopdf Info: Source file: <figure/top1_roc.eps>
 (epstopdf)                    date: 2015-09-10 15:09:42
 (epstopdf)                    size: 46872 bytes
 (epstopdf)             Output file: <figure/top1_roc-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:45
+(epstopdf)                    size: 24780 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/top1_roc-eps-conver
 ted-to.pdf figure/top1_roc.eps>
 (epstopdf)             \includegraphics on input line 138.
-runsystem(repstopdf --outfile=figure/top1_roc-eps-converted-to.pdf figure/top1_
-roc.eps)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/top1_roc-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:45
-(epstopdf)                    size: 24780 bytes.
- <figure/top1_roc-eps-converted-to.pdf, id=378, 587.19376pt x 442.65375pt>
+<figure/top1_roc-eps-converted-to.pdf, id=363, 587.19376pt x 442.65375pt>
 File: figure/top1_roc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/top1_roc-eps-converted-to.pdf>
@@ -1119,17 +1039,14 @@ Package epstopdf Info: Source file: <figure/top3_roc.eps>
 (epstopdf)                    date: 2015-09-10 15:09:42
 (epstopdf)                    size: 47111 bytes
 (epstopdf)             Output file: <figure/top3_roc-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-13 23:08:45
+(epstopdf)                    size: 24940 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/top3_roc-eps-conver
 ted-to.pdf figure/top3_roc.eps>
 (epstopdf)             \includegraphics on input line 147.
-runsystem(repstopdf --outfile=figure/top3_roc-eps-converted-to.pdf figure/top3_
-roc.eps)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/top3_roc-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-13 23:08:45
-(epstopdf)                    size: 24940 bytes.
-
-<figure/top3_roc-eps-converted-to.pdf, id=379, 587.19376pt x 442.65375pt>
+<figure/top3_roc-eps-converted-to.pdf, id=364, 587.19376pt x 442.65375pt>
 File: figure/top3_roc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/top3_roc-eps-converted-to.pdf>
@@ -1141,18 +1058,14 @@ Package epstopdf Info: Source file: <figure/exp2_vary_length.eps>
 (epstopdf)                    size: 25912 bytes
 (epstopdf)             Output file: <figure/exp2_vary_length-eps-converted-to.p
 df>
+(epstopdf)                    date: 2015-09-13 23:08:46
+(epstopdf)                    size: 18651 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/exp2_vary_length-ep
 s-converted-to.pdf figure/exp2_vary_length.eps>
 (epstopdf)             \includegraphics on input line 156.
-runsystem(repstopdf --outfile=figure/exp2_vary_length-eps-converted-to.pdf figu
-re/exp2_vary_length.eps)...executed safely (allowed).
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/exp2_vary_length-eps-converted-to.p
-df>
-(epstopdf)                    date: 2015-09-13 23:08:46
-(epstopdf)                    size: 18651 bytes.
-
-<figure/exp2_vary_length-eps-converted-to.pdf, id=380, 587.19376pt x 442.65375p
+<figure/exp2_vary_length-eps-converted-to.pdf, id=365, 587.19376pt x 442.65375p
 t>
 File: figure/exp2_vary_length-eps-converted-to.pdf Graphic file (type pdf)
  <use figure/exp2_vary_length-eps-converted-to.pdf>
@@ -1160,190 +1073,136 @@ Package pdftex.def Info: figure/exp2_vary_length-eps-converted-to.pdf used on i
 nput line 156.
 (pdftex.def)             Requested size: 243.98238pt x 183.92076pt.
 
+<figure/roc_dtw_cos_cor.png, id=366, 586.8324pt x 442.2924pt>
+File: figure/roc_dtw_cos_cor.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:roc-top1' on page \thepage  undefined on input li
-ne 178.
+<use figure/roc_dtw_cos_cor.png>
+Package pdftex.def Info: figure/roc_dtw_cos_cor.png used on input line 163.
+(pdftex.def)             Requested size: 243.98238pt x 183.88536pt.
 
+<figure/roc_dtw_diff_freq.png, id=367, 586.8324pt x 442.2924pt>
+File: figure/roc_dtw_diff_freq.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:roc-top3' on page \thepage  undefined on input li
-ne 178.
-
-
-LaTeX Warning: Reference `fig:eer-length' on page \thepage  undefined on input 
-line 178.
-
+<use figure/roc_dtw_diff_freq.png>
+Package pdftex.def Info: figure/roc_dtw_diff_freq.png used on input line 168.
+(pdftex.def)             Requested size: 243.98238pt x 183.88536pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.201 \paragraph
+                {Impact of similarity algorithm} [7 <./figure/filtered_x-eps-co
+nverted-to.pdf> <./figure/filtered_y-eps-converted-to.pdf> <./figure/filtered_z
+-eps-converted-to.pdf>]
 
 LaTeX Warning: Reference `fig:roc-curves' on page \thepage  undefined on input 
-line 193.
+line 203.
 
 
-LaTeX Warning: Reference `fig:roc-top1' on page \thepage  undefined on input li
-ne 196.
-
-
-LaTeX Warning: Reference `fig:roc-top3' on page \thepage  undefined on input li
-ne 196.
-
-
-LaTeX Warning: Reference `fig:eer-length' on page \thepage  undefined on input 
-line 202.
+LaTeX Warning: Citation `von2013patterns' on page \thepage  undefined on input 
+line 240.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.214 
-       [8 <./figure/top1_roc-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `fig:roc-top1' on page \thepage  undefined on input li
-ne 217.
-
-
-LaTeX Warning: Reference `fig:roc-top3' on page \thepage  undefined on input li
-ne 217.
-
-
-LaTeX Warning: Reference `fig:eer-length' on page \thepage  undefined on input 
-line 218.
-
-
-LaTeX Warning: Citation `von2013patterns' on page \thepage  undefined on input 
-line 230.
-
+l.244 
+       [8 <./figure/top1_roc-eps-converted-to.pdf> <./figure/top3_roc-eps-conve
+rted-to.pdf> <./figure/exp2_vary_length-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/exp2_vary_size.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 25915 bytes
 (epstopdf)             Output file: <figure/exp2_vary_size-eps-converted-to.pdf
 >
+(epstopdf)                    date: 2015-09-13 23:08:46
+(epstopdf)                    size: 18603 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/exp2_vary_size-eps-
 converted-to.pdf figure/exp2_vary_size.eps>
-(epstopdf)             \includegraphics on input line 237.
-runsystem(repstopdf --outfile=figure/exp2_vary_size-eps-converted-to.pdf figure
-/exp2_vary_size.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 247.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/exp2_vary_size-eps-converted-to.pdf
->
-(epstopdf)                    date: 2015-09-13 23:08:46
-(epstopdf)                    size: 18603 bytes.
-
-<figure/exp2_vary_size-eps-converted-to.pdf, id=440, 587.19376pt x 442.65375pt>
+<figure/exp2_vary_size-eps-converted-to.pdf, id=625, 587.19376pt x 442.65375pt>
 File: figure/exp2_vary_size-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/exp2_vary_size-eps-converted-to.pdf>
 Package pdftex.def Info: figure/exp2_vary_size-eps-converted-to.pdf used on inp
-ut line 237.
+ut line 247.
 (pdftex.def)             Requested size: 243.98238pt x 183.92076pt.
 
 
-LaTeX Warning: Reference `sec:design' on page \thepage  undefined on input line
- 248.
-
-
-LaTeX Warning: Reference `fig:eer-size' on page \thepage  undefined on input li
-ne 252.
-
-
-LaTeX Warning: Reference `fig:eer-size' on page \thepage  undefined on input li
-ne 254.
+Package hyperref Warning: Suppressing empty link on input line 258.
 
 Package epstopdf Info: Source file: <figure/software_arch.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 411313 bytes
 (epstopdf)             Output file: <figure/software_arch-eps-converted-to.pdf>
 
+(epstopdf)                    date: 2015-09-13 23:08:50
+(epstopdf)                    size: 92855 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/software_arch-eps-c
 onverted-to.pdf figure/software_arch.eps>
-(epstopdf)             \includegraphics on input line 272.
-runsystem(repstopdf --outfile=figure/software_arch-eps-converted-to.pdf figure/
-software_arch.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 282.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figure/software_arch-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2015-09-13 23:08:50
-(epstopdf)                    size: 92855 bytes.
-
-<figure/software_arch-eps-converted-to.pdf, id=441, 555.07375pt x 171.64125pt>
+<figure/software_arch-eps-converted-to.pdf, id=628, 555.07375pt x 171.64125pt>
 File: figure/software_arch-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/software_arch-eps-converted-to.pdf>
 Package pdftex.def Info: figure/software_arch-eps-converted-to.pdf used on inpu
-t line 272.
+t line 282.
 (pdftex.def)             Requested size: 243.98238pt x 75.4438pt.
 
-
-LaTeX Warning: Reference `fig:glass-softwarearch' on page \thepage  undefined o
-n input line 280.
+Underfull \vbox (badness 1466) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.294 
-       [9 <./figure/top3_roc-eps-converted-to.pdf> <./figure/exp2_vary_length-e
-ps-converted-to.pdf> <./figure/exp2_vary_size-eps-converted-to.pdf> <./figure/s
-oftware_arch-eps-converted-to.pdf>]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 336.
+l.304 
+       [9 <./figure/roc_dtw_cos_cor.png> <./figure/roc_dtw_diff_freq.png> <./fi
+gure/exp2_vary_size-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 346.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 336.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 346.
 
-Overfull \hbox (1.93553pt too wide) in paragraph at lines 319--350
+Overfull \hbox (1.93553pt too wide) in paragraph at lines 329--360
 [][] 
  []
 
 
-LaTeX Warning: Reference `tab:glass' on page \thepage  undefined on input line 
-354.
-
-
 LaTeX Warning: Citation `von2013patterns' on page \thepage  undefined on input 
-line 365.
+line 375.
 
 
 LaTeX Warning: Citation `egelman2014you' on page \thepage  undefined on input l
-ine 365.
-
-
-LaTeX Warning: Reference `tab:glass' on page \thepage  undefined on input line 
-371.
-
-
-LaTeX Warning: Reference `tab:glass' on page \thepage  undefined on input line 
-374.
-
-
-Underfull \vbox (badness 1424) has occurred while \output is active []
-
+ine 375.
 
 
 LaTeX Warning: Citation `salvador2007toward' on page \thepage  undefined on inp
-ut line 378.
+ut line 388.
 
 
 LaTeX Warning: Citation `ha2014towards' on page \thepage  undefined on input li
-ne 391.
+ne 401.
 
 ) (./discussion.tex
 
 LaTeX Warning: Citation `likamwa2014draining' on page \thepage  undefined on in
 put line 66.
 
-
-LaTeX Warning: Reference `tab:pow' on page \thepage  undefined on input line 70
-.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 \subsection{Is this secure?}
-                                  [10]
+l.77 \subsection
+                {Is this secure?} [10 <./figure/software_arch-eps-converted-to.
+pdf>]
 
-LaTeX Warning: Reference `sec:results' on page \thepage  undefined on input lin
-e 102.
+Package hyperref Warning: Suppressing empty link on input line 102.
 
 
 LaTeX Warning: Citation `hernandezbioglass' on page \thepage  undefined on inpu
@@ -1437,9 +1296,6 @@ e 63.
 LaTeX Warning: Citation `feng2014tips' on page \thepage  undefined on input lin
 e 65.
 
-
-Underfull \vbox (badness 7576) has occurred while \output is active []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
@@ -1466,15 +1322,30 @@ line 74.
 LaTeX Warning: Citation `jain1997identity' on page \thepage  undefined on input
  line 75.
 
-) (./summary.tex)
-No file main.bbl.
+) (./summary.tex) (./main.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \vbox (0.93745pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (14.35422pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.102 \bibitem{gafurov2006biometric}
+                                     [12])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.127 \end{document}
-                     [12]
+                     [13]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 127.
@@ -1486,8 +1357,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  1F7E5E99BA5C326BF84AC17EC7E8BCEF;1330.
+(rerunfilecheck)             Before: 1F7E5E99BA5C326BF84AC17EC7E8BCEF;1330
+(rerunfilecheck)             After:  FD3AD216C2285C559459EABDE482434C;1379.
 
 LaTeX Warning: There were undefined references.
 
@@ -1497,29 +1368,54 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 8150 strings out of 493304
- 117513 string characters out of 6139870
- 227257 words of memory out of 5000000
- 11357 multiletter control sequences out of 15000+600000
- 29037 words of font info for 67 fonts, out of 8000000 for 9000
+ 8274 strings out of 493304
+ 119472 string characters out of 6139870
+ 247424 words of memory out of 5000000
+ 11411 multiletter control sequences out of 15000+600000
+ 29552 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,16n,30p,1345b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on main.pdf (12 pages, 1042342 bytes).
+ 42i,16n,31p,1345b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.28} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.27} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.22} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.12} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.7} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.6} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.3} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on main.pdf (13 pages, 1066133 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 828 PDF objects out of 1000 (max. 8388607)
+ 390 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
