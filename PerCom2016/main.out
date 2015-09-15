@@ -1,23 +1,24 @@
-\BOOKMARK [1][-]{section*.2}{Introduction}{}% 1
-\BOOKMARK [1][-]{section*.3}{Background}{}% 2
-\BOOKMARK [2][-]{section*.4}{Wearable Device Authentication}{section*.3}% 3
-\BOOKMARK [2][-]{section*.5}{Head-movement as a Biometric}{section*.3}% 4
-\BOOKMARK [1][-]{section*.6}{Feature}{}% 5
-\BOOKMARK [1][-]{section*.7}{Headbanger System Design}{}% 6
-\BOOKMARK [2][-]{section*.8}{Sensor Data Collection}{section*.7}% 7
-\BOOKMARK [2][-]{section*.9}{Filtering}{section*.7}% 8
-\BOOKMARK [2][-]{section*.10}{Signature generation}{section*.7}% 9
-\BOOKMARK [2][-]{section*.11}{Classification}{section*.7}% 10
-\BOOKMARK [1][-]{section*.12}{Evaluation}{}% 11
-\BOOKMARK [2][-]{section*.13}{Method}{section*.12}% 12
-\BOOKMARK [2][-]{section*.16}{Accuracy}{section*.12}% 13
-\BOOKMARK [2][-]{section*.20}{Headbanger Google Glass App Implementation}{section*.12}% 14
-\BOOKMARK [3][-]{section*.21}{Response time}{section*.20}% 15
-\BOOKMARK [1][-]{section*.22}{Discussion}{}% 16
-\BOOKMARK [2][-]{section*.23}{Power consumption}{section*.22}% 17
-\BOOKMARK [2][-]{section*.24}{Is this secure?}{section*.22}% 18
-\BOOKMARK [2][-]{section*.25}{Multi-Modality}{section*.22}% 19
-\BOOKMARK [2][-]{section*.26}{Large Scale User Study}{section*.22}% 20
-\BOOKMARK [1][-]{section*.27}{Related Work}{}% 21
-\BOOKMARK [1][-]{section*.28}{Concluding Remarks}{}% 22
-\BOOKMARK [1][-]{section*.29}{REFERENCES }{}% 23
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Background}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Wearable Device Authentication}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Head-movement as a Biometric}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Feature}{}% 5
+\BOOKMARK [1][-]{section.4}{Headbanger System Design}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Sensor Data Collection}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Filtering}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Signature generation}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{Classification}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Evaluation}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Method}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Accuracy}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Is it Secured?}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.4}{Headbanger Google Glass App Implementation}{section.5}% 15
+\BOOKMARK [3][-]{table.2}{Response time}{subsection.5.4}% 16
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 17
+\BOOKMARK [2][-]{subsection.6.1}{Power consumption}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Is this secure?}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.3}{Multi-Modality}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.4}{Large Scale User Study}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Related Work}{}% 22
+\BOOKMARK [1][-]{section.8}{Concluding Remarks}{}% 23
+\BOOKMARK [1][-]{section*.1}{References}{}% 24
