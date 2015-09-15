@@ -15,52 +15,10 @@ institution.
 %based on profiling the execution time of each key 
 %functions associated with \systemname, on the Google Glass device.
 
-\iffalse
-We conducted extensive evaluation of the Headbanger system. In particular, our 
-evaluation focused on showing that a user's body movement pattern can be used 
-to establish the user's identify. We first show that even a simple movement 
-pattern is hard to imitate by others (i.e., being distinctive), and next show 
-that people can easily repeat their own patterns (i.e., being repeatable). To 
-conduct the evaluation, we prototyped the Headbanger system using the Google 
-Glass, but our system can be easily implemented on other platforms.
-\fi
-
-\iffalse
-\begin{figure}[t]
-\centering
-\includegraphics [width=.75\columnwidth]{figure/exp.pdf}
-\caption{One of the participants executing the experiment trial wearing the 
-Google Glass. This trial (like all other trials) is conducted in an academic 
-environment and overseen by one of our team members.
-\label{fig:setup}}
-\end{figure}
-\fi
 
 \subsection{Method}
 %\subsection{Dataset}
 
-\iffalse
-\begin{table}
-\begin{tabular}{lclcl}
-\cline{1-5}
-       & \multicolumn{2}{c}{Male}                          & 
-       \multicolumn{2}{c}{Female}                             \\ \hline\hline
-Gender & \multicolumn{2}{c}{19}                            & 
-\multicolumn{2}{c}{11}                                 \\ \hline
-       & \multicolumn{1}{l}{Mean} & \multicolumn{1}{l}{Mimimum}                
-       & \multicolumn{1}{l}{Maxinum} & \multicolumn{1}{l}{Std 
-       Dev}                  
-       \\ \hline\hline
-Age (yrs)    & \multicolumn{1}{c}{29.7}                     & 
-\multicolumn{1}{c}{23} 
-& \multicolumn{1}{c}{54}                          & \multicolumn{1}{c}{9.81} 
-\\ \hline
-\end{tabular}
-
-\caption{\label{tab:human-subjects-distrib}Gender and age distribution of the 30 participants in our experiments}
-
-\end{table}
-\fi
 
 \paragraph{Participants}
 ** LS: need to update these data **
@@ -276,6 +234,21 @@ prior-to or during data collection phase, through a wireless link.
 
 \subsection{Is it Secured?}
 We evaluated the vulnerability by conducting a imitation attack experiment. The reason that these three subjects chosen to become imitated subjects is as following: $Subject A$ performed a simple nodding movement by naturally following the music flow. $Subject B$ also performed a simple nodding, but his response to the music beat always delayed for a certain time, hence other people are not easy to follow. $Subject C$ performed a movement combined with nodding and shaking, and he only nodded/shake at certain beats instead of every beat, which makes his movement is relatively difficult to learn. As shown in Table~\ref{tab:imitation}, 
+
+\begin{table}[]
+\centering
+\begin{tabular}{lcllc}
+\hline
+ & \multicolumn{1}{l}{Total Imitator} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Ave. \# of Imitator \\ that Succeed\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Ave. \# of Trial Before \\ First Successful Login\end{tabular}} & \multicolumn{1}{l}{FAR (\%)} \\ \hline\hline
+Subject A & 10 &  &  & 17.67 \\ \hline
+Subject B & 13 &  &  & 9.82 \\ \hline
+Subject C & 8 &  &  & 3.27 \\ \hline
+\multicolumn{1}{c}{Overall} & 31 &  &  & 7.54 \\ \hline
+\end{tabular}
+\caption{My caption}
+\label{my-label}
+\end{table}
+
 
 \subsection{Headbanger Google Glass App Implementation}
 
