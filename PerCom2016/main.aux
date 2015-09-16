@@ -40,9 +40,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Wearable Device Authentication}{2}{subsection.2.1}}
 \citation{jain2004introduction}
 \citation{zentner2010rhythmic}
-\citation{eye blink}
-\citation{tap beat}
-\citation{cite dtw}
+\citation{eyeblink}
+\citation{tapbeat}
+\citation{citedtw}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Head-movement as a Biometric}{3}{subsection.2.2}}
 \newlabel{subsec:headmovements}{{\unhbox \voidb@x \hbox {II-B}}{3}{Head-movement as a Biometric}{subsection.2.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Feature}{3}{section.3}}
@@ -71,55 +71,58 @@
 \newlabel{fig:filteredacc}{{7}{7}{Filtered accelerometer signals. Applied Butterworth filter of order 2 and cut-off frequency 10Hz}{figure.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{7}{section.5}}
 \newlabel{sec:results}{{V}{7}{Evaluation}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Method}{7}{subsection.5.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {V-A}0a}Participants}{7}{paragraph.5.1.0.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {V-A}0b}Procedure}{7}{paragraph.5.1.0.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Accuracy}{7}{subsection.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{8}{figure.8}}
-\newlabel{fig:roc-top1}{{8}{8}{Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Is it Accurate?}{7}{subsection.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}1}Participants}{7}{subsubsection.5.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}2}Procedure}{7}{subsubsection.5.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{7}{figure.8}}
+\newlabel{fig:roc-top1}{{8}{7}{Evaluation of impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}}{8}{figure.9}}
 \newlabel{fig:roc-top3}{{9}{8}{Evaluation of impact of music cue duration on TPR and FAR in Top-3 voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}{figure.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}}{8}{figure.10}}
 \newlabel{fig:eer-length}{{10}{8}{Comparison of EER for different music lengths (10 sec, 6 sec and 5 sec) with a fixed n value of 2.7}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}3}Results}{8}{subsubsection.5.1.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates that DTW provides a large enhancement over the other two metrics. }}{8}{figure.11}}
 \newlabel{fig:roc_dtw_cos_cor}{{11}{8}{Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates that DTW provides a large enhancement over the other two metrics}{figure.11}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {V-B}0c}Impact of similarity algorithm}{8}{paragraph.5.2.0.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}}{8}{figure.12}}
+\newlabel{fig:roc_dtw_diff_freq}{{12}{8}{Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}4}Impact of similarity algorithm}{8}{subsubsection.5.1.4}}
 \citation{von2013patterns}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}}{9}{figure.12}}
-\newlabel{fig:roc_dtw_diff_freq}{{12}{9}{Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time}{figure.12}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {V-B}0d}Impact of music cue duration and $K$ value}{9}{paragraph.5.2.0.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}5}Impact of music cue duration and $K$ value}{9}{subsubsection.5.1.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-A}6}Impact of Training set size}{9}{subsubsection.5.1.6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}}{9}{figure.13}}
 \newlabel{fig:eer-size}{{13}{9}{Comparison of EER for different training sample sizes (30, 20 and 10) with fixed n value of 2.7}{figure.13}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {V-B}0e}Impact of Training set size}{9}{paragraph.5.2.0.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Is it Secured?}{9}{subsection.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  Pictorial description of how the mimicked subjects move.}}{9}{figure.14}}
+\newlabel{fig:imitation_movement}{{14}{9}{Pictorial description of how the mimicked subjects move}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Is it Secured?}{9}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-B}1}Participants}{9}{subsubsection.5.2.1}}
 \citation{von2013patterns,egelman2014you}
-\citation{salvador2007toward}
-\citation{ha2014towards}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces My caption}}{10}{table.1}}
-\newlabel{my-label}{{I}{10}{My caption}{table.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Software modules of {\em  Headbanger}\nobreakspace  {}implementation}}{10}{figure.14}}
-\newlabel{fig:glass-softwarearch}{{14}{10}{Software modules of \systemname ~implementation}{figure.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Headbanger Google Glass App Implementation}{10}{subsection.5.4}}
+\newlabel{my-label}{{\unhbox \voidb@x \hbox {V-B}3}{10}{Results}{subsubsection.5.2.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Imitation attack experiment result. Successful Imitator Number(SI) represents the number of the imitators that succeed at least once. Average. Average Number of Trail before first login(ATF) indicates the average times of trail a successful imitator takes before the first login.}}{10}{table.1}}
+\newlabel{tab:imitation}{{I}{10}{Imitation attack experiment result. Successful Imitator Number(SI) represents the number of the imitators that succeed at least once. Average. Average Number of Trail before first login(ATF) indicates the average times of trail a successful imitator takes before the first login}{table.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-B}2}Procedure}{10}{subsubsection.5.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-B}3}Results}{10}{subsubsection.5.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Headbanger Google Glass App Implementation}{10}{subsection.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Software modules of {\em  Headbanger}\nobreakspace  {}implementation}}{10}{figure.15}}
+\newlabel{fig:glass-softwarearch}{{15}{10}{Software modules of \systemname ~implementation}{figure.15}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces  Measured response time of {\em  Headbanger}\nobreakspace  {}app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials.}}{10}{table.2}}
 \newlabel{tab:glass}{{II}{10}{Measured response time of \systemname ~app implementation on Google Glass with different music cue durations and for $K = 1$. The response time reported here is an average over 20 trials}{table.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-D}1}Response time}{10}{table.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{10}{section.6}}
-\newlabel{sec:disc}{{VI}{10}{Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Response time}{10}{table.2}}
+\citation{salvador2007toward}
+\citation{ha2014towards}
 \citation{likamwa2014draining}
 \citation{hernandezbioglass,nymi}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Power consumption on Google Glass of components relevant to {\em  Headbanger}. The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}}{11}{table.3}}
+\newlabel{tab:pow}{{III}{11}{Power consumption on Google Glass of components relevant to \systemname . The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}{table.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{11}{section.6}}
+\newlabel{sec:disc}{{VI}{11}{Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Power consumption}{11}{subsection.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Is this secure?}{11}{subsection.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Multi-Modality}{11}{subsection.6.3}}
 \citation{harwin1990analysis}
 \citation{westeyn2004recognizing}
 \citation{ishimaru2014blink}
 \citation{ishimaru2014blink}
 \citation{ishimaru2014blink}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Power consumption on Google Glass of components relevant to {\em  Headbanger}. The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}}{11}{table.3}}
-\newlabel{tab:pow}{{III}{11}{Power consumption on Google Glass of components relevant to \systemname . The CPU (running at maximum frequency) power consumption includes that of the heads-up display screen being ON as well. Duration marks the time for which component was ON during the a 10 sec music cue length trial}{table.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}Power consumption}{11}{subsection.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Is this secure?}{11}{subsection.6.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Multi-Modality}{11}{subsection.6.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-D}}Large Scale User Study}{11}{subsection.6.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Related Work}{11}{section.7}}
-\newlabel{sec:related}{{VII}{11}{Related Work}{section.7}{}}
 \citation{kjeldsen2001head,hernandezbioglass}
 \citation{kjeldsen2001head}
 \citation{hernandezbioglass}
@@ -137,6 +140,11 @@
 \citation{biddle2012graphical}
 \citation{sherman2014user}
 \citation{jain1997identity}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-D}}Large Scale User Study}{12}{subsection.6.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Related Work}{12}{section.7}}
+\newlabel{sec:related}{{VII}{12}{Related Work}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Concluding Remarks}{12}{section.8}}
+\newlabel{sec:conc}{{VIII}{12}{Concluding Remarks}{section.8}{}}
 \bibstyle{abbrv}
 \bibdata{sugang}
 \bibcite{fitbit}{1}
@@ -156,9 +164,6 @@
 \bibcite{de2012touch}{15}
 \bibcite{egelman2014you}{16}
 \bibcite{feng2014tips}{17}
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Concluding Remarks}{12}{section.8}}
-\newlabel{sec:conc}{{VIII}{12}{Concluding Remarks}{section.8}{}}
-\@writefile{toc}{\contentsline {section}{References}{12}{section*.1}}
 \bibcite{frank2013touchalytics}{18}
 \bibcite{gafurov2011user}{19}
 \bibcite{gafurov2006biometric}{20}
@@ -190,3 +195,4 @@
 \bibcite{westeyn2004recognizing}{46}
 \bibcite{yampolskiy2007motor}{47}
 \bibcite{zentner2010rhythmic}{48}
+\@writefile{toc}{\contentsline {section}{References}{13}{section*.1}}

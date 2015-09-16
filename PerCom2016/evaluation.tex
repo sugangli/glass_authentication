@@ -16,18 +16,53 @@ institution.
 %functions associated with \systemname, on the Google Glass device.
 
 
-\subsection{Method}
-%\subsection{Dataset}
+\begin{figure}[t]
+\centering
+\includegraphics [width=\columnwidth]{figure/top1_roc.eps}
+\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-1 
+scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 
+sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
+\label{fig:roc-top1}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics [width=\columnwidth]{figure/top3_roc.eps}
+\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-3 
+voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 
+10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
+\label{fig:roc-top3}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics [width=\columnwidth]{figure/exp2_vary_length.eps}
+\caption{Comparison of EER for different music lengths (10 sec, 6 sec and 5 
+sec) with a fixed n value of 2.7}
+\label{fig:eer-length}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figure/roc_dtw_cos_cor.png}
+\caption{\label{fig:roc_dtw_cos_cor} Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates  that DTW provides a large enhancement over the other two metrics. }
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figure/roc_dtw_diff_freq.png}
+\caption{\label{fig:roc_dtw_diff_freq} Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}
+\end{figure}
 
 
-\paragraph{Participants}
+\subsection{Is it Accurate?}
+
+\subsubsection{Participants}
 ** LS: need to update these data **
 We had total of 30 volunteer participants. The participants list included a total of 19 males and 11 females. 
 The average age of the participants was 29.7 years with a standard deviation 
 of 9.81 years. The youngest participant was 23 years old while the eldest was 
 at 54 years.
 
-\paragraph{Procedure}
+\subsubsection{Procedure}
 Our first experiment setup aimed at emulating the typical usage scenario 
 of \systemname~for authentication, where a user conducts head-movements in 
 response to a music cue played on the Google Glass device during a login 
@@ -66,69 +101,7 @@ subject.
 The experiment yielded three sets of data traces that each correspond to 
 the three music cue durations we selected. 
 
-Our second experiment aimed at an practical imitation attack field test scenario. In this experiment, there were three subjects being taken video while they were performing their login movement. The participants were divided into three group, and each group was asked to imitated one of the three users above. During the test, the participants can watch the video for as many time as they want at anytime between two trials. A feedback from our system will be provided after each trail so that the participants can decide whether they need to adjust their movement or not. After total number of trials reached 30 for each participant, the experiment will stop no regardless the participant succeed or not. The investigator was not only recording the total number of successes, but also the number of trail before the first successful login. This experiment is conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail. 
-
-\iffalse
-\begin{figure*}[t]
-\centering
-\mbox{
-\subfigure[Top 1]{\includegraphics[width=0.3\textwidth]{figure/top1_roc.eps}}
-\hspace{0.1mm}
-\subfigure[Top 3]{\includegraphics[width=0.3\textwidth]{figure/top3_roc.eps}
- 
-}
-\hspace{0.1mm}
-\subfigure[n = 
-2.7]{\includegraphics[width=0.3\textwidth]{figure/exp2_vary_length.eps}}
-} %end of mbox
-\caption{ (a) ROC curves for $K=1$ case, (b) ROC curves for $K=3$ case, (c) 
-Equal Error Rate (EER) for Top-1 and Top-3 cases for different music cue 
-durations.
-In all these plots, the music cue is retained the same (a 10 sec music 
-snapshot is trimmed into 10sec, 6 sec and 5 sec accordingly).
-}
-\label{fig:roc-curves_k}
-\end{figure*}
-\fi
-
-\begin{figure}[t]
-\centering
-\includegraphics [width=\columnwidth]{figure/top1_roc.eps}
-\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-1 
-scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10 
-sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
-\label{fig:roc-top1}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-\includegraphics [width=\columnwidth]{figure/top3_roc.eps}
-\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-3 
-voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of 
-10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
-\label{fig:roc-top3}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-\includegraphics [width=\columnwidth]{figure/exp2_vary_length.eps}
-\caption{Comparison of EER for different music lengths (10 sec, 6 sec and 5 
-sec) with a fixed n value of 2.7}
-\label{fig:eer-length}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{figure/roc_dtw_cos_cor.png}
-\caption{\label{fig:roc_dtw_cos_cor} Evaluation of impact of different distance metric (DTW, cosine distance, and Correlation). Although DTW is relatively computing-intensive, ROC curve indicates  that DTW provides a large enhancement over the other two metrics. }
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{figure/roc_dtw_diff_freq.png}
-\caption{\label{fig:roc_dtw_diff_freq} Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}
-\end{figure}
-
-
-\subsection{Accuracy}
+\subsubsection{Results}
 We evaluate the accuracy of \systemname~using metrics that are commonly used 
 in evaluating authentication systems, namely,
 the false acceptance rate FAR (percentage of false test samples that are 
@@ -156,10 +129,10 @@ and algorithm choices:
 used for training with a thresholding parameter value $n = 2.7$ with DTW. 
 We will now discuss the results and the impact of such parameter choices 
 on accuracy in more detail.
-\paragraph{Impact of similarity algorithm}
+\subsubsection{Impact of similarity algorithm}
 In previous preliminary study, we find that DTW, Cosine Distance, and Correlation are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC 
 (receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our preserves all characteristics of the data, which includes the response time to the music beat and the waveform of 3 axis. In term of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms. 
-\paragraph{Impact of music cue duration and $K$ value}
+\subsubsection{Impact of music cue duration and $K$ value}
 
 The classification algorithm in \systemname~generates the classification result (YES or NO) by voting among the individual results each generated by the top-K samples in the truing set. We can observe from the ROC curves in Figure~\ref{fig:roc-top1} and \ref{fig:roc-top3} that 
 for both, $K=1$ and $K=3$, the TPR is close to 95\% while the FAR is slightly 
@@ -209,7 +182,7 @@ with fixed n value of 2.7}
 \end{figure}
 
 
-\paragraph{Impact of Training set size}
+\subsubsection{Impact of Training set size}
 %The accuracy of detecting and matching the head-movements to the user depend 
 %upon the music cue duration, value of $K$, and number of samples used for 
 %training.
@@ -232,21 +205,34 @@ offline on a more compute efficient device (smartphone, PC or server) and that
 the wearable device can pre-fetch the trained data (for example, an XML file), 
 prior-to or during data collection phase, through a wireless link.
 
-\subsection{Is it Secured?}
-We evaluated the vulnerability by conducting a imitation attack experiment. The reason that these three subjects chosen to become imitated subjects is as following: $Subject A$ performed a simple nodding movement by naturally following the music flow. $Subject B$ also performed a simple nodding, but his response to the music beat always delayed for a certain time, hence other people are not easy to follow. $Subject C$ performed a movement combined with nodding and shaking, and he only nodded/shake at certain beats instead of every beat, which makes his movement is relatively difficult to learn. As shown in Table~\ref{tab:imitation}, 
+\begin{figure}
+\centering
+\includegraphics[width = \columnwidth]{figure/imitation_subject_movement.png}
+\caption{\label{fig:imitation_movement} Pictorial description of how the mimicked subjects move.}
+\end{figure}
+\subsection{Is it hard to imitate?}
+\subsubsection{Participants}
+\subsubsection{Procedure}
+Our second experiment aimed at an practical imitation attack field test scenario. In this experiment, there were three subjects being taken video while they were performing their login movement. Note that the music cue is usually played via a bone conduction speaker or a earplug, hence a camcorder is difficult to capture the music sound if the environment is noisy or the microphone is not sensitive enough. The imitator will be impossible to synchronize the music with the video, if this information is missing. To eliminate this effect, we set the volume of the speaker to maximum and take the video in a quiet laboratory environment. 
+
+The participants were divided into three group, and each group was asked to imitated only one of the three users above. During the test, the participants can watch the video for as many time as they want at anytime between two trials. A feedback from our system will be provided after each trail so that the participants can decide whether they need to adjust their movement or not. After total number of trials reached 30 for each participant, the experiment would stop regardless the participant succeed or not. The investigator was not only recording the total number of successes, but also the number of trail before the first successful login. This experiment is conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail. 
+
+\subsubsection{Results}
+Although it is difficult to quantitatively to describe the complexity of the movement in 5-Dimension space(3-axis accelarometer, time space,  and response to the music beat), some distinguish characteristics of these three subject is the reason they are chosen to become our imitated subject. As shown in Figure~\ref{fig:imitation_movement} $Subject A$ performed a simple nodding movement by naturally following the music flow. $Subject B$ also performed a simple nodding, but his movement was always off-beat with the music. $Subject C$ performed a movement combined with nodding and shaking, and he only nodded/shake at certain beats instead of every beat, which makes his movement is relatively difficult to learn. Table~\ref{tab:imitation} shows the overall result of this experiment. The overall FAR is 7.54 \%, while the individual FARs are 17.67\%, 9.82\% and 3.27\% accordingly.  Since $Subject A$ perform the simplest movement among these three subjects, 6 out 10 subjects could succeed at least once during their 30 trials, while for $Subject B$ and $Subject C$ this number is 3 of 15 and 3 of 10. 
 
 \begin{table}[]
 \centering
-\caption{My caption}
+
 \label{my-label}
 \begin{tabular}{lcllc}
 \hline
-                            & \multicolumn{1}{l}{Total Imitator} & \multicolumn{1}{c}{AIS} & \multicolumn{1}{c}{ATF} & \multicolumn{1}{l}{FAR (\%)} \\ \hline\hline
-Subject A                   & 10                                 &                         &                         & 17.67                        \\ \hline
-Subject B                   & 13                                 &                         &                         & 9.82                         \\ \hline
-Subject C                   & 8                                  &                         &                         & 3.27                         \\ \hline
-\multicolumn{1}{c}{Overall} & 31                                 &                         &                         & 7.54                         \\ \hline
+                            & \multicolumn{1}{l}{Total Imitator} & \multicolumn{1}{c}{SI} & \multicolumn{1}{c}{ATF} & \multicolumn{1}{l}{FAR (\%)} \\ \hline\hline
+Subject A                   & 10                                 &  6                       &                         & 17.67                        \\ \hline
+Subject B                   & 13                                 &  3                       &                         & 9.82                         \\ \hline
+Subject C                   & 8                                  &  3                       &                         & 3.27                         \\ \hline
+\multicolumn{1}{c}{Overall} & 31                                 &  12                       &                         & 7.54                         \\ \hline
 \end{tabular}
+\caption{\label{tab:imitation}Imitation attack experiment result. Successful Imitator Number(SI) represents the number of the imitators that succeed at least once. Average. Average Number of Trail before first login(ATF) indicates the average times of trail a successful imitator takes before the first login.}
 \end{table}
 
 \subsection{Headbanger Google Glass App Implementation}
