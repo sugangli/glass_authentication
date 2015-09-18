@@ -3,8 +3,8 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.95\columnwidth]{figure/sysarch.eps}
-\caption{\systemname~system design flow. The online authentication phase of \systemname~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) signature generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the signature, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose result will be used as the authentication result.}
+\includegraphics[width=0.95\columnwidth]{figure/system.pdf}
+\caption{\systemname~system design flow. The online authentication phase of \systemname~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) parameter generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the parameter, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose output will be used as the authentication result.}
 \label{fig:sysarch}
 \end{figure}
 
@@ -39,9 +39,8 @@ namely, by appropriately indexing the users in the trained database.
 In the online authentication phase, the sensor readings during the 
 authentication attempt are processed, features are extracted, matched with the 
 trained set. The user is authenticated upon a successful match.
-We posit that \systemname~will run as a service in the device upon power-up, 
-similar to the screen-lock in smartphones or the head-nod interface on Google
-Glass~\cite{googleglass}.  The authentication process is initiated
+We posit that \systemname~will run as a service in the device upon power-up or application start-up, 
+similar to the screen-lock in smartphones.  The authentication process is initiated
 by playing a short duration audio track on the device, to which the user 
 responds through head-movements. 
 Our design is developed based on the idea that humans respond to music 
@@ -66,7 +65,7 @@ accelerometer
 sensor on the smart-glass device.
 \vspace{-2pt}\item {\em Filtering}: The accelerometer signals are filtered by applying  
 a low-pass filter to remove records of extraneous motion.
-\vspace{-2pt}\item {\em Signature generation}: The accelerometer signals are
+\vspace{-2pt}\item {\em Parameter generation}: The accelerometer signals are
 processed through the dynamic-time warping (DTW) tool~\cite{dtw} to obtain a
 DTW feature that is treated as the unique signature for the user.
 %A user can generate different signatures for different audio tracks. A
@@ -89,7 +88,6 @@ with sufficient confidence.
 %As shown in Figure~\ref{fig:sysarch} shows the block diagram of
 %~\systemname system design.
 We will now discuss these design aspects in more detail.
-\newpage
 \subsection{Sensor Data Collection}
 %To facilitate natural head movement, we provide several
 %short music tracks with easy-to-follow beats.
@@ -100,7 +98,7 @@ the music beats played on the device for a stipulated duration of $T$ seconds.
 In this duration, the raw accelerometer
 signals, from the inbuilt sensor, are collected at
 a sampling rate of $r$ samples/sec; the default sampling rate on
-Google Glass is 200Hz. The accelerometer data corresponding to one user,  is a 
+Google Glass is 50Hz. The accelerometer data corresponding to one user,  is a 
 collection of accelerometer readings on the
 3D axis (x, y, and z) collected over $T$ sec duration. 
 Figure~\ref{fig:headbanger-illustrate} illustrates the axis 
