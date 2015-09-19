@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.21)  18 SEP 2015 17:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.21)  19 SEP 2015 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,12 +559,28 @@ LaTeX Warning: Citation `clarke1999rhythm' on page 3 undefined on input line 6.
 LaTeX Warning: Citation `fraisse1982rhythm' on page 3 undefined on input line 6
 .
 
-<figure/width_amp_box.png, id=214, 1686.0591pt x 922.8879pt>
-File: figure/width_amp_box.png Graphic file (type png)
+Package epstopdf Info: Source file: <figure/width_amp_box.eps>
+(epstopdf)                    date: 2015-09-19 17:10:33
+(epstopdf)                    size: 121918 bytes
+(epstopdf)             Output file: <figure/width_amp_box-eps-converted-to.pdf>
 
-<use figure/width_amp_box.png>
-Package pdftex.def Info: figure/width_amp_box.png used on input line 10.
-(pdftex.def)             Requested size: 253.04987pt x 138.49762pt.
+(epstopdf)             Command: <repstopdf --outfile=figure/width_amp_box-eps-c
+onverted-to.pdf figure/width_amp_box.eps>
+(epstopdf)             \includegraphics on input line 10.
+runsystem(repstopdf --outfile=figure/width_amp_box-eps-converted-to.pdf figure/
+width_amp_box.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figure/width_amp_box-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-09-19 17:10:58
+(epstopdf)                    size: 26678 bytes.
+<figure/width_amp_box-eps-converted-to.pdf, id=214, 716.6775pt x 504.88625pt>
+File: figure/width_amp_box-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figure/width_amp_box-eps-converted-to.pdf>
+Package pdftex.def Info: figure/width_amp_box-eps-converted-to.pdf used on inpu
+t line 10.
+(pdftex.def)             Requested size: 253.04987pt x 178.26901pt.
 
 <figure/resp_time_cos.png, id=215, 586.8324pt x 442.2924pt>
 File: figure/resp_time_cos.png Graphic file (type png)
@@ -601,13 +617,10 @@ LaTeX Warning: Citation `citedtw' on page 3 undefined on input line 28.
 LaTeX Warning: Reference `fig:resp_time_dtw' on page 3 undefined on input line 
 28.
 
-) (./system.tex [3]
-Underfull \vbox (badness 2245) has occurred while \output is active []
-
-
-<figure/system.pdf, id=230, 279.29344pt x 235.63031pt>
+) (./system.tex [3] <figure/system.pdf, id=230, 279.29344pt x 235.63031pt>
 File: figure/system.pdf Graphic file (type pdf)
- <use figure/system.pdf>
+
+<use figure/system.pdf>
 Package pdftex.def Info: figure/system.pdf used on input line 6.
 (pdftex.def)             Requested size: 240.39659pt x 202.82147pt.
 
@@ -674,9 +687,9 @@ Overfull \hbox (30.76187pt too wide) in paragraph at lines 13--19
 
 [4 <./figure/raw_x-eps-converted-to.pdf> <./figure/raw_y-eps-converted-to.pdf> 
 <./figure/raw_z-eps-converted-to.pdf> <./figure/resp_time_cos.png> <./figure/re
-sp_time_cor.png> <./figure/resp_time_dtw.png> <./figure/width_amp_box.png>]
-[5 <./figure/freq_x-eps-converted-to.pdf> <./figure/freq_y-eps-converted-to.pdf
-> <./figure/freq_z-eps-converted-to.pdf> <./figure/system.pdf>]
+sp_time_cor.png> <./figure/resp_time_dtw.png> <./figure/width_amp_box-eps-conve
+rted-to.pdf>] [5 <./figure/freq_x-eps-converted-to.pdf> <./figure/freq_y-eps-co
+nverted-to.pdf> <./figure/freq_z-eps-converted-to.pdf> <./figure/system.pdf>]
 Package epstopdf Info: Source file: <figure/filtered_x.eps>
 (epstopdf)                    date: 2015-09-10 15:09:40
 (epstopdf)                    size: 64865 bytes
@@ -688,7 +701,7 @@ erted-to.pdf figure/filtered_x.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/filtered_x-eps-converted-to.pdf, id=453, 587.19376pt x 442.65375pt>
+<figure/filtered_x-eps-converted-to.pdf, id=489, 587.19376pt x 442.65375pt>
 File: figure/filtered_x-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_x-eps-converted-to.pdf>
@@ -706,7 +719,7 @@ erted-to.pdf figure/filtered_y.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/filtered_y-eps-converted-to.pdf, id=454, 587.19376pt x 442.65375pt>
+<figure/filtered_y-eps-converted-to.pdf, id=490, 587.19376pt x 442.65375pt>
 File: figure/filtered_y-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_y-eps-converted-to.pdf>
@@ -724,7 +737,7 @@ erted-to.pdf figure/filtered_z.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/filtered_z-eps-converted-to.pdf, id=455, 587.19376pt x 442.65375pt>
+<figure/filtered_z-eps-converted-to.pdf, id=491, 587.19376pt x 442.65375pt>
 File: figure/filtered_z-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/filtered_z-eps-converted-to.pdf>
@@ -748,7 +761,7 @@ ted-to.pdf figure/top1_roc.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/top1_roc-eps-converted-to.pdf, id=474, 587.19376pt x 442.65375pt>
+<figure/top1_roc-eps-converted-to.pdf, id=510, 587.19376pt x 442.65375pt>
 File: figure/top1_roc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/top1_roc-eps-converted-to.pdf>
@@ -770,7 +783,7 @@ ted-to.pdf figure/top3_roc.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/top3_roc-eps-converted-to.pdf, id=475, 587.19376pt x 442.65375pt>
+<figure/top3_roc-eps-converted-to.pdf, id=511, 587.19376pt x 442.65375pt>
 File: figure/top3_roc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/top3_roc-eps-converted-to.pdf>
@@ -789,7 +802,7 @@ s-converted-to.pdf figure/exp2_vary_length.eps>
 (epstopdf)             \includegraphics on input line 39.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/exp2_vary_length-eps-converted-to.pdf, id=476, 587.19376pt x 442.65375p
+<figure/exp2_vary_length-eps-converted-to.pdf, id=512, 587.19376pt x 442.65375p
 t>
 File: figure/exp2_vary_length-eps-converted-to.pdf Graphic file (type pdf)
  <use figure/exp2_vary_length-eps-converted-to.pdf>
@@ -797,14 +810,14 @@ Package pdftex.def Info: figure/exp2_vary_length-eps-converted-to.pdf used on i
 nput line 39.
 (pdftex.def)             Requested size: 253.04987pt x 190.75616pt.
 
-<figure/roc_dtw_cos_cor.png, id=477, 586.8324pt x 442.2924pt>
+<figure/roc_dtw_cos_cor.png, id=513, 586.8324pt x 442.2924pt>
 File: figure/roc_dtw_cos_cor.png Graphic file (type png)
 
 <use figure/roc_dtw_cos_cor.png>
 Package pdftex.def Info: figure/roc_dtw_cos_cor.png used on input line 46.
 (pdftex.def)             Requested size: 253.04987pt x 190.72192pt.
 
-<figure/roc_dtw_diff_freq.png, id=478, 586.8324pt x 442.2924pt>
+<figure/roc_dtw_diff_freq.png, id=514, 586.8324pt x 442.2924pt>
 File: figure/roc_dtw_diff_freq.png Graphic file (type png)
 
 <use figure/roc_dtw_diff_freq.png>
@@ -838,7 +851,7 @@ converted-to.pdf figure/exp2_vary_size.eps>
 (epstopdf)             \includegraphics on input line 178.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/exp2_vary_size-eps-converted-to.pdf, id=736, 587.19376pt x 442.65375pt>
+<figure/exp2_vary_size-eps-converted-to.pdf, id=772, 587.19376pt x 442.65375pt>
 File: figure/exp2_vary_size-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/exp2_vary_size-eps-converted-to.pdf>
 Package pdftex.def Info: figure/exp2_vary_size-eps-converted-to.pdf used on inp
@@ -848,7 +861,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
-<figure/imitation_subject_movement.png, id=741, 303.1325pt x 254.45062pt>
+<figure/imitation_subject_movement.png, id=777, 303.1325pt x 254.45062pt>
 File: figure/imitation_subject_movement.png Graphic file (type png)
 
 <use figure/imitation_subject_movement.png>
@@ -877,13 +890,16 @@ onverted-to.pdf figure/software_arch.eps>
 (epstopdf)             \includegraphics on input line 248.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/software_arch-eps-converted-to.pdf, id=790, 555.07375pt x 171.64125pt>
+<figure/software_arch-eps-converted-to.pdf, id=826, 555.07375pt x 171.64125pt>
 File: figure/software_arch-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/software_arch-eps-converted-to.pdf>
 Package pdftex.def Info: figure/software_arch-eps-converted-to.pdf used on inpu
 t line 248.
 (pdftex.def)             Requested size: 253.04987pt x 78.24878pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 313.
 
 
@@ -895,12 +911,10 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <7> not available
  [10 <./figure/imitation_subject_movement.png> <./figure/software_arch-eps-conv
 erted-to.pdf>])
 (./discussion.tex [11]) (./relatedwork.tex) (./summary.tex [12]) (./main.bbl
-Overfull \vbox (0.559pt too high) has occurred while \output is active []
-
- [13])
+[13])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
 
-Overfull \vbox (0.90596pt too high) has occurred while \output is active []
+Overfull \vbox (1.15596pt too high) has occurred while \output is active []
 
 
 [14]
@@ -908,15 +922,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 28773CCD26F5468D23F0D39D2095B6D2;2196.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 00092CF2DD746CB7A7C96E88826F0BFE;2186
-(rerunfilecheck)             After:  28773CCD26F5468D23F0D39D2095B6D2;2196.
 
 LaTeX Warning: There were undefined references.
 
@@ -926,9 +934,9 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 7942 strings out of 493304
- 121845 string characters out of 6139870
- 267680 words of memory out of 5000000
+ 7945 strings out of 493304
+ 121981 string characters out of 6139870
+ 249037 words of memory out of 5000000
  11123 multiletter control sequences out of 15000+600000
  38797 words of font info for 72 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -943,10 +951,10 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (14 pages, 1121433 bytes).
+Output written on main.pdf (14 pages, 1080110 bytes).
 PDF statistics:
- 952 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 522 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
  380 words of extra memory for PDF output out of 10000 (max. 10000000)
 
