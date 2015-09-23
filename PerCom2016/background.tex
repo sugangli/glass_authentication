@@ -1,11 +1,10 @@
 \section{Background}
 \label{sec:background}
 
-\subsection{Wearable Device Authentication}
+\subsection{Mobile Device Authentication Through Body Movements}
 
 
 %\begin{comment}
-
 %\end{comment}
 
 %Authentication mechanisms for wearable devices can broadly be divided into two
@@ -16,7 +15,7 @@
 %typically the user's smartphone -- is used as a medium for authentication.
 %Today's commercially available wearable devices predominantly use the latter
 %approach where users login to their wearable devices through their smartphone
-%-- using a PIN or an email account.  
+%-- using a PIN or an email account.
 %%A select few gadgets, for example the Google Glass or fitbit, require the
 %%users to register their device to their user specific accounts (gmail for
 %%Google Glass), which can also be perceived as an indirect mechanism for
@@ -34,40 +33,38 @@
 %The fact that wearable devices relate significantly to ``what we wear" on the
 %human body, biometrics can play a key role for direct authentication to
 %wearable
-%devices. 
+%devices.
 
-Biometrics allow a system to identify a user based upon ``who you
-are" (i.e., her physiology) instead of ``what you
-have'' (i.e., ID cards) or ``what you know'' (i.e.,
-passwords)~\cite{jain2004introduction,o2003comparing,yampolskiy2007motor}.
-Physiological biometrics such as DNA, ear shape, face, fingerprint,
-hand or finger geometry,
-iris, odor, palm-print, retinal scan, and voice, have been very effective and
-widely used in many prototype and commercial authentication systems.
-In addition, body shape such as body height, width, and body-part proportions
-can also be used as biometric cues to identify different
-people~\cite{collins2002silhouette}. Even characteristics such as
-body weight and fat percentage have been considered as secondary biometrics
-for authentication purposes~\cite{ailisto2006soft}. 
+%Biometrics allow a system to identify a user based upon ``who you
+%are" (i.e., her physiology) instead of ``what you
+%have'' (i.e., ID cards) or ``what you know'' (i.e.,
+%passwords)~\cite{jain2004introduction,o2003comparing,yampolskiy2007motor}.
+%Physiological biometrics such as DNA, ear shape, face, fingerprint,
+%hand or finger geometry,
+%iris, odor, palm-print, retinal scan, and voice, have been very effective and
+%widely used in many prototype and commercial authentication systems.
+%In addition, body shape such as body height, width, and body-part proportions
+%can also be used as biometric cues to identify different
+%people~\cite{collins2002silhouette}. Even characteristics such as
+%body weight and fat percentage have been considered as secondary biometrics
+%for authentication purposes~\cite{ailisto2006soft}.
 
-However, biometrics are
-not prominently used in wearable devices that are commercially available 
-today, though
-there have been specific point commercial designs (e.g., Nymi~\cite{nymi}). This can be attributed to the
-fact that biometrics would require the specific hardware and sensors available on
-the wearable device. Also the overheads for physiological biometrics in
-wearable devices can be high, in both, cost for hardware as well as
-integration and computing.
+%However, biometrics are
+%not prominently used in wearable devices that are commercially available
+%today, though
+%there have been specific point commercial designs (e.g., Nymi~\cite{nymi}). This can be attributed to the
+%fact that biometrics would require the specific hardware and sensors available on
+%the wearable device. Also the overheads for physiological biometrics in
+%wearable devices can be high, in both, cost for hardware as well as
+%integration and computing.
 
-%Most of the afore-mentioned biometrics, however, require extra hardware
-%(e.g., camera) and/or processing that is too demanding for wearable devices.
+%%Most of the afore-mentioned biometrics, however, require extra hardware
+%%(e.g., camera) and/or processing that is too demanding for wearable devices.
 
-An other approach to direct authentication is using behavioral biometrics
-where unique signatures from human behavior (subconscious
+Recently, a number of body-movement based authentication approaches have been proposed for mobile devices, in which unique signatures from human behavior (subconscious
 or in response to external stimulus) provide cues for differentiating and
 authenticating users. For example, it has been shown that gait (e.g.,
-stride length, the
-amount of arm swing) when the user is walking or
+stride length, the amount of arm swing) when the user is walking or
 running is a reliable identification cue, and irrespective of the
 environment~\cite{stevenage1999visual}. Okumura et.al.~\cite{okumura2006study}
 have shown that the human arm swing patterns can be used to create signatures
@@ -75,26 +72,20 @@ to authenticate to their cell-phones. Monrose
 et.al.~\cite{monrose2000keystroke} show that keystroke rhythms, when
 users type on the keyboard, that include typing dynamics such as how
 long is a keystroke, how far is between consecutive strokes, and how is the
-pressure exerted on each key, can be used as a biometric to authenticate
+pressure exerted on each key, can be used to authenticate
 users. Similarly, mouse usage dynamics~\cite{jorgensen2011mouse} and touchpad
 touching dynamics~\cite{bo2013silentsense,de2012touch} have also been shown to
-serve as potential biometrics.
+serve as potential authentication cues.
 
-In comparison to other means of authentication, behavioral biometric
-authentication can offer a more convenient (than physiological biometrics),
-and more secure (than indirect authentication) solution for wearable device
-authentication. With the increasing off-the-shelf
-availability and (almost) unlimited access to the sensors on the wearables, it
+Our viewpoint is that, in comparison to other means of authentication, body-movement based
+authentication offers great convenience -- with increasing access to the built-in sensors on wearables, it
 has become possible to generate and infer unique behavioral signatures
-specific to users. We use these rationale as a motivation for our proposed
-design of a behavioral biometric based authentication that generates unique
-signatures from accelerometer signal patterns from user's head movements.
-We design an authentication system, dubbed {\em Headbanger}, for head-worn
+specific to users. With this rationale, we design an authentication system, dubbed {\em Headbanger}, for head-worn
 devices by monitoring user's unique head-movement patterns in response to an
 external audio stimulus.
 
 %\vspace{4pt}{\bf Head-movements as a behavioral biometric.}
-\subsection{Head-movement as a Biometric}
+\subsection{Using Head-movement for Authentication}
 \label{subsec:headmovements}
 
 %As such, authenticating a user involves comparing her sensor
@@ -105,30 +96,30 @@ external audio stimulus.
 %and in the following section, we will discuss each component of this design
 %in more detail.
 
-According to Jain et al.~\cite{jain2004introduction}, a human characteristic can be
-considered as biometric as long as it is \emph{universal}, \emph{distinctive},
+According to Jain et al.~\cite{jain2004introduction}, a type of body movement can be
+considered for authentication purpose as long as it is \emph{universal}, \emph{distinctive},
 \emph{repeatable}, and \emph{collectible}. With the advancements in head-worn
-wearable computer designs collecting head-movement
-patterns using the built-in accelerometers and motion sensors has become more 
+wearable computer designs, collecting head-movement
+patterns using built-in accelerometers and motion sensors has become increasingly
 accessible. Such sensors are
-available on almost all head-worn wearable devices available today, thus
-making head movements, both, available {\em universal} and \emph{collectible}. 
+available on most of today's head-worn wearable devices, thus
+making head movements, both, {\em universal} and \emph{collectible}.
 
-In this paper, we will show that free-style head movements are \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). It has been shown~\cite{zentner2010rhythmic} that most people move
+In this paper, we will show that free-style head movements are \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music beats. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). It has been shown~\cite{zentner2010rhythmic} that most people move
 their body as a natural response to external rhythmic stimuli such as music;
 even at a very early age, infants respond to music and their movements speed
-up with the increasing rhythm speed. Most adults naturally perform head 
-movements or hand movements when listening to a fast beat audio track.  When 
-combined with external rhythmic stimuli, we believe body movements become more 
-distinctive -- not only a person's movement pattern is unique, but their 
-response to rhythmic stimuli is also unique. In this way, the resulting 
+up with the increasing rhythm speed. Most adults naturally perform head
+movements or hand movements when listening to a fast beat audio track.  When
+combined with external rhythmic stimuli, we believe body movements become more
+distinctive -- not only a person's movement pattern is unique, but their
+response to rhythmic stimuli is also unique. In this way, the resulting
 authentication system will be more dependable.
 
 Based on a
 preliminary analysis of the accelerometer signals from five Google Glass
-users, we also observed (see Figure~\ref{fig:raw} (a)-(e)) 
+users, we also observed (see Figure~\ref{fig:raw} (a)-(e))
 that these users
-{\em repeatedly} showed unique and {\em distinctive} head-movement patterns 
+{\em repeatedly} showed unique and {\em distinctive} head-movement patterns
 (that are differentiable through simple signal processing techniques),
 when listening to the same music beats on the head-worn device.
 Motivated by this observation we hypothesize that head movements
@@ -160,4 +151,4 @@ indicate that different users' head movement patterns appear distinctive from
 each other. The three users wore a Google Glass (in turns) and listened to a
 10 second audio snapshot of a pop song.}
 \vspace{-2pt}
-\end{figure*}
+\end{figure*} 
