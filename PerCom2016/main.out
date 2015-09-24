@@ -1,7 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Background}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Wearable Device Authentication}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Head-movement as a Biometric}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Mobile Device Authentication Through Body Movements}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Using Head-movement for Authentication}{section.2}% 4
 \BOOKMARK [1][-]{section.3}{Preliminary Study}{}% 5
 \BOOKMARK [1][-]{section.4}{Headbanger System Design}{}% 6
 \BOOKMARK [2][-]{subsection.4.1}{Sensor Data Collection}{section.4}% 7

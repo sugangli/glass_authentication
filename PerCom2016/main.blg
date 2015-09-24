@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 Case mismatch error between cite keys DTW and dtw
----line 81 of file main.aux
+---line 79 of file main.aux
  : \citation{DTW
  :              }
 I'm skipping whatever remains of this command
@@ -14,45 +14,45 @@ Warning--to sort, need author or key in smartwatch
 Warning--to sort, need author or key in fitbit
 Warning--to sort, need author or key in nymi
 Warning--empty journal in hoyle2015sensitive
-You've used 52 entries,
+You've used 48 entries,
             2118 wiz_defined-function locations,
-            729 strings with 12128 characters,
-and the built_in function-call counts, 15968 in all, are:
-= -- 1397
-> -- 991
+            713 strings with 11560 characters,
+and the built_in function-call counts, 14892 in all, are:
+= -- 1303
+> -- 931
 < -- 2
-+ -- 400
-- -- 340
-* -- 1012
-:= -- 2748
-add.period$ -- 156
-call.type$ -- 52
-change.case$ -- 326
++ -- 376
+- -- 320
+* -- 952
+:= -- 2556
+add.period$ -- 144
+call.type$ -- 48
+change.case$ -- 304
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 640
-empty$ -- 1266
-format.name$ -- 340
-if$ -- 3282
+cite$ -- 53
+duplicate$ -- 592
+empty$ -- 1176
+format.name$ -- 320
+if$ -- 3062
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 48
-newline$ -- 259
-num.names$ -- 96
-pop$ -- 464
+int.to.str$ -- 48
+missing$ -- 44
+newline$ -- 239
+num.names$ -- 88
+pop$ -- 434
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 256
 quote$ -- 0
-skip$ -- 383
+skip$ -- 355
 stack$ -- 0
-substring$ -- 393
-swap$ -- 94
+substring$ -- 373
+swap$ -- 88
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
+type$ -- 192
 warning$ -- 5
-while$ -- 108
-width$ -- 54
-write$ -- 518
+while$ -- 100
+width$ -- 50
+write$ -- 478
 (There was 1 error message)

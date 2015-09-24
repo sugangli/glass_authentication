@@ -16,12 +16,6 @@ Nymi band.
 Smart watch.
 \newblock \url{http://en.wikipedia.org/wiki/Smartwatch}.
 
-\bibitem{ailisto2006soft}
-H.~Ailisto, E.~Vildjiounaite, M.~Lindholm, S.-M. Makela, and J.~Peltola.
-\newblock Soft biometrics -- combining body weight and fat measurements with
-  fingerprint biometrics.
-\newblock {\em Pattern Recognition Letters}, 2006.
-
 \bibitem{ailisto2005identifying}
 H.~J. Ailisto, M.~Lindholm, J.~Mantyjarvi, E.~Vildjiounaite, and S.-M. Makela.
 \newblock Identifying people from gait pattern with accelerometers.
@@ -65,11 +59,6 @@ R.~Challis and R.~Kitney.
 E.~F. Clarke.
 \newblock Rhythm and timing in music.
 \newblock {\em The psychology of music}, 2:473--500, 1999.
-
-\bibitem{collins2002silhouette}
-R.~T. Collins, R.~Gross, and J.~Shi.
-\newblock Silhouette-based human identification from body shape and gait.
-\newblock In {\em IEEE FGR}, 2002.
 
 \bibitem{cornelius2014wearable}
 C.~Cornelius, R.~Peterson, J.~Skinner, R.~Halter, and D.~Kotz.
@@ -204,11 +193,6 @@ F.~Monrose and A.~D. Rubin.
 \newblock Keystroke dynamics as a biometric for authentication.
 \newblock {\em Future Generation computer systems}, 2000.
 
-\bibitem{o2003comparing}
-L.~O'Gorman.
-\newblock Comparing passwords, tokens, and biometrics for user authentication.
-\newblock {\em Proceedings of the IEEE}, 2003.
-
 \bibitem{okumura2006study}
 F.~Okumura, A.~Kubota, Y.~Hatori, K.~Matsuo, M.~Hashimoto, and A.~Koike.
 \newblock A study on biometric authentication based on arm sweep action with
@@ -272,11 +256,6 @@ J.~O. Wobbrock.
 \newblock Tapsongs: tapping rhythm-based passwords on a single binary sensor.
 \newblock In {\em Proceedings of the 22nd annual ACM symposium on User
   interface software and technology}, pages 93--96. ACM, 2009.
-
-\bibitem{yampolskiy2007motor}
-R.~V. Yampolskiy.
-\newblock Motor-skill based biometrics.
-\newblock In {\em Annual Security Conference}, 2007.
 
 \bibitem{zentner2010rhythmic}
 M.~Zentner and T.~Eerola.
