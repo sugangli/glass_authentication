@@ -67,7 +67,7 @@ authenticating users. For example, it has been shown that gait (e.g.,
 stride length, the amount of arm swing) when the user is walking or
 running is a reliable identification cue, and irrespective of the
 environment~\cite{stevenage1999visual}. Okumura et.al.~\cite{okumura2006study}
-have shown that the human arm swing patterns can be used to create signatures
+have shown that human arm swing patterns can be used to create signatures
 to authenticate to their cell-phones. Monrose
 et.al.~\cite{monrose2000keystroke} show that keystroke rhythms, when
 users type on the keyboard, that include typing dynamics such as how
@@ -77,8 +77,8 @@ users. Similarly, mouse usage dynamics~\cite{jorgensen2011mouse} and touchpad
 touching dynamics~\cite{bo2013silentsense,de2012touch} have also been shown to
 serve as potential authentication cues.
 
-Our viewpoint is that, in comparison to other means of authentication, body-movement based
-authentication offers great convenience -- with increasing access to the built-in sensors on wearables, it
+We take the viewpoint that, in comparison to other means of authentication, body-movement based
+authentication offers great convenience -- with increasing access to built-in sensors on wearables, it
 has become possible to generate and infer unique behavioral signatures
 specific to users. With this rationale, we design an authentication system, dubbed {\em Headbanger}, for head-worn
 devices by monitoring user's unique head-movement patterns in response to an
@@ -97,15 +97,15 @@ external audio stimulus.
 %in more detail.
 
 According to Jain et al.~\cite{jain2004introduction}, a type of body movement can be
-considered for authentication purpose as long as it is \emph{universal}, \emph{distinctive},
+considered for the authentication purpose as long as it is \emph{universal}, \emph{distinctive},
 \emph{repeatable}, and \emph{collectible}. With the advancements in head-worn
 wearable computer designs, collecting head-movement
 patterns using built-in accelerometers and motion sensors has become increasingly
 accessible. Such sensors are
 available on most of today's head-worn wearable devices, thus
-making head movements, both, {\em universal} and \emph{collectible}.
+making head movements both {\em universal} and \emph{collectible}.
 
-In this paper, we will show that free-style head movements are \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music beats. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). It has been shown~\cite{zentner2010rhythmic} that most people move
+In this paper, we strive to show that free-style head movements are reasonably \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music beats. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). It has been shown~\cite{zentner2010rhythmic} that most people move
 their body as a natural response to external rhythmic stimuli such as music;
 even at a very early age, infants respond to music and their movements speed
 up with the increasing rhythm speed. Most adults naturally perform head
@@ -115,20 +115,6 @@ distinctive -- not only a person's movement pattern is unique, but their
 response to rhythmic stimuli is also unique. In this way, the resulting
 authentication system will be more dependable.
 
-Based on a
-preliminary analysis of the accelerometer signals from five Google Glass
-users, we also observed (see Figure~\ref{fig:raw} (a)-(e))
-that these users
-{\em repeatedly} showed unique and {\em distinctive} head-movement patterns
-(that are differentiable through simple signal processing techniques),
-when listening to the same music beats on the head-worn device.
-Motivated by this observation we hypothesize that head movements
-can be a good behavioral biometric characteristic to authenticate
-users to their smart glass.
-We next formally present the design of our system that
-utilizes head-movement patterns as behavioral biometric signature
-to authenticate smart glass users.
-
 \begin{figure*}[t]
 \begin{center}
 \begin{tabular}{ccc}
@@ -137,7 +123,6 @@ to authenticate smart glass users.
 \includegraphics [width=.33\linewidth]{figure/raw_z.eps}\\
 (a) X-Axis & (b) Y-Axis & (c) Z-Axis \\
 \end{tabular}
-
 %\begin{tabular}{cc}
 %\includegraphics [width=.33\linewidth]{../fig/raw_sub4.eps}&
 %\includegraphics [width=.33\linewidth]{../fig/raw_sub5.eps}\\
@@ -152,3 +137,20 @@ each other. The three users wore a Google Glass (in turns) and listened to a
 10 second audio snapshot of a pop song.}
 \vspace{-2pt}
 \end{figure*} 
+
+
+Based on a preliminary analysis of the accelerometer signals from three Google Glass
+users, we observed (see Figure~\ref{fig:raw} (a)-(c))
+that these users {\em repeatedly} showed {\em distinctive} head-movement patterns
+(that are differentiable even through simple signal processing techniques),
+when listening to the same music beats.
+
+%Motivated by this observation we hypothesize that head movements
+%can be a good behavioral biometric characteristic to authenticate
+%users to their smart glass.
+%We next formally present the design of our system that
+%utilizes head-movement patterns as behavioral biometric signature
+%to authenticate smart glass users.
+
+
+
