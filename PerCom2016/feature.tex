@@ -10,9 +10,9 @@ and (2) response time, the time interval between a music beat and the correspond
 %response time in our measurement can be either negative or positive. However, finding the associated movement of a beat is a non-trivial process, hence we develop the following algorithm to achieve this goal and form a SRT. First, accelerometer data needs to be synchronized with the music cue in midi format. Since midi file is a time series of instrument commands,  no additional signal processing is required to detect the beat in the music as we can take each command as a beat if the music is simple enough. Second, we locate two neighboring peaks where a beat resides in between, and compute the time intervals from the beat to both peaks. Finally, we choose the one with a smaller absolute value as the response time. Note that we only use data from two axis, since nodding rarely generates meaningful data on the other one. In some cases,  user is not necessary nodding for every beat,  thus we use the 90 percentile of the response time sample to interpolate  when the detected response time is beyond this value.
 %\end{itemize}
 \begin{figure}
-\includegraphics[width=\columnwidth]{figure/waveform.png}
+\includegraphics[width=\columnwidth]{figure/waveform_resp.png}
 \centering
-\caption{\label{fig:waveform}Waveform snapshot.}
+\caption{\label{fig:waveform}Waveform with beats snapshot.}
 \end{figure}
 
 \begin{figure}
