@@ -61,10 +61,9 @@
 %%Most of the afore-mentioned biometrics, however, require extra hardware
 %%(e.g., camera) and/or processing that is too demanding for wearable devices.
 
-Recently, a number of body-movement based authentication approaches have been proposed for mobile devices, in which unique signatures from human behavior (subconscious
-or in response to external stimulus) provide cues for differentiating and
-authenticating users. For example, it has been shown that gait (e.g.,
-stride length, the amount of arm swing) when the user is walking or
+A number of body-movement based authentication approaches have been proposed for mobile devices. These systems
+leverage unique signatures from human behavior that may be subconscious
+or in response to external stimulus or both.  For example, it has been shown that gait (e.g.~stride length, the amount of arm swing) when the user is walking or
 running is a reliable identification cue, and irrespective of the
 environment~\cite{stevenage1999visual}. Okumura et.al.~\cite{okumura2006study}
 have shown that human arm swing patterns can be used to create signatures
@@ -78,7 +77,7 @@ touching dynamics~\cite{bo2013silentsense,de2012touch} have also been shown to
 serve as potential authentication cues.
 
 We take the viewpoint that, in comparison to other means of authentication, body-movement based
-authentication offers great convenience -- with increasing access to built-in sensors on wearables, it
+authentication may offer great convenience. With increasing access to built-in sensors on wearables, it
 has become possible to generate and infer unique behavioral signatures
 specific to users. With this rationale, we design an authentication system, dubbed {\em Headbanger}, for head-worn
 devices by monitoring user's unique head-movement patterns in response to an
@@ -96,20 +95,21 @@ external audio stimulus.
 %and in the following section, we will discuss each component of this design
 %in more detail.
 
-According to Jain et al.~\cite{jain2004introduction}, a type of body movement can be
-considered for the authentication purpose as long as it is \emph{universal}, \emph{distinctive},
-\emph{repeatable}, and \emph{collectible}. With the advancements in head-worn
-wearable computer designs, collecting head-movement
-patterns using built-in accelerometers and motion sensors has become increasingly
-accessible. Such sensors are
-available on most of today's head-worn wearable devices, thus
+According to Jain et al.~\cite{jain2004introduction}, a type of body movement is useful for
+authentication when it is \emph{universal}, \emph{distinctive},
+\emph{repeatable}, and \emph{collectible}. %With the advancements in head-worn
+%wearable computer designs, collecting head-movement
+%patterns using built-in accelerometers and motion sensors has become increasingly
+%accessible. 
+Sensors for collecting head-movement patterns are
+available on most of today's head-worn wearable devices, and thus
 making head movements both {\em universal} and \emph{collectible}.
 
-In this paper, we strive to show that free-style head movements are reasonably \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music beats. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). It has been shown~\cite{zentner2010rhythmic} that most people move
+In this paper, we show that free-style head movements are  \emph{distinctive} and \emph{repeatable}, especially when combined with external stimuli such as music beats. In~\systemname, music plays a crucial role in stimulating body movements such that the resulting movement pattern is natural to the user (more distinctive) and easier to remember (more repeatable). Zentner and Eerola~\cite{zentner2010rhythmic} have shown that most people move
 their body as a natural response to external rhythmic stimuli such as music;
 even at a very early age, infants respond to music and their movements speed
 up with the increasing rhythm speed. Most adults naturally perform head
-movements or hand movements when listening to a fast beat audio track.  When
+movements or hand movements when listening to a fast beat audio track \textbf{FIXME, citation needed here}.  When
 combined with external rhythmic stimuli, we believe body movements become more
 distinctive -- not only a person's movement pattern is unique, but their
 response to rhythmic stimuli is also unique. In this way, the resulting
