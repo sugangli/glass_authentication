@@ -55,11 +55,6 @@ R.~Challis and R.~Kitney.
   3: The design of butterworth and chebychev filters.
 \newblock {\em Journal of biomedical engineering}, 1983.
 
-\bibitem{clarke1999rhythm}
-E.~F. Clarke.
-\newblock Rhythm and timing in music.
-\newblock {\em The psychology of music}, 2:473--500, 1999.
-
 \bibitem{cornelius2014wearable}
 C.~Cornelius, R.~Peterson, J.~Skinner, R.~Halter, and D.~Kotz.
 \newblock A wearable system that knows who wears it.
@@ -81,11 +76,6 @@ T.~Feng, J.~Yang, Z.~Yan, E.~M. Tapia, and W.~Shi.
 \newblock Tips: context-aware implicit user identification using touch screen
   in uncontrolled environments.
 \newblock In {\em ACM HotMobile}, 2014.
-
-\bibitem{fraisse1982rhythm}
-P.~Fraisse.
-\newblock Rhythm and tempo.
-\newblock {\em The psychology of music}, 1:149--180, 1982.
 
 \bibitem{frank2013touchalytics}
 M.~Frank, R.~Biedert, E.~Ma, I.~Martinovic, and D.~Song.
@@ -250,12 +240,6 @@ T.~Westeyn and T.~Starner.
 \newblock Recognizing song-based blink patterns: Applications for restricted
   and universal access.
 \newblock In {\em IEEE FGR}, 2004.
-
-\bibitem{wobbrock2009tapsongs}
-J.~O. Wobbrock.
-\newblock Tapsongs: tapping rhythm-based passwords on a single binary sensor.
-\newblock In {\em Proceedings of the 22nd annual ACM symposium on User
-  interface software and technology}, pages 93--96. ACM, 2009.
 
 \bibitem{zentner2010rhythmic}
 M.~Zentner and T.~Eerola.
