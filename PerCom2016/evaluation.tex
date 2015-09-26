@@ -18,9 +18,8 @@ Glass implementation of \systemname.
 \begin{figure}[t]
 \centering
 \includegraphics [width=\columnwidth]{figure/top1_roc.eps}
-\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-1
-scheme ($K = 1$). A 10 sec music snapshot is trimmed into music cues of 10
-sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
+\caption{The impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). We trimmed a 10s music snapshot into music cues of 10s, 6s and 5s correspondingly. In this set of results, we varied $n$ ***YZ: what is n? What are the values n? Please specify ***}
+%The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
 \label{fig:roc-top1}
 \end{figure}
 
@@ -119,14 +118,10 @@ the accuracy
 of \systemname~through the metrics stated above.
 %Figures~\ref{fig:roc-curves} (a)-(c) report the accuracy of
 %\systemname~through the metrics stated above.
-In general, our evaluation of the 30 subject data-set indicates that a
-TPR of 95.1\% at FAR of 3.5\%, and EER = 3.97\% can be achieved in
-\systemname, however, these results are tailored to the following parameter
-and algorithm choices:
-10 sec music duration, $K = 3$, and 30 (out of 40) trials from each user being
-used for training with a thresholding parameter value $n = 2.7$ with DTW.
-We will now discuss the results and the impact of such parameter choices
-on accuracy in more detail.
+
+In general, we observe that even with a 5s music cue, \systemname~can achieve a TPR of ***\% at FAR of ***\% and EER of ***\% (when we have $K$=***, *** out of 40 trials from each user being used for training with  thresholding parameter value $n = 2.7$ with DTW). If users do not mind a cue duration of 10s, the TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\% (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). 
+Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.  
+
 \subsubsection{Impact of similarity algorithm}
 In previous preliminary study, we find that DTW, Cosine Distance, and Correlation are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC
 (receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our system preserves all characteristics of the data, which includes the response time to the music beat and the 3-axis accelerometer data. In terms of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms~\cite{DTW}.
