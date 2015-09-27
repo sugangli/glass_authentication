@@ -109,21 +109,24 @@ A strict threshold in the classifier can lead to high FRR, while
 overly relaxing the same can lead to a high FAR. Hence, we also consider
 the equal error rate EER (percentage of errors when $FAR = FRR$), that
 considers both FAR and FRR.
-%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
-%We present the accuracy results through the receiver operating
-%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
-%and~\ref{}.
-Figures~\ref{fig:roc-top1}, \ref{fig:roc-top3} and \ref{fig:eer-length} report
-the accuracy
-of \systemname~through the metrics stated above.
-%Figures~\ref{fig:roc-curves} (a)-(c) report the accuracy of
-%\systemname~through the metrics stated above.
+%%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
+%%We present the accuracy results through the receiver operating
+%%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
+%%and~\ref{}.
+%Figures~\ref{fig:roc-top1}, \ref{fig:roc-top3} and \ref{fig:eer-length} report
+%the accuracy
+%of \systemname~through the metrics stated above.
+%%Figures~\ref{fig:roc-curves} (a)-(c) report the accuracy of
+%%\systemname~through the metrics stated above.
 
-In general, we observe that even with a 5s music cue, \systemname~can achieve a TPR of ***\% at FAR of ***\% and EER of ***\% (when we have $K$=***, *** out of 40 trials from each user being used for training with  thresholding parameter value $n = 2.7$ with DTW). If users do not mind a cue duration of 10s, the TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\% (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW).
-Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
+%In general, we observe that even with a 5s music cue, \systemname~can achieve a TPR of ***\% at FAR of ***\% and EER of ***\% (when we have $K$=***, *** out of 40 trials from each user being used for training with  thresholding parameter value $n = 2.7$ with DTW). If users do not mind a cue duration of 10s, 
 
-\paragraph{Impact of similarity algorithm}
-In previous preliminary study, we find that DTW, Cosine Distance, and Correlation are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC
+After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
+
+\paragraph{Impact of similarity Computing algorithm}
+
+
+In , we find that DTW, Cosine Distance, and Correlation are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC
 (receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our system preserves all characteristics of the data, which includes the response time to the music beat and the 3-axis accelerometer data. In terms of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms~\cite{DTW}.
 
 \paragraph{Impact of music cue duration and $K$ value}
