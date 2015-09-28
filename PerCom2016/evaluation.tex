@@ -7,8 +7,9 @@ institution. In the first phase of evaluation, we collected from volunteer parti
 readings with Google Glass. We analyzed these traces offline on a PC.
 Our evaluations are primarily aimed at determining the accuracy of detecting
 and differentiating users based on their head-movements, and understanding
-the effect of important design parameters such as similarity metric, length of the music cue, training
-data-set size and sampling rate. In the second phase of evaluation, We also measured the response time of our Google
+the effect of important parameters such as similarity metric, length of the music cue, training
+data-set size and sampling rate. In addition to authentication accuracy, we also evaluated how robust is \systemname~against intentional imitation.
+In the second phase of evaluation, We also measured the response time of our Google
 Glass implementation of \systemname.
 
 %based on profiling the execution time of each key
@@ -99,17 +100,17 @@ subject.
 The experiment yielded three sets of data traces that each correspond to
 the three music cue durations we selected.
 
-\subsubsection{Results}
+\subsubsection{Metrics}
 We evaluate the accuracy of \systemname~using metrics that are commonly used
 in evaluating authentication systems, namely,
-the false acceptance rate FAR (percentage of false test samples that are
-mistakenly accepted), false rejection rate FRR (percentage of true test
-samples that are mistakenly rejected), and true positive rate
-TPR (percentage of true test samples that are correctly accepted).
-A strict threshold in the classifier can lead to high FRR, while
-overly relaxing the same can lead to a high FAR. Hence, we also consider
+true positive rate TPR (percentage of true test samples that are
+correctly accepted), false acceptance rate FAR (percentage of false test samples that are
+mistakenly accepted), and false rejection rate FRR (percentage of true test
+samples that are mistakenly rejected). These three metrics are, however, largely dependent on the choice of thresholding values in the system design --
+a strict threshold in the classifier can lead to high FRR, while
+overly relaxing the same can lead to a high FAR. Hence, in order to report the threshold-independent, end-to-end performance, we consider
 the equal error rate EER (percentage of errors when $FAR = FRR$), that
-considers both FAR and FRR.
+considers both FAR and FRR. ***YZ: please check whether this is correct ***
 %%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
 %%We present the accuracy results through the receiver operating
 %%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
@@ -122,56 +123,91 @@ considers both FAR and FRR.
 
 %In general, we observe that even with a 5s music cue, \systemname~can achieve a TPR of ***\% at FAR of ***\% and EER of ***\% (when we have $K$=***, *** out of 40 trials from each user being used for training with  thresholding parameter value $n = 2.7$ with DTW). If users do not mind a cue duration of 10s,
 
-After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
+%After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
 
-\paragraph{Impact of Distance Computing Algorithm}
-There are various ways of calculating the distance between two accelerometer signals, and we consider DTW, Cosine Distance, and Correlation in this study (see comparison results in Figure~\ref{fig:roc_dtw_cos_cor}). In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1 (with 100 data points in each case), while fixing the other parameters -- music cue duration of $10s$, $K = 1$, and  raining data size of 30. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point in Figure~\ref{fig:roc_dtw_cos_cor}. The results show that, among these three algorithms, DTW fares much better than the other two. This is as expected because ***~\cite{DTW}.
+\subsubsection{Determining System Parameter Values}
+Before presenting the final authentication accuracy results, we first report how \systemname~TPR and FAR are impacted by several important system parameters, namely, the choice of distance computing algorithm, $K$ value, and training dataset size, in Figures~\ref{fig:roc_dtw_cos_cor}, ***, and *** respectively, and determine the values we are going to use for these parameters. In each set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point, and the resulting curves are referred to as ROC curves ***YZ: more details about ROC *** In this setting, between two ROC curves on the same figure, the one that is closer to the upper left corner of the figure yields better authentication accuracy.
+
+Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation in this study, when we had $K=***$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: DTW is ***\% better than Cosine Distance, and ***\% better than Correlation. This is as expected because DTW ***~\cite{DTW}. As a result, in the remaining of this study, we will use DTW for the end-to-end system design. 
+
+Secondly, Figure~\ref{fig:***} compares the performance of two $K$ values: $K$=1 and $K$=3, when we had DTW, music cue duration of 10s, and training dataset size of 30 samples.  Recall that the classification algorithm in ~\systemname~generates a classification result (YES or NO) by voting among individual results each generated by the top-K samples in the true set. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:***}. However, we observe the improvement is only marginal: the accuracy when $K=3$ is only ***\% better than the accuracy when $K=1$. On the other hand, having $K=3$ incurs three times as much computing as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for the end-to-end system design.
+
+Thirdly, Figure~\ref{fig:***} compares the performance of three training dataset sizes: 10, 20, and 30 samples, when we had DTW, $K=1$, and music cue duration of 10s. We observe that ***. As a result, in the remaining of this study, we will use *** for the end-to-end system design.
+
+%\paragraph{Impact of Training Dataset Size}
+%%The accuracy of detecting and matching the head-movements to the user depend
+%%upon the music cue duration, value of $K$, and number of samples used for
+%%training.
+
+%***YZ: we need to rewrite this section. In this section, we need to focus on how much improvement we have when we increase the data set size. Also, I think we are using way too many metrics. ***
+%Recalling from Section~\ref{sec:design}, the input to the training phase
+%is a set of temporal signals (samples with duration equal to the music cue
+%duration), each corresponding to one trial of the head-movements from the
+%user. Our evaluations so far considered a training set consisting of 30 samples.
+%***I feel we have too many different metrics. It is confusing.*** In Figure~\ref{fig:eer-size}, we report the EER in \systemname~for three
+%different training data set sizes; 10,20 and 30 samples.
+%We can observe from Figure~\ref{fig:eer-size} that the EER holds an inverse
+%relationship with the training set size. A larger training set minimizes the
+%variance in mean and standard deviation computations, as the errors in their
+%inconsistency are reduced by averaging the mean and standard deviation
+%estimates over a larger set of data.
+%On the other hand, a larger training set also implies a longer execution time
+%of the training phase.
+%However, in our system design, we posit that the training phase can be
+%conducted
+%offline on a more compute efficient device (smartphone, PC or server) and that
+%the wearable device can pre-fetch the trained data (for example, an XML file),
+%prior-to or during data collection phase, through a wireless link.
 
 %are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC
 %(receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our system preserves all characteristics of the data, which includes the response time to the music beat and the 3-axis accelerometer data. In terms of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms~\cite{DTW}.
 
-\paragraph{Impact of $K$ value}
-***YZ: please rearrange the results so that we have two plots. In the first one, we have two curves: k=1 vs k=3 with music cue of 10s. In the second plot, we have 3 curves: 10s, 6s, and 5s with k=1 (why 1? see my comments below)***  The classification algorithm in \systemname~generates a classification result (YES or NO) by voting among individual results each generated by the top-K samples in the true set. We observe from the ROC curves in Figure~\ref{fig:roc-top1} and \ref{fig:roc-top3} that
-for both, $K=1$ and $K=3$, the TPR is close to 95\% while the FAR is slightly
-above 3\% for the 10 sec music duration. For $K = 1$ the FAR increases to
-about 7\% for the 5 sec and 6 sec cases, however, for $K = 3$ the FAR
-decreases to about 3\% and 4\%, respectively.
-We observe a similar trend with the EER as shown in
-Figure\ref{fig:eer-length}, where improvements of 0.5 - 1 \%
-can be achieved by choosing $K = 3$ over $K = 1$. ***YZ: if the improvement is less than 1\%, then K=1 is sufficient. Then for the music cue, please just use K=1***
-This indicates that the accuracy in \systemname~can improve with a larger
-value of $K$. However, the improvement in accuracy through redundancy in the
-training set trades off with the increased execution time as the
-matching requires at least $K - 1$  extra DTW computations as opposed to only
-1 for a top-1 scheme. As we will show ahead, DTW computations incur heavy CPU
-budget on the wearable device.
-***YZ: I will re-write this paragraph after you reorganize the results ***
+%\paragraph{Impact of $K$ value}
+% We observe from the ROC curves in Figure~\ref{fig:roc-top1} and \ref{fig:roc-top3} that
+%for both, $K=1$ and $K=3$, the TPR is close to 95\% while the FAR is slightly
+%above 3\% for the 10 sec music duration. For $K = 1$ the FAR increases to
+%about 7\% for the 5 sec and 6 sec cases, however, for $K = 3$ the FAR
+%decreases to about 3\% and 4\%, respectively.
+%We observe a similar trend with the EER as shown in
+%Figure\ref{fig:eer-length}, where improvements of 0.5 - 1 \%
+%can be achieved by choosing $K = 3$ over $K = 1$. ***YZ: if the improvement is less than 1\%, then K=1 is sufficient. Then for the music cue, please just use K=1***
+%This indicates that the accuracy in \systemname~can improve with a larger
+%value of $K$. However, the improvement in accuracy through redundancy in the
+%training set trades off with the increased execution time as the
+%matching requires at least $K - 1$  extra DTW computations as opposed to only
+%1 for a top-1 scheme. As we will show ahead, DTW computations incur heavy CPU
+%budget on the wearable device.
+%***YZ: I will re-write this paragraph after you reorganize the results ***
 
 
 
-\paragraph{Impact of music cue duration}
+\subsubsection{Authentication Accuracy Results}
 %We measure the DTW computation on Google Glass to be the most
 %computationally expensive operation of all the software modules in
 %\systemname.
 %\paragraph{Impact of music cue duration}
 
-***YZ: I need to rewrite this paragraph. The tone needs to be changed. What is the improvement? ***
-In general, we observe from the results that the FAR can
-be decreased by increasing the music cue duration.
-We can observe (from Figures~\ref{fig:roc-top1}, \ref{fig:roc-top3} and
-\ref{fig:eer-length}) that the improvement is less significant when the music
-cue duration is increased from 5 sec to 6 sec, however, the improvement is
-more
-significant when the music cue duration is increased to 10 sec.
-In \systemname~the data collection phase for the authentication system
-(sampling accelerometer sensor readings) is executed in parallel with the
-music cue. The data processing phase involving the filtering, classification
-and matching is executed only at the end of the music cue and in the same
-order.
+%***YZ: I need to rewrite this paragraph. The tone needs to be changed. What is the improvement? ***
+
+After determining the system parameters' values for~\systemname~, we next report the EER of~\systemname~when the user chooses different music cue durations in Figure~\ref{***}. After a user starts the authentication procedure, how long a user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  The authentication latency consists of two parts: data input latency and computing latency, where the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, the data input latency is the bottleneck as the computing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, the data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different data collection latencies as well as desire different levels of authentication accuracies, \systemname~allows the users to choose different music cue durations (which has the same length as the data input latency) and delivers different authentication accuracies accordingly.
+
+From Figure~\ref{fig:***}, we observe that the EER is as low as *\% with a 5-second music cue, and ***\% with a 10-second music cue.  
+%
+%In general, we observe from the results that the FAR can
+%be decreased by increasing the music cue duration.
+%We can observe (from Figures~\ref{fig:roc-top1}, \ref{fig:roc-top3} and
+%\ref{fig:eer-length}) that the improvement is less significant when the music
+%cue duration is increased from 5 sec to 6 sec, however, the improvement is
+%more
+%significant when the music cue duration is increased to 10 sec.
+%In \systemname~the data collection phase for the authentication system
+%(sampling accelerometer sensor readings) is executed in parallel with the
+%music cue. The data processing phase involving the filtering, classification
+%and matching is executed only at the end of the music cue and in the same
+%order.
 %Hence, execution time of the app will be independent of this duration.
-We note that, the data input duration of 5-10 sec for authentication
-may seem long, but in reality, such data input durations are on par with those
-of password based systems~\cite{von2013patterns}.
+We note that, the data input duration of 5-10 sec for authentication is on par with those
+of password based systems~\cite{von2013patterns}, *** details**.
 %We also note that, since the authentication process is initiated only at the
 %end of the music cue, execution time of the app will be independent
 %of this duration.
@@ -185,39 +221,16 @@ with fixed n value of 2.7}
 \end{figure}
 
 
-\paragraph{Impact of Training Dataset Size}
-%The accuracy of detecting and matching the head-movements to the user depend
-%upon the music cue duration, value of $K$, and number of samples used for
-%training.
-
-***YZ: we need to rewrite this section. In this section, we need to focus on how much improvement we have when we increase the data set size. Also, I think we are using way too many metrics. ***
-Recalling from Section~\ref{sec:design}, the input to the training phase
-is a set of temporal signals (samples with duration equal to the music cue
-duration), each corresponding to one trial of the head-movements from the
-user. Our evaluations so far considered a training set consisting of 30 samples.
-***I feel we have too many different metrics. It is confusing.*** In Figure~\ref{fig:eer-size}, we report the EER in \systemname~for three
-different training data set sizes; 10,20 and 30 samples.
-We can observe from Figure~\ref{fig:eer-size} that the EER holds an inverse
-relationship with the training set size. A larger training set minimizes the
-variance in mean and standard deviation computations, as the errors in their
-inconsistency are reduced by averaging the mean and standard deviation
-estimates over a larger set of data.
-On the other hand, a larger training set also implies a longer execution time
-of the training phase.
-However, in our system design, we posit that the training phase can be
-conducted
-offline on a more compute efficient device (smartphone, PC or server) and that
-the wearable device can pre-fetch the trained data (for example, an XML file),
-prior-to or during data collection phase, through a wireless link.
 
 
-\paragraph{Impact of Sampling Rate}
-***YZ: this can be removed ***
-Due to DTW is resource-consuming, one direct way to reduce the workload of our algorithm is to decrease the sampling rate of the accelarometer and remain the sampling time. Based on Nyquist–Shannon sampling theorem, since the high cut of our filter is 10 Hz, the minimum sampling rate should be 20 Hz. Also, the highest sampling rate and the default sampling rate of our platform are 200 Hz and 50 Hz accordingly. Thus, we choose these three value to evaluate the impact of sampling rate.  In Figure~\ref{fig:roc_dtw_diff_freq}, we observe that 200 Hz provides the best performance among three value, while 50 Hz and 20 Hz are giving closed results. The EER of 20 Hz is **, comparing with  ** of that of 200 Hz. Since the decrement of EER is insignificant and we can achieve 10 times speedup in DTW computing,  20 Hz will be a ideal value of system implementation.
+
+%\paragraph{Impact of Sampling Rate}
+%***YZ: this can be removed ***
+%Due to DTW is resource-consuming, one direct way to reduce the workload of our algorithm is to decrease the sampling rate of the accelarometer and remain the sampling time. Based on Nyquist–Shannon sampling theorem, since the high cut of our filter is 10 Hz, the minimum sampling rate should be 20 Hz. Also, the highest sampling rate and the default sampling rate of our platform are 200 Hz and 50 Hz accordingly. Thus, we choose these three value to evaluate the impact of sampling rate.  In Figure~\ref{fig:roc_dtw_diff_freq}, we observe that 200 Hz provides the best performance among three value, while 50 Hz and 20 Hz are giving closed results. The EER of 20 Hz is **, comparing with  ** of that of 200 Hz. Since the decrement of EER is insignificant and we can achieve 10 times speedup in DTW computing,  20 Hz will be a ideal value of system implementation.
 \begin{figure}
 \centering
 \includegraphics[width = \columnwidth]{figure/imitation_subject_movement.png}
 \caption{\label{fig:imitation_movement} Pictorial description of how the mimicked subjects move.}
 \end{figure}
 
-\input{eval2}
+\input{eval2} 
