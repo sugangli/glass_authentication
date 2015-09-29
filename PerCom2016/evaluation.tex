@@ -22,24 +22,24 @@ Glass implementation of \systemname.
 
 \begin{figure}[t]
 \centering
-\includegraphics [width=\columnwidth]{figure/top1_roc.eps}
-\caption{The impact of music cue duration on TPR and FAR in Top-1 scheme ($K = 1$). We trimmed a 10s music snapshot into music cues of 10s, 6s and 5s correspondingly. In this set of results, we varied $n$ ***YZ: what is n? What are the values n? Please specify ***}
+\includegraphics [width=\columnwidth]{figure/roc_diff_size.eps}
+\caption{The impact of training data size.}
 %The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
-\label{fig:roc-top1}
+\label{fig:roc_diff_size}
 \end{figure}
+
+%\begin{figure}[t]
+%\centering
+%\includegraphics [width=\columnwidth]{figure/top3_roc.eps}
+%\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-3
+%voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of
+%10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
+%\label{fig:roc-top3}
+%\end{figure}
 
 \begin{figure}[t]
 \centering
-\includegraphics [width=\columnwidth]{figure/top3_roc.eps}
-\caption{Evaluation of impact of music cue duration on TPR and FAR in Top-3
-voting scheme ($K = 3$). A 10 sec music snapshot is trimmed into music cues of
-10 sec, 6 sec and 5 sec correspondingly.The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
-\label{fig:roc-top3}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-\includegraphics [width=\columnwidth]{figure/exp2_vary_length.eps}
+\includegraphics [width=\columnwidth]{figure/exp2_eer_vary_length.eps}
 \caption{Comparison of EER for different music lengths (10 sec, 6 sec and 5
 sec) with a fixed n value of 2.7}
 \label{fig:eer-length}
@@ -48,8 +48,8 @@ sec) with a fixed n value of 2.7}
 
 
 \begin{figure}
-\includegraphics[width=\columnwidth]{figure/roc_dtw_diff_freq.png}
-\caption{\label{fig:roc_dtw_diff_freq} Evaluation of impact of different sampling rate shows that the highest sampling rate 200 Hz gives the best resutlt. However, the sampling rate determines computational effort for the smart device, which could be significant in terms of response time.}
+\includegraphics[width=\columnwidth]{figure/roc_k_value.eps}
+\caption{\label{fig:roc_k_value} Evaluation of impact of different K values shows that voting scheme provides minor improvement on the performance.}
 \end{figure}
 
 
@@ -105,12 +105,12 @@ We evaluate the accuracy of \systemname~using metrics that are commonly used
 in evaluating authentication systems, namely,
 true positive rate TPR (percentage of true test samples that are
 correctly accepted), false acceptance rate FAR (percentage of false test samples that are
-mistakenly accepted), and false rejection rate FRR (percentage of true test
+mistakenly accepted), and false rejection rate TRR (percentage of true test
 samples that are mistakenly rejected). These three metrics are, however, largely dependent on the choice of thresholding values in the system design --
-a strict threshold in the classifier can lead to high FRR, while
+a strict threshold in the classifier can lead to high TRR, while
 overly relaxing the same can lead to a high FAR. Hence, in order to report the threshold-independent, end-to-end performance, we consider
-the equal error rate EER (percentage of errors when $FAR = FRR$), that
-considers both FAR and FRR. ***YZ: please check whether this is correct ***
+the equal error rate EER (percentage of errors when $FAR = TRR$), that
+considers both FAR and TRR. ***YZ: please check whether this is correct ***
 %%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
 %%We present the accuracy results through the receiver operating
 %%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
@@ -126,13 +126,13 @@ considers both FAR and FRR. ***YZ: please check whether this is correct ***
 %After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
 
 \subsubsection{Determining System Parameter Values}
-Before presenting the final authentication accuracy results, we first report how \systemname~TPR and FAR are impacted by several important system parameters, namely, the choice of distance computing algorithm, $K$ value, and training dataset size, in Figures~\ref{fig:roc_dtw_cos_cor}, ***, and *** respectively, and determine the values we are going to use for these parameters. In each set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point, and the resulting curves are referred to as ROC curves ***YZ: more details about ROC *** In this setting, between two ROC curves on the same figure, the one that is closer to the upper left corner of the figure yields better authentication accuracy.
+Before presenting the final authentication accuracy results, we first report how \systemname~TPR and FAR are impacted by several important system parameters, namely, the choice of distance computing algorithm, $K$ value, and training dataset size, in Figures~\ref{fig:roc_dtw_cos_cor}, ~\ref{fig:roc_k_value}, and ~\ref{fig:roc_diff_size} respectively, and determine the values we are going to use for these parameters. In each set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point, and the resulting curves are referred to as Receiver Operating Characteristics (ROC) curves. ROC curve describes the performance of authentication system by varying the threshold.  ***YZ: more details about ROC *** In this setting, between two ROC curves on the same figure, the one that is closer to the upper left corner of the figure yields better authentication accuracy.
 
-Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation in this study, when we had $K=***$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: DTW is ***\% better than Cosine Distance, and ***\% better than Correlation. This is as expected because DTW ***~\cite{DTW}. As a result, in the remaining of this study, we will use DTW for the end-to-end system design. 
+Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation in this study, when we had $K=1$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: DTW is 20.5\% better than Cosine Distance, and 18.7\% better than Correlation. This is as expected because DTW can achieve significant enhancement than  the other two algorithms, in terms of matching the waveform of two signals ~\cite{dtw}. As a result, in the remaining of this study, we will use DTW for the end-to-end system design. 
+matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms
+Secondly, Figure~\ref{fig:roc_k_value} compares the performance of two $K$ values: $K$=1 and $K$=3, when we had DTW, music cue duration of 10s, and training dataset size of 30 samples.  Recall that the classification algorithm in ~\systemname~generates a classification result (YES or NO) by voting among individual results each generated by the top-K samples in the true set. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:roc_k_value}. However, we observe the improvement is only marginal: the EER when $K=3$ is only 0.5\% better than the EER when $K=1$. On the other hand, having $K=3$ incurs three times as much computing as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for the end-to-end system design.
 
-Secondly, Figure~\ref{fig:***} compares the performance of two $K$ values: $K$=1 and $K$=3, when we had DTW, music cue duration of 10s, and training dataset size of 30 samples.  Recall that the classification algorithm in ~\systemname~generates a classification result (YES or NO) by voting among individual results each generated by the top-K samples in the true set. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:***}. However, we observe the improvement is only marginal: the accuracy when $K=3$ is only ***\% better than the accuracy when $K=1$. On the other hand, having $K=3$ incurs three times as much computing as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for the end-to-end system design.
-
-Thirdly, Figure~\ref{fig:***} compares the performance of three training dataset sizes: 10, 20, and 30 samples, when we had DTW, $K=1$, and music cue duration of 10s. We observe that ***. As a result, in the remaining of this study, we will use *** for the end-to-end system design.
+Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three training dataset sizes: 10, 20, and 30 samples, when we had DTW, $K=1$, and music cue duration of 10s. We observe that the EER when $size=30$ is 1.79\% better than the EER when $size=20$ and 3.17\% better than that when $size=10$. As a result, in the remaining of this study, we will use $size=30$ for the end-to-end system design.
 
 %\paragraph{Impact of Training Dataset Size}
 %%The accuracy of detecting and matching the head-movements to the user depend
@@ -160,7 +160,7 @@ Thirdly, Figure~\ref{fig:***} compares the performance of three training dataset
 %prior-to or during data collection phase, through a wireless link.
 
 %are giving promising results for the response time sequence, hence we will evaluate these three algorithms in our end-to-end system. Also due to DTW is relatively more computing-intensive than the other two algorithm, we would like to see whether DTW  is worth of computing resource. In this experiment, we vary thresholding parameter value $n$ and fix the other parameters: 10 sec duration, $K = 1$, and  training data $size = 30$. We can observe from the ROC
-%(receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our system preserves all characteristics of the data, which includes the response time to the music beat and the 3-axis accelerometer data. In terms of matching the waveform of two signal, DTW can achieve significant enhancement than the other two algorithms~\cite{DTW}.
+%(receiver operating characteristic) curves in Figure~\ref{fig:roc_dtw_cos_cor} that DTW gives the best result among three algorithms, since its curve is the closest to the upper left corner. Our system preserves all characteristics of the data, which includes the response time to the music beat and the 3-axis accelerometer data. In terms of ~\cite{DTW}.
 
 %\paragraph{Impact of $K$ value}
 % We observe from the ROC curves in Figure~\ref{fig:roc-top1} and \ref{fig:roc-top3} that
@@ -189,9 +189,9 @@ Thirdly, Figure~\ref{fig:***} compares the performance of three training dataset
 
 %***YZ: I need to rewrite this paragraph. The tone needs to be changed. What is the improvement? ***
 
-After determining the system parameters' values for~\systemname~, we next report the EER of~\systemname~when the user chooses different music cue durations in Figure~\ref{***}. After a user starts the authentication procedure, how long a user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  The authentication latency consists of two parts: data input latency and computing latency, where the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, the data input latency is the bottleneck as the computing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, the data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different data collection latencies as well as desire different levels of authentication accuracies, \systemname~allows the users to choose different music cue durations (which has the same length as the data input latency) and delivers different authentication accuracies accordingly.
+After determining the system parameters' values for~\systemname~, we next report the EER of~\systemname~when the user chooses different music cue durations in Figure~\ref{fig:eer-length}. After a user starts the authentication procedure, how long a user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  The authentication latency consists of two parts: data input latency and computing latency, where the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, the data input latency is the bottleneck as the computing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, the data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different data collection latencies as well as desire different levels of authentication accuracies, \systemname~allows the users to choose different music cue durations (which has the same length as the data input latency) and delivers different authentication accuracies accordingly.
 
-From Figure~\ref{fig:***}, we observe that the EER is as low as *\% with a 5-second music cue, and ***\% with a 10-second music cue.  
+From Figure~\ref{fig:eer-length}, we observe that the EER is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue.  
 %
 %In general, we observe from the results that the FAR can
 %be decreased by increasing the music cue duration.
@@ -207,7 +207,7 @@ From Figure~\ref{fig:***}, we observe that the EER is as low as *\% with a 5-sec
 %order.
 %Hence, execution time of the app will be independent of this duration.
 We note that, the data input duration of 5-10 sec for authentication is on par with those
-of password based systems~\cite{von2013patterns}, *** details**.
+of PIN-based and patttern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. *** details**. 
 %We also note that, since the authentication process is initiated only at the
 %end of the music cue, execution time of the app will be independent
 %of this duration.
