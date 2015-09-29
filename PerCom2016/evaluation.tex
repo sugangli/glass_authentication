@@ -22,7 +22,7 @@ Glass implementation of \systemname.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figure/roc_k_value.eps}
-\caption{\label{fig:roc_k_value} The impact of different K values: $K=1$ and $K=3$. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 data points in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point. The results show that voting schemes ($K=3$) provide minor improvement on the performance. As a result, in the remaining of the study, we will choose $K=1$ for distance computing.}
+\caption{\label{fig:roc_k_value} The impact of different K values: $K=1$ and $K=3$. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 data points in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point. The results show that voting schemes ($K=3$) provide minor improvement on the performance. As a result, in the remaining of the study, we will choose $K=1$.}
 \end{figure}
 
 
@@ -30,7 +30,7 @@ Glass implementation of \systemname.
 \begin{figure}[t]
 \centering
 \includegraphics [width=\columnwidth]{figure/roc_diff_size.eps}
-\caption{The impact of training dataset size: 10, 20, and 30 samples. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 data points in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point. The results show that ***. As a result, in the remaining of the study, we will choose *** for distance computing.}
+\caption{The impact of training dataset size: 10, 20, and 30 samples. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 data points in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each data point. The results show that having 30 samples can considerably outperform than having fewer samples. As a result, in the remaining of the study, we will choose to have 30 samples.}
 %The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
 \label{fig:roc_diff_size}
 \end{figure}
@@ -180,7 +180,7 @@ Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three traini
 %1 for a top-1 scheme. As we will show ahead, DTW computations incur heavy CPU
 %budget on the wearable device.
 %***YZ: I will re-write this paragraph after you reorganize the results ***
-
+\emph{Finally, we note that in Section~\ref{subsec:app}, we have implemented a Headbanger app for Google Glass, and measured the computing latency of the app using the chosen parameter values. We show that the resulting computing latencies are very reasonable.}
 
 
 \subsubsection{Authentication Accuracy Results}
@@ -209,18 +209,18 @@ From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname is as l
 %order.
 %Hence, execution time of the app will be independent of this duration.
 Finally, we note that, the data input duration of 5-10 sec for authentication is on par with those
-of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!*** 
+of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!***
 %We also note that, since the authentication process is initiated only at the
 %end of the music cue, execution time of the app will be independent
 %of this duration.
 
-\begin{figure}[t]
-\centering
-\includegraphics [width=\columnwidth]{figure/exp2_vary_size.eps}
-\caption{Comparison of EER for different training sample sizes (30, 20 and 10)
-with fixed n value of 2.7}
-\label{fig:eer-size}
-\end{figure}
+%\begin{figure}[t]
+%\centering
+%\includegraphics [width=\columnwidth]{figure/exp2_vary_size.eps}
+%\caption{Comparison of EER for different training sample sizes (30, 20 and 10)
+%with fixed n value of 2.7}
+%\label{fig:eer-size}
+%\end{figure}
 
 
 
