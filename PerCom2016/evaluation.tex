@@ -59,7 +59,7 @@ sec) with a fixed n value of 2.7. We point out that ***}
 
 \subsubsection{Participants}
 We had a total of 30 volunteer participants for this experiment, including a total of 19 males and 11 females.
-The average age of the participants was 29.7 years with a standard deviation
+The mean age of the participants was 29.7 years with a standard deviation
 of 9.81 years. The youngest participant was 23 years old while the eldest was
 54 years old.
 
@@ -71,14 +71,14 @@ attempt.
 %One of the participants executing the experiment trial wearing the
 %Google Glass. %Figure~\ref{fig:setup} shows our experiment setup.
 In this experiment, all participants were asked to wear a Google Glass
-device. Participants who originally wore spectacles were asked to remove their
-spectacles before conducting the experiment.
+device. Participants who originally wore glasses (e.g.~corrective eyewear) were asked to remove their
+glasses before conducting the experiment.
 The trials were conducted in an academic environment and overseen by one of
 our team members.
 The Google Glass ran our data-collection app that played a piece of
 music (music cue) for a specific duration, and recorded the accelerometer
 sensor readings. We conducted these trials for three duration values: 5s,
-6s and 10s. %As we will show further, the accuracy of the system can
+6s and 10s \textbf{what was the rationale for these values?}. %As we will show further, the accuracy of the system can
 %significantly improve with the duration of the music cue; longer the duration
 %better is the accuracy.
 The sensor readings were recorded into a text file that was stored
@@ -88,10 +88,10 @@ academic laboratory environment.
 
 During the course of a data collection session, the participants were allowed to take a
 break or withdraw from data collection if they felt uncomfortable at any
-point; for example, feeling
-dizzy after head-movement for a period of time, not being able to see clearly
-if near-sighted, etcetera. The conductor also allowed the user to take a break
-of about one minute after each trial.
+point.%; for example, feeling
+%dizzy after head-movement for a period of time, not being able to see clearly
+%if near-sighted, etcetera. 
+The participants also could take a break for a minute after each trial.
 Each trial lasted for the duration of the music cue played on the Glass, and
 a total of 40 such trials were conducted for each of the 30 subjects.
 The entire data collection effort lasted over a duration of 60 days, of which 15
@@ -103,7 +103,7 @@ The experiment yielded three sets of data traces that each correspond to
 the three music cue durations we selected.
 
 \subsubsection{Metrics}
-We evaluate the accuracy of \systemname~using metrics that are commonly used
+We evaluate the accuracy of \systemname~using metrics that are commonly used \textbf{might want to add citations here.}
 in evaluating authentication systems, namely,
 true positive rate TPR (percentage of true test samples that are
 correctly accepted), false acceptance rate FAR (percentage of false test samples that are
@@ -127,7 +127,9 @@ balances FAR and TRR.
 %After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
 
 \subsubsection{Tuning Important System Parameters}
-Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively. Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. For each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR  on y-axis and FAR on x-axis for each data point,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.  ***YZ: varying the threshold? Unclear to me. *** In this setting, between two ROC curves on the same figure, the one closer to the upper left corner of the figure yields fares better than the other one.
+%Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively. 
+Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size} present the results how the system's performance is impacted by several parameters: the choice of distance computing algorithm, $K$ value, and training dataset size.
+Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. For each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR  on y-axis and FAR on x-axis for each data point,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.  ***YZ: varying the threshold? Unclear to me. *** In this setting, between two ROC curves on the same figure, the one closer to the upper left corner of the figure yields fares better than the other one. \textbf{Yes, I don't understand this either. You can obviously get e.g. EER (threshold) values from looking at the ROC curves, but I'm not sure what is going on here.}
 
 Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation, assuming $K=1$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: its EER is 14.29\% smaller than that of Cosine Distance, and 20.51\% smaller than that of Correlation. This is as expected because DTW is designed to match the waveform of two signals~\cite{dtw} and thus outputs more accurate distance score. As a result, in the remaining of this study, we will use DTW for the evaluation.
 
@@ -180,7 +182,7 @@ Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three traini
 %1 for a top-1 scheme. As we will show ahead, DTW computations incur heavy CPU
 %budget on the wearable device.
 %***YZ: I will re-write this paragraph after you reorganize the results ***
-Finally, we note that in Section~\ref{subsec:app}, we have implemented a Headbanger app for Google Glass, and measured the computing latency of the app using the chosen parameter values. We show that the resulting computing latencies are very reasonable.
+%Finally, we note that in Section~\ref{subsec:app}, we have implemented a Headbanger app for Google Glass, and measured the computing latency of the app using the chosen parameter values. We show that the resulting computing latencies are very reasonable.
 
 
 \subsubsection{Authentication Accuracy Results}
@@ -193,7 +195,7 @@ Finally, we note that in Section~\ref{subsec:app}, we have implemented a Headban
 
 After tuning system parameters, we next calculate the EER of~\systemname~when users choose different music cue durations and present the results in Figure~\ref{fig:eer-length}. As soon as a user starts the authentication procedure, how long the user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  Authentication latency consists of two parts: data input latency and computing latency, where the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, data input latency is the bottleneck as the computing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different latencies and desire different levels of authentication accuracies, \systemname~allows the users to choose the music cue duration (which has the same length as the data input latency).
 
-From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that this accuracy is rather sufficient for personal wearable devices that are not used in very hostile environments.
+From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that this accuracy is rather sufficient for personal wearable devices that are not used in very hostile environments.
 %
 %In general, we observe from the results that the FAR can
 %be decreased by increasing the music cue duration.
@@ -209,7 +211,7 @@ From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname is as l
 %order.
 %Hence, execution time of the app will be independent of this duration.
 Finally, we note that, the data input duration of 5-10 sec for authentication is on par with those
-of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!***
+of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!*** \textbf{Yeah. Also, such discussion belongs to Discussion and not results.}
 %We also note that, since the authentication process is initiated only at the
 %end of the music cue, execution time of the app will be independent
 %of this duration.
