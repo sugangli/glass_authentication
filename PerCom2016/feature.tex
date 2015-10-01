@@ -1,7 +1,8 @@
 %\section{Preliminary Study}
-%In order to understand the insightful information of musical head movement, 
-Next, we conducted a preliminary experiment to further investigate whether head-movement patterns can be used to authenticate users. In this experiment, we collected head-movement accelerometer data from 28 subjects, wherein each subject was asked to perform a simple nodding movement following the music cue, as shown in Figure~\ref{fig:imitation_movement}(a). ***YZ: refer to one of the figures we have in the results section***  For this purpose, we examined two simple features: (1) wave amplitude, the difference between the bottom of a wave and the peak of the following wave, which indicates how hard a person nods; %(2) mean wave width, the mean interval between two consecutive wave bottoms or peaks, which indicates the length of a nodding motion;
-and (2) response time, the time interval between a music beat and the corresponding nodding motion, which indicates how quickly a person responds to music beats. ***YZ: please use a wave picture to show what are there three features ***
+%In order to understand the insightful information of musical head movement,
+Next, we conducted a preliminary experiment to further investigate whether head-movement patterns can be potentially used to authenticate users. In this experiment, we collected head-movement accelerometer data from 28 subjects, wherein each subject was asked to perform a simple nodding movement following a short audio track (referred to as \emph{music cue} in the rest of the paper), as shown in Figure~\ref{fig:imitation_movement}(a).   For this purpose, we examined %two simple features: (1) wave amplitude, the difference between the bottom of a wave and the peak of the following wave, which indicates how hard a person nods; %(2) mean wave width, the mean interval between two consecutive wave bottoms or peaks, which indicates the length of a nodding motion;
+%and (2)
+ a simple feature, response time, which is the time interval between a music beat and the corresponding nodding motion, which indicates how quickly a person responds to music beats. ***YZ: please use a wave picture to show what are there three features ***
 % we extract several characteristics from the original accelerometer data:
 %\begin{itemize}
 %\item{\em Wave amplitude},which is the difference of a wave bottom and its next wave peak. It measures the acceleration when the user performs the head-movement, in other words, wave amplitude describes “how hard” the user nod his head. Due to accelerometer data usually contains high frequency noise, and we are more interested in the main signal where user nod his head, a 5-Hz-cutoff low-pass filter is applied before we extract all the characteristic in the signal.
@@ -15,11 +16,11 @@ and (2) response time, the time interval between a music beat and the correspond
 \caption{\label{fig:waveform}Waveform with beats snapshot. \textbf{ALL FIGURES SHOULD TELL WHAT IS THE TAKE-AWAY. MAKE THE PAPER GLANCEABLE, INCLUDE A PARAGRAPH FOR ALL FIGURES}}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figure/width_amp_box.eps}
-\centering
-\caption{\label{fig:width_amp} Wave Amplitude Boxplot **YZ: please re-consider the features** \textbf{ALL FIGURES SHOULD TELL WHAT IS THE TAKE-AWAY. MAKE THE PAPER GLANCEABLE, INCLUDE A PARAGRAPH FOR ALL FIGURES}}
-\end{figure}
+%\begin{figure}
+%\includegraphics[width=\columnwidth]{figure/width_amp_box.eps}
+%\centering
+%\caption{\label{fig:width_amp} Wave Amplitude Boxplot **YZ: please re-consider the features** \textbf{ALL FIGURES SHOULD TELL WHAT IS THE TAKE-AWAY. MAKE THE PAPER GLANCEABLE, INCLUDE A PARAGRAPH FOR ALL FIGURES}}
+%\end{figure}
 
 \begin{figure*}[t]
 \begin{center}
@@ -35,9 +36,9 @@ and (2) response time, the time interval between a music beat and the correspond
 \end{figure*}
 
 
-Figure~\ref{fig:width_amp} shows each subject's wave amplitude box plot (we collected 20 nodding samples for each subject in the experiment). We observe that each subject's wave amplitude distribution *** 
- 
+Figure~\ref{fig:width_amp} shows each subject's wave amplitude box plot (we collected 20 nodding samples for each subject in the experiment). We observe that each subject's wave amplitude distribution ***
+
 Next, we calculate the similarity between response times of different users. We take the response time time series of each subject, calculate the average Cosine Distance (COS), Correlation (COR), and the Dynamic Time Warping (DTW)~\cite{dtw} output between any pair of subjects, and plot these results in Figures~\ref{fig:distance} (a)-(c). In each plot, we show the distance values for all 28 subjects -- for each subject, we plot distances between her own response time time series and other 27 subjects' response time time series (referred to as distances with false subjects, shown in blue dots), as well as distances among her own response time time series (referred to as distances with true subjects, shown in red dots). All three figures show that distances within a subject's own response times are clearly smaller than those across subjects.
 
-These observations suggest that even with simple nodding movements, the accelerometer data collected by Google Glass have the potential to be used as authentication means. With this motivation, we next devise the authentication protocol for \systemname.     
+These observations suggest that even with simple nodding movements, the accelerometer data collected by Google Glass have the potential to be used as authentication means. With this motivation, we next devise the authentication protocol for \systemname.
 %To better understand the SRT for different users,  we apply various similarity scores to provide an intuitive and quantitative description of their difference. In Figure~\ref{fig:distance}, the average Cosine Distance (COS) and Correlation (COR) can help most of the subject to differentiate himself with the other subjects, but for some subjects's true subject score (red dot) are closed to their false subject score (blue dot). For subject 2, red dot even exceeds the blue dot.The output of Dynamic Time Warping (DTW)~\cite{cite dtw} can be used as another distance metric.In Figure~\ref{fig:resp_time_dtw},  it shows that all average self-comparing similarity scores are lower than that when they are compared with false users. In real world, the SRT detection algorithm may not be practical if we also consider more complex head-movement other than simple nodding for each beat. The observation above indicates the possibility to further derive a system which can differentiate the true user and the false users based on the fusion of these characteristics. 

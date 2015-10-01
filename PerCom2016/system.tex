@@ -40,12 +40,12 @@ In the online authentication phase, we collect the sensor readings during a user
 The user is authenticated upon a successful match.
 We posit that \systemname~will run as a service in the device upon power-up or application start-up,
 similar to the screen-lock in smartphones.  The authentication process is initiated
-by playing a short audio track, to which the user
-responds through head-movements. Our design is developed based on the idea that humans respond to music
-naturally through head movements, and that such movements are more
-significant and unique when the track contains fast beats and/or rhythm.
-We will refer to the audio snapshots as {\em music cues} in the rest of the
-paper.
+by playing a short music cue, to which the user
+responds through head-movements. %Our design is developed based on the idea that humans respond to music
+%naturally through head movements, and that such movements are more
+%significant and unique when the track contains fast beats and/or rhythm.
+%We will refer to the audio snapshots as {\em music cues} in the rest of the
+%paper.
 %~\systemname~generates unique features from the head
 %movements of a user, and uses them as a unique signature for
 %identifying the right user of the device. The system will
@@ -248,17 +248,17 @@ YZ: Sugang, we need some detailed equations or algorithms here.
 \fi
 
 \subsection{Classification}
-The classification step labels a test sample as ``true'' or ``false'' depending upon whether its distance from the real user's training samples is below a threshold. Again, we choose this method because it strikes a good balance between simplicity and performance. Next, we explain how we build the classifier and how to conduct online classification in detail:
+The classification step labels a test sample as ``true'' or ``false'' depending upon whether its distance to the real user's training samples is below a threshold. Again, we choose this method because it strikes a good balance between simplicity and performance. Next, we explain how we build the classifier and how to conduct online classification in detail:
 %In this study, we developed a simple yet effective classification scheme based on adaptive thresholds.
 
 \begin{enumerate}
 
-\item \emph{Establishing Top-K Samples.} Given $M$ training samples, we first identify the top $K$
+\vspace{3pt}\item \emph{Identifying Top-K Samples.} Given $M$ training samples, we first identify the top $K$
 samples as follows. For each training sample, we calculate its distances to the rest of the $M-1$ samples, and obtain the average. We choose the $K$ samples that have the lowest average distances and refer to them as Top-K samples.
 
-\item \emph{Calculating True Distance Range.} Suppose sample $s$ is one of the Top-K samples. We have its distance vectors to the rest of $M-1$ samples in the training set, from which we can calculate the mean distance vector $\mu_s$ and standard deviation distance vector $\sigma_s$. Then sample $s$'s true distance range is defined as $[\mu_s-n\sigma_s, \mu_s+n\sigma_s]$, where $n$ is a design parameter that can be tuned. 
-    
-\item \emph{Labeling Test Sample.}   If a test sample's distance to  one of the Top-K samples, $s$, falls within $s$'s true distance range, it is labeled as a true user; otherwise, a false user. The strictness of this labeling process is characterized by
+\vspace{3pt}\item \emph{Establishing Distance Threshold.} Suppose sample $s$ is one of the Top-K samples. We have its distance vectors to the rest of $M-1$ samples in the training set, from which we can calculate the mean distance vector $\mu_s$ and standard deviation distance vector $\sigma_s$. Then sample $s$'s distance threshold is defined as $\mu_s+n\sigma_s$, where $n$ is a design parameter that can be tuned.
+
+\vspace{3pt}\item \emph{Labeling Test Sample.}   If we use a reference sample $s$ to label the test sample $t$, then $t$ is labeled as a true sample if the distance between $s$ and $t$ is less then $s$'s distance threshold ($\mu_s+n\sigma_s$); otherwise, a false sample. The strictness of this labeling process is characterized by
 the value of $n$ in the true distance range; a large $n$ relaxes can increase the false
 acceptance rate while a small $n$ value can result in a
 high rejection rate of true samples. %In our system we aim to reach an optimal
@@ -269,7 +269,7 @@ high rejection rate of true samples. %In our system we aim to reach an optimal
 %evaluations, the thresholding approach is more robust than the SVM approach,
 %through both yield reasonable authentication accuracy.
 
-\item \emph{Voting}. We label the test sample according to all $K$ Top-K samples, and the final classification result is the majority decision among all $K$ labeling decisions. 
+\vspace{3pt}\item \emph{Voting}. We label the test sample according to all $K$ Top-K samples, and the final classification result is the majority decision among all $K$ labeling decisions.
 
 
 %that have
@@ -290,7 +290,7 @@ high rejection rate of true samples. %In our system we aim to reach an optimal
 %particular, we evaluate for $K = 1$ and $K = 3$.
 
 \end{enumerate}
-Among the four steps outlined above, the first two steps belong to the offline training phase, while the last two steps belong to the online training phase. 
+Among the four steps outlined above, the first two steps belong to the offline training phase, while the last two steps belong to the online training phase.
 Finally, if the user's test sample is classified as ``true'' then the user is authenticated to the device; otherwise, the user is rejected.
 
 
