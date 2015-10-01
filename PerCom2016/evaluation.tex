@@ -78,7 +78,7 @@ our team members.
 The Google Glass ran our data-collection app that played a piece of
 music (music cue) for a specific duration, and recorded the accelerometer
 sensor readings. We conducted these trials for three duration values: 5s,
-6s and 10s \textbf{what was the rationale for these values?}. %As we will show further, the accuracy of the system can
+6s and 10s, in order to yield a sufficient sample length. We also conducts a experiment with shorter music duration(2s and 3s), however, the accuracy drop significantly. %As we will show further, the accuracy of the system can
 %significantly improve with the duration of the music cue; longer the duration
 %better is the accuracy.
 The sensor readings were recorded into a text file that was stored
@@ -129,7 +129,9 @@ balances FAR and TRR.
 \subsubsection{Tuning Important System Parameters}
 %Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively. 
 Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size} present the results how the system's performance is impacted by several parameters: the choice of distance computing algorithm, $K$ value, and training dataset size.
-Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. For each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 data points. We then plotted the TPR  on y-axis and FAR on x-axis for each data point,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.  ***YZ: varying the threshold? Unclear to me. *** In this setting, between two ROC curves on the same figure, the one closer to the upper left corner of the figure yields fares better than the other one. \textbf{Yes, I don't understand this either. You can obviously get e.g. EER (threshold) values from looking at the ROC curves, but I'm not sure what is going on here.}
+Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. Recall that threshold is set by $\mu+n\sigma$, where $\mu$ and $\sigma$ are determined at training phase. Thus, for each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}. 
+ 
+***YZ: varying the threshold? Unclear to me. *** In this setting, between two ROC curves on the same figure, the one closer to the upper left corner of the figure yields fares better than the other one. \textbf{Yes, I don't understand this either. You can obviously get e.g. EER (threshold) values from looking at the ROC curves, but I'm not sure what is going on here.}
 
 Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation, assuming $K=1$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: its EER is 14.29\% smaller than that of Cosine Distance, and 20.51\% smaller than that of Correlation. This is as expected because DTW is designed to match the waveform of two signals~\cite{dtw} and thus outputs more accurate distance score. As a result, in the remaining of this study, we will use DTW for the evaluation.
 
@@ -210,8 +212,8 @@ From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname~is as l
 %and matching is executed only at the end of the music cue and in the same
 %order.
 %Hence, execution time of the app will be independent of this duration.
-Finally, we note that, the data input duration of 5-10 sec for authentication is on par with those
-of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!*** \textbf{Yeah. Also, such discussion belongs to Discussion and not results.}
+%Finally, we note that, the data input duration of 5-10 sec for authentication is on par with those
+%of PIN-based and pattern-based system~\cite{von2013patterns}, where the former takes 1.5 sec and the later takes 3.1 sec on average. ***YZ: 5-10 seconds are much larger than 1.5/3.1 seconds!!*** \textbf{Yeah. Also, such discussion belongs to Discussion and not results.}
 %We also note that, since the authentication process is initiated only at the
 %end of the music cue, execution time of the app will be independent
 %of this duration.
