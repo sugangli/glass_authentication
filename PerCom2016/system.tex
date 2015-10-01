@@ -36,7 +36,7 @@ one real user for the device for the sake of simplicity. An extension to
 support multiple users per device will be possible with minor modifications,
 namely, by appropriately indexing the users in the trained database.
 
-In the online authentication phase, we collect the sensor readings during a user's authentication attempt, extract features and match them with the trained features. 
+In the online authentication phase, we collect the sensor readings during a user's authentication attempt, extract features and match them with the trained features.
 The user is authenticated upon a successful match.
 We posit that \systemname~will run as a service in the device upon power-up or application start-up,
 similar to the screen-lock in smartphones.  The authentication process is initiated
@@ -90,7 +90,7 @@ We will now discuss these design aspects in more detail.
 %To facilitate natural head movement, we provide several
 %short music tracks with easy-to-follow beats.
 
-The data collection step involves collecting motion sensor data (we mainly focus on accelerometer in this study) while the user makes head-movements 
+The data collection step involves collecting motion sensor data (we mainly focus on accelerometer in this study) while the user makes head-movements
 in response to the music cue  with a duration of $T$ seconds.
 The raw accelerometer
 signals are collected at
@@ -100,10 +100,10 @@ collection of accelerometer readings on the
 3D axis (x, y, and z) collected over $T$-second duration.
 %Figure~\ref{fig:headbanger-illustrate} illustrates the axis
 %conventions with respect to the user's head position.
-%The data collection unit stores 
+%The data collection unit stores
 The accelerometer readings are stored in a
 matrix with dimensionality $3\times rT$. %where each element corresponds
-%to one signal point. 
+%to one signal point.
 We will refer to this $3\times rT$ matrix as a {\em sample}.
 We retain the duration $T$ to be in the order of few seconds, as frequency of
 human head movements are, intuitively, typically in the order of few times per
@@ -141,11 +141,11 @@ second. %This intuition will be more clear from the filtering stage to be
 
 %\subsection{Filtering}
 
-Next, we filter the raw samples to remove noises due to spurious movements such as vibration or shaking. 
+Next, we filter the raw samples to remove noises due to spurious movements such as vibration or shaking.
 %The filtering ensures that the head-movement signature
 %generated from the accelerometer readings encompasses
 %only head movements, and not any spurious signals caused due to
-%vibration or shaking. 
+%vibration or shaking.
 %From the frequency
 %spectrum of each accelerometer sample, as shown in
 %Figure~\ref{fig:raw_freq}
@@ -181,9 +181,9 @@ filter~\cite{challis1983design} and set a relaxed cut-off frequency of 10Hz.
 %\subsection{Quantifying Sample Similarity}
 
 
-In this study, we build a distance-based classifier for its simplicity is well suite for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study, Cosine Distance, Correlation, and dynamic-time warping (DTW). 
+In this study, we build a distance-based classifier for its simplicity is well suite for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study, Cosine Distance, Correlation, and dynamic-time warping (DTW).
 
-Given two signals $s_1 = (x_1, y_1, z_1)$ and $s_2 = (x_2, y_2, z_2)$, its Cosine distance is calculated as***;   Correlation is calculated as ***; DTW is calculated as ***.  
+Given two signals $s_1 = (x_1, y_1, z_1)$ and $s_2 = (x_2, y_2, z_2)$, its Cosine distance is calculated as***;   Correlation is calculated as ***; DTW is calculated as ***.
 %We generate a signature from the accelerometer signals using the
 %dynamic-time warping (DTW) tool~\cite{dtw}. DTW is generally used
 %as a similarity matching tool for time-domain analysis of
@@ -248,14 +248,19 @@ YZ: Sugang, we need some detailed equations or algorithms here.
 \fi
 
 \subsection{Classification}
-The classification step labels a test sample depending upon whether its distance from the real user's training samples is below a threshold. Again, we choose this method because of its simplicity and low computing complexity. Next, we explain how we build the classifier in detail:
-%In this study, we developed a simple yet effective classification scheme based on adaptive thresholds. 
+The classification step labels a test sample as ``true'' or ``false'' depending upon whether its distance from the real user's training samples is below a threshold. Again, we choose this method because it strikes a good balance between simplicity and performance. Next, we explain how we build the classifier in detail:
+%In this study, we developed a simple yet effective classification scheme based on adaptive thresholds.
 
 \begin{enumerate}
 
-\item Given $M$ training samples, we identify the top $K$ samples that have
-the lowest $K$ average distance to the rest of the
-training set, and calculate their DTW vectors to the rest of the samples in
+\item \emph{Establishing Top-K Samples.} Given $M$ training samples, we first identify the top $K$ 
+samples as follows. For each training sample, we calculate its distances to the rest of the $M-1$ samples, and obtain the average. We choose the $K$ samples that have the lowest average distances and refer to them as Top-K samples.  
+
+\item \emph{True}
+
+that have
+the lowest $K$ average distance values to the rest of the
+training set. We next calculate their DTW vectors to the rest of the samples in
 the training set to obtain $(M-1)K$ distance vectors. We call this resultant
 vector as Top-$K$ reference distance vector. For example, if $K = 1$, then we
 call the resulting algorithm as Top-1 algorithm; if $K \neq 1$, then we call
