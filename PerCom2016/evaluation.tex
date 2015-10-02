@@ -5,12 +5,8 @@ We conducted comprehensive evaluation of \systemname~through laboratory studies 
 human subjects -- our studies were approved by the Institutional Review Board (IRB) of our
 institution. In the first phase of evaluation, we collected from volunteer participants accelerometer sensor
 readings with Google Glass. We analyzed these traces offline on a PC.
-Our evaluations are primarily aimed at determining the accuracy of detecting
-and differentiating users based on their head-movements, and understanding
-the effect of important parameters such as similarity metric, length of the music cue, training
-data-set size and sampling rate. In addition to authentication accuracy, we also evaluated how robust is \systemname~against intentional imitation.
-In the second phase of evaluation, We also measured the response time of our Google
-Glass implementation of \systemname.
+Our evaluation in this phase is primarily aimed at determining the accuracy and robustness of \systemname. 
+In the second phase of evaluation, we implemented a \systemname~app and measured its processing latency. Our measurements suggest that \systemname is indeed light-weight and can be executed on wearable devices such as Google Glass.
 
 %based on profiling the execution time of each key
 %functions associated with \systemname, on the Google Glass device.
@@ -90,7 +86,7 @@ During the course of a data collection session, the participants were allowed to
 break or withdraw from data collection if they felt uncomfortable at any
 point.%; for example, feeling
 %dizzy after head-movement for a period of time, not being able to see clearly
-%if near-sighted, etcetera. 
+%if near-sighted, etcetera.
 The participants also could take a break for a minute after each trial.
 Each trial lasted for the duration of the music cue played on the Glass, and
 a total of 40 such trials were conducted for each of the 30 subjects.
@@ -126,10 +122,10 @@ balances FAR and TRR.
 %After evaluating the above metrics under various scenarios, the highlight is that \emph{our TPR can be as high as 95.1\% at FAR of 3.5\% and EER of 3.97\%} (when we have $K = 3$, and 30 (out of 40) trials from each user being used for training with a thresholding parameter value $n = 2.7$ with DTW). Next we discuss in more detail how the authentication accuracy results are impacted by various design parameters.
 
 \subsubsection{Tuning Important System Parameters}
-%Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively. 
+%Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively.
 Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size} present the results how the system's performance is impacted by several parameters: the choice of distance computing algorithm, $K$ value, and training dataset size.
-Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. Recall that threshold is set by $\mu+n\sigma$, where $\mu$ and $\sigma$ are determined at training phase. Thus, for each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}. 
- 
+Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. Recall that threshold is set by $\mu+n\sigma$, where $\mu$ and $\sigma$ are determined at training phase. Thus, for each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.
+
 Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation, assuming $K=1$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: its EER is 14.29\% smaller than that of Cosine Distance, and 20.51\% smaller than that of Correlation. This is as expected because DTW is designed to match the waveform of two signals~\cite{dtw} and thus outputs more accurate distance score. As a result, in the remaining of this study, we will use DTW for the evaluation.
 
 
