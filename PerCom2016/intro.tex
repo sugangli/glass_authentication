@@ -56,6 +56,15 @@ through a more capable device. We, however, take the viewpoint that wearables wi
 units that have to maintain security guarantees without such paired devices
 and we seek to develop suitable \emph{direct authentication} methods that are
 both accurate and light-weight.
+\vspace{-1mm}
+\begin{figure}[t!]
+\centering
+\includegraphics[width=\columnwidth]{figure/headbanger_illustrate.png}
+\caption{Illustration of Headbanger. The head-worn device authenticates the
+users based on signatures generated from head-movement patterns.  These patterns are created in
+response to an audio snapshot played on the device.}
+\label{fig:headbanger-illustrate}
+\end{figure}
 
 %For example, fitness trackers and
 %smart-watches are tethered to user's mobile device to connect to the
@@ -73,15 +82,6 @@ DNA, fingerprint, hand/finger geometry, iris, odor, palm-print, retinal scan,
 voice, etc.) requires specialized sensing hardware and processing resources
 that add cost, and many of these sensors are even larger than the size of wearables
 themselves.
-
-\begin{figure}[t!]
-\centering
-\includegraphics[width=\columnwidth]{figure/headbanger_illustrate.png}
-\caption{Illustration of Headbanger. The head-worn device authenticates the
-users based on signatures generated from head-movement patterns.  These patterns are created in
-response to an audio snapshot played on the device.}
-\label{fig:headbanger-illustrate}
-\end{figure}
 
 We therefore focus on a third class of direct authentication methods: relying upon the uniqueness of human behavior characteristics such as human walking gait, arm swings, typing patterns, body pulse beats, eye-blinks, etc. This way of authenticating users is often referred to as behavior-based authentication, and it has been studied in the context of authenticating smart phones and tablets~\cite{rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,bo2013silentsense,de2012touch}. The main advantage of using behavioral characteristics for mobile devices is that the signatures can be readily generated from raw data of built in sensors such as motion sensors, camera, microphones etc. Considering that cameras and microphones, as well as vision and audio processing algorithms, are quite energy-hungry, we thus focus on those behavioral characteristics that can be easily captured by sensors that require less power consumption, such as accelerometer. More specifically, we propose to authenticate wearable devices to users based on the following behavioral characteristic: our unique body movement patterns and their dependence on external stimuli that wearable devices can generate, such as vibrations and music.
 
@@ -105,7 +105,7 @@ fast-tempo music through earbuds to stimulate movements and to make such
 free-style movements more repeatable.
 
 In particular, we have designed, implemented and evaluated {\em Headbanger},
-an authentication system that can authenticate users by observing how they move their head when listening to music beats. Although we
+an authentication system that can authenticate users by motion sensing head movement when listening to music beats. Although we
 use Google Glass as a running example, our design can
 be applied to other head-worn gadgets and any system that can record
 head-movements through motion sensing. Our choice for using head movements is
@@ -159,8 +159,7 @@ acceptance rate of 4.43\% and an average true-positive rate of 95.57\%. Also, we
 
 \item We implement \systemname~on Google Glass and carefully profile the
 execution time of each software module in the implementation. Our measurements
-indicate an average processing latency of 1.93 seconds on the Google Glass for the
-most accurate results.
+indicate an average processing latency of 1.93 seconds on the Google Glass for the best authentication performance.
 
 %\item We have conducted detailed validation of using head-movement patterns
 %as a biometric characteristic by collecting and analyzing data from multiple

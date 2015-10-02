@@ -4,7 +4,7 @@
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.75\columnwidth]{figure/system.pdf}
-\caption{\systemname~system design flow. The online authentication phase of \systemname~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) parameter generation in which we calculate the dynamic time warping (DTW) distances between two accelerometer samples as the parameter, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose output will be used as the authentication result.}
+\caption{\systemname~system design flow. The online authentication phase of \systemname~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) parameter generation in which we calculate the distances between two accelerometer samples as the parameter, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose output will be used as the authentication result.}
 \label{fig:sysarch}
 \end{figure}
 
@@ -179,7 +179,7 @@ filter~\cite{challis1983design} and set a relaxed cut-off frequency of 10Hz.
 %\subsection{Quantifying Sample Similarity}
 
 
-In this study, we build a distance-based classifier for its simplicity is well suite for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study -- Cosine distance (COS), Correlation distance (COR), and dynamic-time warping distance (DTW).
+In this study, we build a distance-based classifier for its simplicity is well suite for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study -- Cosine (COS)distance, Correlation (COR)distance, and dynamic-time warping (DTW)distance.
 
 Suppose we have two time series $S_a = (s_1,s_2, ... ,s_n)$ and $S_b = (s_1, s_2, ..., s_n)$.  Their COS distance is calculated as $\frac{S_{a}\cdot S_{b}}{\left \| S_{a}\right \|\times \left \| S_{b} \right \|}$;   The COR distance is calculated by dividing their distance covariance by the product of their distance standard deviations; The DTW distance is defined as the distance when the optimal alignment between $S_a$ and $S_b$ has been determined by "warping" them non-linearly.   ~\cite{dtw}.
 %We generate a signature from the accelerometer signals using the

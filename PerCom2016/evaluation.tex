@@ -5,8 +5,8 @@ We conducted comprehensive evaluation of \systemname~through laboratory studies 
 human subjects -- our studies were approved by the Institutional Review Board (IRB) of our
 institution. In the first phase of evaluation, we collected from volunteer participants accelerometer sensor
 readings with Google Glass. We analyzed these traces offline on a PC.
-Our evaluation in this phase is primarily aimed at determining the accuracy and robustness of \systemname.
-In the second phase of evaluation, we implemented a \systemname~app and measured its processing latency. Our measurements suggest that \systemname is indeed light-weight and can be executed on wearable devices such as Google Glass.
+Our evaluation in this phase is primarily aimed at determining the accuracy and robustness of \systemname. 
+In the second phase of evaluation, we implemented a \systemname~app and measured its processing latency. Our measurements suggest that \systemname~is indeed light-weight and can be executed on wearable devices such as Google Glass.
 
 %based on profiling the execution time of each key
 %functions associated with \systemname, on the Google Glass device.
@@ -43,9 +43,10 @@ In the second phase of evaluation, we implemented a \systemname~app and measured
 \begin{figure}[t]
 \centering
 \includegraphics [width=.75\columnwidth]{figure/exp2_eer_vary_length.eps}
-\caption{The EER value of \systemname~when users choose different music cue lengths (10 sec, 6 sec and 5
-sec). We have an EER value of 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue, which is better than results of many similar body-movement based authentication systems (such as those in~\cite{gafurov2006biometric,ahmed2015checksum,rogers2015approach}).}
+\caption{The EER of \systemname~when users choose different music cue lengths (10 sec, 6 sec and 5
+sec) with a fixed n value of 2.7.}
 \label{fig:eer-length}
+\vspace{-1mm}
 \end{figure}
 
 
@@ -105,7 +106,7 @@ correctly accepted), false acceptance rate FAR (percentage of false test samples
 mistakenly accepted), and true rejection rate TRR (percentage of true test
 samples that are mistakenly rejected). These three metrics are, however, largely dependent on the choice of the classification threshold  parameter in \systemname --
 a strict threshold in the classifier can lead to a high TRR value, while
-overly relaxing the threshold can lead to a high FAR. Hence, in order to report the threshold-independent performance, we also consider equal error rate EER which is the percentage of errors when we have $FAR = TRR$.
+overly relaxing the threshold can lead to a high FAR. Hence, in order to report the threshold-independent performance, we also consider equal error rate EER which is the percentage of errors when we have $FAR = TRR$. 
 %%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
 %%We present the accuracy results through the receiver operating
 %%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
@@ -123,7 +124,7 @@ overly relaxing the threshold can lead to a high FAR. Hence, in order to report 
 \subsubsection{Tuning Important System Parameters}
 %Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively.
 Figures~\ref{fig:roc_dtw_cos_cor}-\ref{fig:roc_diff_size} present the results on how the system's performance is impacted by several important system parameters, namely, the choice of sample distance computing algorithm, the number of best representative training samples used for classification ($K$), and the number of total training samples ($M$).
-Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and data collection/computing overhead.
+Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and data collection/computing overhead. 
 
 Recall that our classifier employs a distance threshold of ($\mu+n\sigma$), where $\mu$ and $\sigma$ are calculated from the training samples. For each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.
 
@@ -133,8 +134,8 @@ Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three dist
 Secondly, Figure~\ref{fig:roc_k_value} compares the performance of two $K$ values: $K$=1 and $K$=3, assuming DTW distance, music cue duration of 10s, and 30 training samples. Recall that
 our classifier compares the test sample against $K$ best representative training samples, generates $K$ independent classification results, and votes among them for the final authentication result. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:roc_k_value}. However, we observe the improvement is very marginal: the EER when $K=3$ is only 0.5\% smaller than the EER when $K=1$. On the other hand, having $K=3$ incurs three times as much computation as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for evaluation.
 
-Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three training dataset sizes: M=10, 20, and 30 samples, assuming DTW distance, $K=1$, and music cue duration of 10s. We observe that the EER when $M=30$ is 1.79\% smaller than the EER when $M=20$ and 3.17\% smaller than that when $M=10$.  We emphasize that the value of $M$ has NO impact on the computing overhead in the online authentication phase because the classifier only compares the test sample against $K$ representative training samples. As a result, in the remaining of this study, we will use $M=30$ for the evaluation. Please note that we don't choose use a larger $M$ value because the benefit of having a larger $M$ diminishes quickly after having 30 samples.
-
+Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three training dataset sizes: M=10, 20, and 30 samples, assuming DTW distance, $K=1$, and music cue duration of 10s. We observe that the EER when $M=30$ is 1.79\% smaller than the EER when $M=20$ and 3.17\% smaller than that when $M=10$.  We emphasize that the value of $M$ has NO impact on the computing overhead in the online authentication phase because the classifier only compares the test sample against $K$ representative training samples. As a result, in the remaining of this study, we will use $M=30$ for the evaluation. Please note that we don't choose use a larger $M$ value because the benefit of having a larger $M$ diminishes quickly after having 30 samples. 
+ 
  %***LS: need to extend to emphasize it has nothing to do with user experience since we can grow it after initialized data collection, hence we choose size 30 that gives the best result ***
 
 %\paragraph{Impact of Training Dataset Size}
@@ -194,11 +195,7 @@ Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three traini
 
 After tuning system parameters to balance accuracy and computing overhead, we next calculate the EER value of the resulting~\systemname~system when users choose different music cue durations and present the results in Figure~\ref{fig:eer-length}. As soon as a user starts the authentication procedure, how long the user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  Authentication latency consists of two parts: data input latency and data processing latency, wherein the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, data input latency is by far the bottleneck as the data processing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different latencies and desire different levels of authentication accuracy, \systemname~allows the users to choose the music cue duration (which has the same length as the data input latency).
 
-From Figure~\ref{fig:eer-length}, we observe that the EER value of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that this accuracy is rather sufficient for personal wearable devices that are not used in hostile environments. Also, the data input latency of 5-10 seconds is comparable with similar authentication systems. For example, a gait-based authentication system~\cite{gafurov2006biometric} delivers an EER of 7.3\% after observing the user for 20 meters; 
-an arm-swing-based authentication system~\cite{ahmed2015checksum} delivers a TPR of 91.6\% and  a FAR of 5.5\%  with 5.7 seconds of processing latency; an eye-blinking-based authentication system~\cite{rogers2015approach} delivers the BAC=(TPR + FAR)/2 of 94.4\%, with a processing latency of 32 seconds.
-
-
-
+From Figure~\ref{fig:eer-length}, we observe that the EER value of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that such error rate is rather sufficient for personal head-worn devices that are not used in hostile environments.
 %
 %In general, we observe from the results that the FAR can
 %be decreased by increasing the music cue duration.
@@ -235,9 +232,11 @@ an arm-swing-based authentication system~\cite{ahmed2015checksum} delivers a TPR
 %***YZ: this can be removed ***
 %Due to DTW is resource-consuming, one direct way to reduce the workload of our algorithm is to decrease the sampling rate of the accelarometer and remain the sampling time. Based on Nyquist–Shannon sampling theorem, since the high cut of our filter is 10 Hz, the minimum sampling rate should be 20 Hz. Also, the highest sampling rate and the default sampling rate of our platform are 200 Hz and 50 Hz accordingly. Thus, we choose these three value to evaluate the impact of sampling rate.  In Figure~\ref{fig:roc_dtw_diff_freq}, we observe that 200 Hz provides the best performance among three value, while 50 Hz and 20 Hz are giving closed results. The EER of 20 Hz is **, comparing with  ** of that of 200 Hz. Since the decrement of EER is insignificant and we can achieve 10 times speedup in DTW computing,  20 Hz will be a ideal value of system implementation.
 \begin{figure}
+\vspace{-1mm}
 \centering
 \includegraphics[width = .75\columnwidth]{figure/imitation_subject_movement.png}
-\caption{\label{fig:imitation_movement} Pictorial description of the nodding pattern employed by each imitatee. Imitatee (a) only moved his head in the vertical direction, and his nodding immediately follows each music beat (on-beat); imitatee (b) only moved his head in the vertical direction, but there is often a delay between his nodding and the music beat (off-beat); imitatee (c) occasionally combined shaking with nodding, and on-beat. As a result, the nodding patterns in (b) and (c) are slightly more complex than that in (a). }
+\caption{\label{fig:imitation_movement} Pictorial description of how the imitatees move.}
+\vspace{-1mm}
 \end{figure}
 
 \input{eval2} 
