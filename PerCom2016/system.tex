@@ -183,7 +183,7 @@ filter~\cite{challis1983design} and set a relaxed cut-off frequency of 10Hz.
 
 In this study, we build a distance-based classifier for its simplicity is well suite for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study, Cosine Distance, Correlation, and dynamic-time warping (DTW).
 
-Given two signals $s_1 = (x_1, y_1, z_1)$ and $s_2 = (x_2, y_2, z_2)$, its Cosine distance is calculated as***;   Correlation is calculated as ***; DTW is calculated as ***.
+Given two time series $S_a = (s_1,s_2, ... ,s_n)$ and $S_b = (s_1, s_2, ..., s_n)$, its Cosine distance is calculated as $\frac{S_{a}\cdot S_{b}}{\left \| S_{a}\right \|\times \left \| S_{b} \right \|}$;   Correlation is calculated by dividing their distance covariance by the product of their distance standard deviations; DTW is calculated by "warping" $S_a$ and $S_b$ non-linearly in time dimension to determine measure of their distance independent of certain non-linear variations in the time dimension~\cite{dtw}.
 %We generate a signature from the accelerometer signals using the
 %dynamic-time warping (DTW) tool~\cite{dtw}. DTW is generally used
 %as a similarity matching tool for time-domain analysis of
