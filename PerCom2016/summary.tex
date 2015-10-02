@@ -18,15 +18,15 @@ set. The matching is conducted based on a thresholding scheme.
 %efficiently and accurately label user signatures.
 Through a 30 user based experiment based evaluation using accelerometer traces
 collected using our data collection app on Google Glass, we observed that the
-average true-acceptance rate of our approach is at 95.1$\%$ and the false
-acceptance rates (FAR) at 3.9$\%$. 
+average true-acceptance rate of our approach is at 95.57$\%$ and the false
+acceptance rates (FAR) at 4.43$\%$. 
 From our evaluation over 30 subjects' data we observed that a 10 sec and $K=3$ 
 yield the least $EER$ of 3.97$\%$. We observed that the FAR can be reduced by 
 increasing the music cue duration or by using more samples for feature 
 extraction (use Top $K$ samples) or by increasing the training data set. 
 We implemented \systemname~on Google Glass and profiled the execution time of 
-the key system modules and observed response time of about 4.47 sec for a 10 
-sec music cue duration and reduces to 2.44 sec for a 5 sec music cue duration.
+the key system modules and observed response time of about 1.93 sec for a 10 
+sec music cue duration and reduces to 0.88 sec for a 5 sec music cue duration.
 Our profiling indicated that the most compute intensive part of the app (of 
 the order of few seconds) was the classifier that involved DTW computation. We 
 believe that such high compute times can be reduced through optimized 
