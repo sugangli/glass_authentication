@@ -14,7 +14,7 @@ we ended the session no matter whether the imitator had succeeded or not. In eac
 \subsubsection{Results}
 Each of the three imitatees performed simple nodding in this experiment; though simple, their nodding patterns have varying complexity. As shown in Figure~\ref{fig:imitation_movement}, Imitatee $A$ moved his head vertically, each nodding on a music beat, with no noticeable horizontal movement; imitatee $B$ also only moved his head in the vertical direction, but there was always a delay between his nodding and the corresponding music beat; imitatee $C$ combined slight shaking along with nodding, and closely followed music beats. Among these three imitatees, $A$ is the easiest, while the other two are slightly more complex.
 
-Table~\ref{tab:imitation} summarizes the results. Here, we use FAR to denote the successful imitation rate because a successful imitation is also a false acceptance. The overall FAR of the experiment is 6.94\%, while the individual FARs for the three imitatees are 15.83\%, 2.77\% and 2.72\% accordingly.  Since imitatee $A$ had the easiest nodding pattern, 6 out of 10 subjects could succeed at least once during their 30 trials, while for imitatees $B$ and $C$, the numbers are  3 out of 13 and 3 of 12, respectively. These results are promising: when a user employs slightly more complex head-movement patterns, it becomes much harder for others to imitate. 
+Table~\ref{tab:imitation} summarizes the results. Here, we use FAR to denote the successful imitation rate because a successful imitation is also a false acceptance. The overall FAR of the experiment is 6.94\%, while the individual FARs for the three imitatees are 15.83\%, 2.77\% and 2.72\% accordingly.  Since imitatee $A$ had the easiest nodding pattern, 7 out of 12 subjects could succeed at least once during their 30 trials, while for imitatees $B$ and $C$, the numbers are  3 out of 13 and 3 of 12, respectively. These results are promising: when a user employs slightly more complex head-movement patterns, it becomes much harder for others to imitate.
 
 
 
@@ -66,12 +66,12 @@ processing. %The processing stage includes the filtering of the accelerometer
 %%with the feature templates generated from the training phase.
 Upon completion of data processing, the app responds with a YES or NO textual
 output on the Google Glass screen. The training phase is conducted offline on a PC, and %prior to live-testing off the application.
-%The training phase 
+%The training phase
 %which involves collecting 30 samples of the
 %head-movement accelerometer readings, generating the features, and saving them
 %into a local server (running on PC) as an XML file, with appropriate indexing.
 %Upon app initiation on Glass, the trained features are pre-fetched from
-%the server through a wireless connection. 
+%the server through a wireless connection.
 we ensure that the training set
 is readily available during the authentication process. %thus eliminating the
 %additional processing time required for the training phase.
@@ -132,7 +132,7 @@ of 5, 6 and 10 seconds. %We conducted the benchmark execution-time profiling of
 %mobility. We define response time as the time elapsed between music cue
 %completion to
 %the display of authentication response (YES/NO text) on the Glass screen.
-The processing latency is within 2 seconds for a 10-second data input, and is less than 1 second (0.88s) for a 5-second input.  
+The processing latency is within 2 seconds for a 10-second data input, and is less than 1 second (0.88s) for a 5-second input.
 %We feel that a response time of 2-5 sec for a local authentication solution in
 %Google Glass is comparable to that of prior-art that comes close to our
 %solution~\cite{von2013patterns,egelman2014you}.

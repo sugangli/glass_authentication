@@ -73,8 +73,8 @@ The trials were conducted in an academic environment and overseen by one of
 our team members.
 The Google Glass ran our data-collection app that played a piece of
 music (music cue) for a specific duration, and recorded the accelerometer
-sensor readings. We conducted these trials for three duration values: 5s,
-6s and 10s, in order to yield a sufficient sample length. We also conducted a experiment with shorter music duration(2s and 3s), however, the accuracy drop significantly. %As we will show further, the accuracy of the system can
+sensor readings. %We conducted these trials for three duration values: 5s,
+%6s and 10s, in order to yield a sufficient sample length. We also conducted a experiment with shorter music duration(2s and 3s), however, the accuracy drop significantly. %As we will show further, the accuracy of the system can
 %significantly improve with the duration of the music cue; longer the duration
 %better is the accuracy.
 The sensor readings were recorded into a text file that was stored
@@ -84,7 +84,7 @@ academic laboratory environment.
 
 During the course of a data collection session, the participants were allowed to take a
 break or withdraw from data collection if they felt uncomfortable at any
-point.%; for example, feeling
+point. %; for example, feeling
 %dizzy after head-movement for a period of time, not being able to see clearly
 %if near-sighted, etcetera.
 The participants also could take a break for a minute after each trial.
@@ -92,21 +92,20 @@ Each trial lasted for the duration of the music cue played on the Glass, and
 a total of 40 such trials were conducted for each of the 30 subjects.
 The entire data collection effort lasted over a duration of 60 days, of which 15
 subjects conducted their trials in a single sitting over a period of two
-hours, while the rest of the trails were spread over 3 days on an average per
+hours, while the rest of the trails were spread over 3 days on average per
 subject.
 %while, half of the trials of the rest 10 subjects were spread over 2 days.
-The experiment yielded three sets of data traces that each correspond to
-the three music cue durations we selected.
+%The experiment yielded three sets of data traces that each correspond to
+%the three music cue durations we selected.
 
 \subsubsection{Metrics}
 We evaluate the accuracy of \systemname~using metrics that are commonly used in evaluating authentication systems, namely,
 true positive rate TPR (percentage of true test samples that are
 correctly accepted), false acceptance rate FAR (percentage of false test samples that are
-mistakenly accepted), and false rejection rate TRR (percentage of true test
-samples that are mistakenly rejected). These three metrics are, however, largely dependent on the choice of thresholding values in the system design --
-a strict threshold in the classifier can lead to high TRR, while
-overly relaxing the same can lead to a high FAR. Hence, in order to report the threshold-independent performance, we consider equal error rate EER (percentage of errors when $FAR = TRR$), that
-balances FAR and TRR.
+mistakenly accepted), and true rejection rate TRR (percentage of true test
+samples that are mistakenly rejected). These three metrics are, however, largely dependent on the choice of the classification threshold  parameter in \systemname --
+a strict threshold in the classifier can lead to a high TRR value, while
+overly relaxing the threshold can lead to a high FAR. Hence, in order to report the threshold-independent performance, we also consider equal error rate EER which is the percentage of errors when we have $FAR = TRR$. 
 %%and balanced accuracy BAC, where BAC = 1 - (FAR+FRR)/2.
 %%We present the accuracy results through the receiver operating
 %%characteristics (ROC) curves, TPR versus FAR, as shown in Figures~\ref{}
@@ -123,15 +122,20 @@ balances FAR and TRR.
 
 \subsubsection{Tuning Important System Parameters}
 %Before presenting final authentication accuracy results, we first study how \systemname's performance is impacted by several important system parameters -- the choice of distance computing algorithm, $K$ value, and training dataset size -- and present the results  in Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size}, respectively.
-Figures~\ref{fig:roc_dtw_cos_cor}-~\ref{fig:roc_diff_size} present the results how the system's performance is impacted by several parameters: the choice of distance computing algorithm, $K$ value, and training dataset size.
-Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and computing overhead. Recall that threshold is set by $\mu+n\sigma$, where $\mu$ and $\sigma$ are determined at training phase. Thus, for each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.
+Figures~\ref{fig:roc_dtw_cos_cor}-\ref{fig:roc_diff_size} present the results on how the system's performance is impacted by several important system parameters, namely, the choice of sample distance computing algorithm, the number of best representative training samples used for classification ($K$), and the number of total training samples ($M$).
+Based upon these results, we tune the parameter values to balance the tradeoff between authentication accuracy and data collection/computing overhead. 
 
-Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: DTW, Cosine Distance, and Correlation, assuming $K=1$, music cue duration of 10s, and training dataset size of 30 samples.  Among these three algorithms, DTW fares much better than the other two: its EER is 14.29\% smaller than that of Cosine Distance, and 20.51\% smaller than that of Correlation. This is as expected because DTW is designed to match the waveform of two signals~\cite{dtw} and thus outputs more accurate distance score. As a result, in the remaining of this study, we will use DTW for the evaluation.
+Recall that our classifier employs a distance threshold of ($\mu+n\sigma$), where $\mu$ and $\sigma$ are calculated from the training samples. For each parameter study, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, and had a total of 100 threshold values. We then plotted the TPR  on y-axis and FAR on x-axis for each threshold value,  resulting curves referred to as Receiver Operating Characteristics (ROC) curves. %ROC curves are usually used to describe the performance of an authentication system by varying the threshold~\cite{hanley1982meaning}.
+
+Firstly, Figure~\ref{fig:roc_dtw_cos_cor} compares the performance of three distance computing algorithms: COS (cosine), COR (correlation) and DTW, assuming a single best representative training sample $K=1$, music cue duration of 10s, and 30 training samples $M=30$.  Among these three algorithms, DTW fares much better than the other two: its EER is 14.29\% smaller than that of COS distance, and 20.51\% smaller than that of COR distance. This is as expected because DTW is designed to match the waveform of two signals~\cite{dtw} and thus outputs more accurate distance score. As a result, in the remaining of this study, we will use DTW for evaluation. Even though DTW incurs more computation than the other two, our Google Glass implementation shows that through software optimization, the processing latency of DTW distance can be made very small (see Section~\ref{subsec:app}).
 
 
-Secondly, Figure~\ref{fig:roc_k_value} compares the performance of two $K$ values: $K$=1 and $K$=3, assuming DTW distance, music cue duration of 10s, and training dataset size of 30 samples.  Recall that the classification algorithm in ~\systemname~generates a classification result (YES or NO) by voting among individual results each generated by the top-K samples in the true set. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:roc_k_value}. However, we observe the improvement is very marginal: the EER when $K=3$ is only 0.5\% smaller than the EER when $K=1$. On the other hand, having $K=3$ incurs three times as much computing as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for the evaluation.
+Secondly, Figure~\ref{fig:roc_k_value} compares the performance of two $K$ values: $K$=1 and $K$=3, assuming DTW distance, music cue duration of 10s, and 30 training samples. Recall that
+our classifier compares the test sample against $K$ best representative training samples, generates $K$ independent classification results, and votes among them for the final authentication result. Hence, we expect that considering top 3 samples will be better than only considering the top 1 sample, as confirmed by the results shown in Figure~\ref{fig:roc_k_value}. However, we observe the improvement is very marginal: the EER when $K=3$ is only 0.5\% smaller than the EER when $K=1$. On the other hand, having $K=3$ incurs three times as much computation as having $K=1$. As a result, in the remaining of this study, we will use $K=1$ for evaluation.
 
-Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three training dataset sizes: 10, 20, and 30 samples, assuming DTW distance, $K=1$, and music cue duration of 10s. We observe that the EER when $size=30$ is 1.79\% smaller than the EER when $size=20$ and 3.17\% smaller than that when $size=10$. As a result, in the remaining of this study, we will use $size=30$ for the evaluation. ***LS: need to extend to emphasize it has nothing to do with user experience since we can grow it after initialized data collection, hence we choose size 30 that gives the best result ***
+Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three training dataset sizes: M=10, 20, and 30 samples, assuming DTW distance, $K=1$, and music cue duration of 10s. We observe that the EER when $M=30$ is 1.79\% smaller than the EER when $M=20$ and 3.17\% smaller than that when $M=10$.  We emphasize that the value of $M$ has NO impact on the computing overhead in the online authentication phase because the classifier only compares the test sample against $K$ representative training samples. As a result, in the remaining of this study, we will use $M=30$ for the evaluation. Please note that we don't choose use a larger $M$ value because the benefit of having a larger $M$ diminishes quickly after having 30 samples. 
+ 
+ %***LS: need to extend to emphasize it has nothing to do with user experience since we can grow it after initialized data collection, hence we choose size 30 that gives the best result ***
 
 %\paragraph{Impact of Training Dataset Size}
 %%The accuracy of detecting and matching the head-movements to the user depend
@@ -188,9 +192,9 @@ Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three traini
 
 %***YZ: I need to rewrite this paragraph. The tone needs to be changed. What is the improvement? ***
 
-After tuning system parameters, we next calculate the EER of~\systemname~when users choose different music cue durations and present the results in Figure~\ref{fig:eer-length}. As soon as a user starts the authentication procedure, how long the user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  Authentication latency consists of two parts: data input latency and computing latency, where the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, data input latency is the bottleneck as the computing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different latencies and desire different levels of authentication accuracies, \systemname~allows the users to choose the music cue duration (which has the same length as the data input latency).
+After tuning system parameters to balance accuracy and computing overhead, we next calculate the EER value of the resulting~\systemname~system when users choose different music cue durations and present the results in Figure~\ref{fig:eer-length}. As soon as a user starts the authentication procedure, how long the user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  Authentication latency consists of two parts: data input latency and data processing latency, wherein the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, data input latency is by far the bottleneck as the data processing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different latencies and desire different levels of authentication accuracy, \systemname~allows the users to choose the music cue duration (which has the same length as the data input latency).
 
-From Figure~\ref{fig:eer-length}, we observe that the EER of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that this accuracy is rather sufficient for personal wearable devices that are not used in very hostile environments.
+From Figure~\ref{fig:eer-length}, we observe that the EER value of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that this accuracy is rather sufficient for personal wearable devices that are not used in hostile environments.
 %
 %In general, we observe from the results that the FAR can
 %be decreased by increasing the music cue duration.
