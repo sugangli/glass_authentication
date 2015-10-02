@@ -1,8 +1,8 @@
 %\section{Preliminary Study}
 %In order to understand the insightful information of musical head movement,
-Next, we conducted a preliminary experiment to further investigate whether head-movement patterns can be potentially used to authenticate users. In this experiment, we collected head-movement accelerometer data from 28 subjects, wherein each subject was asked to perform a simple nodding movement following a short audio track (referred to as \emph{music cue} in the rest of the paper).   For this purpose, we examined %two simple features: (1) wave amplitude, the difference between the bottom of a wave and the peak of the following wave, which indicates how hard a person nods; %(2) mean wave width, the mean interval between two consecutive wave bottoms or peaks, which indicates the length of a nodding motion;
+Next, we conducted a preliminary experiment to further investigate whether head-movement patterns can be potentially used to authenticate users. In this experiment, we collected head-movement accelerometer data from 28 subjects, wherein each subject was asked to perform a simple nodding movement following a short audio track (referred to as \emph{music cue} in the rest of the paper), as shown in Figure~\ref{fig:imitation_movement}(a).   For this purpose, we examined %two simple features: (1) wave amplitude, the difference between the bottom of a wave and the peak of the following wave, which indicates how hard a person nods; %(2) mean wave width, the mean interval between two consecutive wave bottoms or peaks, which indicates the length of a nodding motion;
 %and (2)
-a simple aspect of the head-movement pattern, response time, which is the time interval between a music beat and the corresponding nodding motion, as shown in Figure~\ref{fig:waveform}. The response time indicates how quickly a person responds to music beats.
+ a simple feature, response time, which is the time interval between a music beat and the corresponding nodding motion, which indicates how quickly a person responds to music beats. ***YZ: please use a wave picture to show what are there three features ***
 % we extract several characteristics from the original accelerometer data:
 %\begin{itemize}
 %\item{\em Wave amplitude},which is the difference of a wave bottom and its next wave peak. It measures the acceleration when the user performs the head-movement, in other words, wave amplitude describes “how hard” the user nod his head. Due to accelerometer data usually contains high frequency noise, and we are more interested in the main signal where user nod his head, a 5-Hz-cutoff low-pass filter is applied before we extract all the characteristic in the signal.
@@ -10,12 +10,10 @@ a simple aspect of the head-movement pattern, response time, which is the time i
 %\item{\em Series of response time (SRT)},which is the series of time interval between the music beat and corresponding movement.  Studies in ~\cite{westeyn2004recognizing} and ~\cite{wobbrock2009tapsongs} show SRT could be used to differentiate the users. It is important to note that user is not necessary perform after the music beat. The evidence in music psychology ~\cite{clarke1999rhythm,fraisse1982rhythm} demonstrate that  humans have capability to perceive and perform rhythmm, hence user can perform the moving before he hears the beat.
 %response time in our measurement can be either negative or positive. However, finding the associated movement of a beat is a non-trivial process, hence we develop the following algorithm to achieve this goal and form a SRT. First, accelerometer data needs to be synchronized with the music cue in midi format. Since midi file is a time series of instrument commands,  no additional signal processing is required to detect the beat in the music as we can take each command as a beat if the music is simple enough. Second, we locate two neighboring peaks where a beat resides in between, and compute the time intervals from the beat to both peaks. Finally, we choose the one with a smaller absolute value as the response time. Note that we only use data from two axis, since nodding rarely generates meaningful data on the other one. In some cases,  user is not necessary nodding for every beat,  thus we use the 90 percentile of the response time sample to interpolate  when the detected response time is beyond this value.
 %\end{itemize}
-
-\begin{figure}[t]
-\includegraphics[width=.75\columnwidth]{figure/waveform_resp.png}
+\begin{figure}
+\includegraphics[width=.75\columnwidth]{figure/waveform_1.png}
 \centering
-\caption{\label{fig:waveform}Response time of a head motion is the interval between the motion and the music beat to which the motion responds. From a sequence of head motions, we can obtain the response time time series.}
->>>>>>> 68513003dc6ad372dcd15fe264feeb2235311e94
+\caption{\label{fig:waveform}Waveform with beats snapshot. Response time is determined by the time interval between a beat and its closest wave peak.}
 \end{figure}
 
 %\begin{figure}
@@ -27,20 +25,20 @@ a simple aspect of the head-movement pattern, response time, which is the time i
 \begin{figure*}[t]
 \begin{center}
 \begin{tabular}{ccc}
-\includegraphics [width=.31\linewidth]{figure/resp_time_cos.png}&
-\includegraphics [width=.31\linewidth]{figure/resp_time_cor.png}&
-\includegraphics [width=.31\linewidth]{figure/resp_time_dtw.png}\\
+\includegraphics [width=.33\linewidth]{figure/resp_time_cos.png}&
+\includegraphics [width=.33\linewidth]{figure/resp_time_cor.png}&
+\includegraphics [width=.33\linewidth]{figure/resp_time_dtw.png}\\
 (a) Cosine Distance & (b) Correlation & (c) DTW \\
 \end{tabular}
 \end{center}
-\caption{\label{fig:distance} (a) Cosine, (b) Correlation and (c) DTW distances are computed over 20 response time time series for each subject, with 28 subjects in total. For each subject's column, a red dot represents the average distance among that subject's own response times, while a blue dot represents the average distance to other subjects' response times. The results show that red distances are always lower than blue ones, suggesting that different subjects' head-movement patterns are distinguishable.}
+\caption{\label{fig:distance} The similarity score is computed over N (N = 20) sample data for each subject, and 28 subjects in total. For each column, a red dot represents the average similarity score of that subject's own SRT, i.e., each of his sample data compared with the other N-1 SRTs from him, hence we have the average similarity score over all these comparison. Similarly, a blue dot on the same column represents the similarity score of that subject's SRTs compares with another subject's SRTs.}
 \vspace{-2pt}
 \end{figure*}
 
 
-%Figure~\ref{fig:width_amp} shows each subject's wave amplitude box plot (we collected 20 nodding samples for each subject in the experiment). We observe that each subject's wave amplitude distribution ***
+Figure~\ref{fig:width_amp} shows each subject's wave amplitude box plot (we collected 20 nodding samples for each subject in the experiment). We observe that each subject's wave amplitude distribution ***
 
-Next, we calculate the distances between response time time series of different subjects. Specifically, we take the response time time series of each subject, and calculate the average cosine distance (COS), correlation (COR), and dynamic time warping (DTW) output~\cite{dtw} between any pair of subjects. **** We plot these three types of distance values in Figures~\ref{fig:distance} (a)-(c). In each plot, we show distance values for all 28 subjects -- for each subject, we plot the average distance between her response time time series and time series from each of the other 27 subjects (referred to as distances with false subjects, shown in blue dots), as well as distances among her own response time time series (referred to as distances with true subjects, shown in red dots). All three figures show that distances within a subject's own response times are clearly smaller than those across subjects.
+Next, we calculate the similarity between response times of different users. We take the response time time series of each subject, calculate the average Cosine Distance (COS), Correlation (COR), and the Dynamic Time Warping (DTW)~\cite{dtw} output between any pair of subjects, and plot these results in Figures~\ref{fig:distance} (a)-(c). In each plot, we show the distance values for all 28 subjects -- for each subject, we plot distances between her own response time time series and other 27 subjects' response time time series (referred to as distances with false subjects, shown in blue dots), as well as distances among her own response time time series (referred to as distances with true subjects, shown in red dots). All three figures show that distances within a subject's own response times are clearly smaller than those across subjects.
 
 These observations suggest that even with simple nodding movements, the accelerometer data collected by Google Glass have the potential to be used as authentication means. With this motivation, we next devise the authentication protocol for \systemname.
 %To better understand the SRT for different users,  we apply various similarity scores to provide an intuitive and quantitative description of their difference. In Figure~\ref{fig:distance}, the average Cosine Distance (COS) and Correlation (COR) can help most of the subject to differentiate himself with the other subjects, but for some subjects's true subject score (red dot) are closed to their false subject score (blue dot). For subject 2, red dot even exceeds the blue dot.The output of Dynamic Time Warping (DTW)~\cite{cite dtw} can be used as another distance metric.In Figure~\ref{fig:resp_time_dtw},  it shows that all average self-comparing similarity scores are lower than that when they are compared with false users. In real world, the SRT detection algorithm may not be practical if we also consider more complex head-movement other than simple nodding for each beat. The observation above indicates the possibility to further derive a system which can differentiate the true user and the false users based on the fusion of these characteristics. 
