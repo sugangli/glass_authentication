@@ -10,12 +10,7 @@ a simple aspect of the head-movement pattern, response time, which is the time i
 %\item{\em Series of response time (SRT)},which is the series of time interval between the music beat and corresponding movement.  Studies in ~\cite{westeyn2004recognizing} and ~\cite{wobbrock2009tapsongs} show SRT could be used to differentiate the users. It is important to note that user is not necessary perform after the music beat. The evidence in music psychology ~\cite{clarke1999rhythm,fraisse1982rhythm} demonstrate that  humans have capability to perceive and perform rhythmm, hence user can perform the moving before he hears the beat.
 %response time in our measurement can be either negative or positive. However, finding the associated movement of a beat is a non-trivial process, hence we develop the following algorithm to achieve this goal and form a SRT. First, accelerometer data needs to be synchronized with the music cue in midi format. Since midi file is a time series of instrument commands,  no additional signal processing is required to detect the beat in the music as we can take each command as a beat if the music is simple enough. Second, we locate two neighboring peaks where a beat resides in between, and compute the time intervals from the beat to both peaks. Finally, we choose the one with a smaller absolute value as the response time. Note that we only use data from two axis, since nodding rarely generates meaningful data on the other one. In some cases,  user is not necessary nodding for every beat,  thus we use the 90 percentile of the response time sample to interpolate  when the detected response time is beyond this value.
 %\end{itemize}
-<<<<<<< HEAD
-\begin{figure}
-\includegraphics[width=.75\columnwidth]{figure/waveform_1.png}
-\centering
-\caption{\label{fig:waveform}Waveform with beats snapshot. Response time is determined by the time interval between a beat and its closest wave peak. }
-=======
+
 \begin{figure}[t]
 \includegraphics[width=.75\columnwidth]{figure/waveform_resp.png}
 \centering
