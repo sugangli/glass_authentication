@@ -22,16 +22,15 @@ lives~\cite{googleglass,smartwatch,fitbit}.  %This is thanks to the advances in 
 %With the proliferation of such wearable devices, they can be expected to be subjected to malicious attacks and preserving the security and privacy of these devices will become increasingly important.
 These devices often collect data about the wearer and their
 surroundings; the collected data is personal in nature and
-sometimes related to the wearer's health. Security and privacy for such systems thus become critically important. While there has been work on limiting privacy
-threats
-~\cite{hoyle2015sensitive,hoyle2014privacy,jana2013scanner}, security solutions for wearable devices are seriously lagging behind.
+sometimes even related to the wearer's health. Safeguarding the security and privacy of such data, thus becomes critically important. While there has been work on limiting privacy
+threats for data collected by wearable devices
+~\cite{hoyle2015sensitive,hoyle2014privacy,jana2013scanner}, security solutions are seriously lagging behind.
 %however, to the best of our knowledge we are the first to address user
 %authentication directly with these devices.
 Any security solution for these devices has to strike an
 appropriate balance with user convenience, especially since users are interacting
 with an increasing number of wearables. A fundamental building
-block for safeguarding the security of user data acquired on or accessed
-through wearable devices is user authentication. %, since many
+block for securing wearable devices and their data is efficient user authentication. %, since many
 %solutions are only effective as long as the device itself is authenticated to
 %the right user/owner.
 In this study, we thus focus on wearable device authentication techniques that are both efficient and convenient.
@@ -46,7 +45,7 @@ approach is also in question as it increases the chance of hacking into both
 devices if either is lost or stolen. Some devices including
 Google Glass~\cite{googleglass} and FitBit's health tracker~\cite{fitbit}
 allow linking the device to online accounts instead of a mobile device for
-convenience,  which, however, does not make it more secure. Indirect authentication
+convenience,  which, however, does not add to security. Indirect authentication
 remains a
 dominant paradigm for wearables despite these fundamental shortcomings because
 such devices are \emph{seriously resource-constrained} in many aspects:
@@ -83,7 +82,7 @@ voice, etc.) requires specialized sensing hardware and processing resources
 that add cost, and many of these sensors are even larger than the size of wearables
 themselves.
 
-We therefore focus on a third class of direct authentication methods: relying upon the uniqueness of human behavior characteristics such as human walking gait, arm swings, typing patterns, body pulse beats, eye-blinks, etc. This way of authenticating users is often referred to as behavior-based authentication, and it has been studied in the context of authenticating smart phones and tablets~\cite{rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,bo2013silentsense,de2012touch}. The main advantage of using behavioral characteristics for mobile devices is that the signatures can be readily generated from raw data of built in sensors such as motion sensors, camera, microphones etc. Considering that cameras and microphones, as well as vision and audio processing algorithms, are quite energy-hungry, we thus focus on those behavioral characteristics that can be easily captured by sensors that require less power consumption, such as accelerometer. More specifically, we propose to authenticate wearable devices to users based on the following behavioral characteristic: our unique body movement patterns and their dependence on external stimuli that wearable devices can generate, such as vibrations and music.
+We therefore focus on a third class of direct authentication methods: relying upon the uniqueness of human behavior characteristics such as human walking gait, arm swings, typing patterns, body pulse beats, eye-blinks, etc. This way of authenticating users is often referred to as behavior-based authentication, and it has been studied in the context of authenticating smart phones and tablets~\cite{rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,bo2013silentsense,de2012touch}. The main advantage of using behavioral characteristics for mobile device user authentication is that the signatures can be readily generated from raw data of built in sensors such as motion sensors, camera, microphones etc. Considering that cameras and microphones, as well as vision and audio processing algorithms, are quite energy-hungry, we thus focus on those behavioral characteristics that can be easily captured by sensors that require less power consumption, such as accelerometer. More specifically, we propose to authenticate wearable devices to users based on the following behavioral characteristic: our unique body movement patterns and their dependence on external stimuli that wearable devices can generate, such as vibrations and music.
 
 \vspace{1mm}\noindent{\bf Head-movement based authentication.} Body movement
 patterns have long been used by humans to discriminate between people. By
@@ -96,8 +95,8 @@ to capture the differentiating characteristics of movement patterns, process the
 uniqueness of each user's behaviors. Moreover, each device will have only a
 limited view of body movements, dependent on its mounting position on the
 human body. In this paper, we set out to conduct a holistic study of wearable
-authentication through body movements and to design an accurate, robust and
-light-weight authentication system. A key distinguishing feature of our work
+authentication through body movements and to design an \emph{accurate, robust,
+light-weight, and convenient} authentication system. A key distinguishing feature of our work
 is that we will also consider stimuli that wearable devices can provide to
 design challenge-response inspired mechanisms, particularly stimuli that are
 difficult to observe even for the closest adversaries. For example, we can use
@@ -135,8 +134,8 @@ In summary, the key contributions of this paper are:
 \item We have designed and implemented a novel user authentication method for wearable devices
 using head-movement patterns. Our study shows that user's head-movement patterns
 contain unique signatures that when inferred correctly can be used as valid
-means for authentication. We design a system, \systemname, that records, processes,and classifies
-head-movement patterns of users based on the built-in accelerometer sensor readings.
+means for authentication. We design a system, \systemname, that records, processes, and classifies
+head-movement patterns of users based on accelerometer sensor readings.
 
 %\item We devise of a set of light-weight preprocessing and classification
 %algorithms that can effectively transform raw and noisy sensor data into
@@ -151,15 +150,14 @@ head-movement patterns of users based on the built-in accelerometer sensor readi
 Through comprehensive experiments
 involving 95 users and over
 different system design parameters we show that head-movement patterns
-can generate accurate authentication results. Our approach effectively identifies a wearable device user, with average false
+can generate accurate authentication results. Our approach effectively identifies a wearable device user, with an average false
 acceptance rate of 4.43\% and an average true-positive rate of 95.57\%. Also, we show that our authentication method is quite robust: when a user slightly increases her head-movement complexity, it quickly becomes \emph{much harder} for attackers to imitate the movement pattern.
 
 
 %average false rejection rate of 4.9\%.
 
 \item We implement \systemname~on Google Glass and carefully profile the
-execution time of each software module in the implementation. Our measurements
-indicate an average processing latency of 1.93 seconds on the Google Glass for the best authentication performance.
+execution time of each software module in the implementation. We measure an average processing latency of 1.93 seconds on the Google Glass for the best authentication performance.
 
 %\item We have conducted detailed validation of using head-movement patterns
 %as a biometric characteristic by collecting and analyzing data from multiple
