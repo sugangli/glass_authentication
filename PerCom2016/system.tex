@@ -3,7 +3,7 @@
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.75\columnwidth]{figure/system.pdf}
+\includegraphics[width=0.85\columnwidth]{figure/system.pdf}
 \caption{\systemname~system design flow. The online authentication phase of \systemname~consists of the following steps: (1) sensor data collection in which we collect accelerometer data while users move their head as a response to an audio track played on the glass, (2) filtering in which we apply a Butterworth filtering to smoothen the sensor data for subsequent processing, (3) parameter generation in which we calculate the distances between two accelerometer samples as the parameter, and (4) classification in which we adopt an adaptive thresholding mechanism to classify the user's head movement, whose output will be used as the authentication result.}
 \label{fig:sysarch}
 \end{figure}
@@ -93,10 +93,10 @@ The data collection step involves collecting motion sensor data (we mainly focus
 in response to the music cue  with a duration of $T$ seconds.
 The raw accelerometer
 signals are collected at
-a sampling rate of $r$ samples/sec. %; the default sampling rate on Google Glass is 50Hz. 
+a sampling rate of $r$ samples/sec. %; the default sampling rate on Google Glass is 50Hz.
 The accelerometer data corresponding to one user,  is a
 collection of accelerometer readings on the
-3D axis (x, y, and z) collected over $T$-second duration, 
+3D axis (x, y, and z) collected over $T$-second duration,
 %Figure~\ref{fig:headbanger-illustrate} illustrates the axis
 %conventions with respect to the user's head position.
 %The data collection unit stores

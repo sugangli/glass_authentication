@@ -12,12 +12,12 @@ In the second phase of evaluation, we implemented a \systemname~app and measured
 %functions associated with \systemname, on the Google Glass device.
 
 \begin{figure}\centering
-\includegraphics[width=.75\columnwidth]{figure/roc_dtw_cos_cor.eps}
+\includegraphics[width=.85\columnwidth]{figure/roc_dtw_cos_cor.eps}
 \caption{\label{fig:roc_dtw_cos_cor} The impact of the distance computing algorithm (i.e., DTW, cosine distance, and Correlation). In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 thresholds in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each threshold. The results show that DTW delivers much better accuracies than the other two distance algorithms. As a result, in the remaining of the study, we will choose DTW for distance computing.}
 \end{figure}
 
 \begin{figure}\centering
-\includegraphics[width=.75\columnwidth]{figure/roc_k_value.eps}
+\includegraphics[width=.85\columnwidth]{figure/roc_k_value.eps}
 \caption{\label{fig:roc_k_value} The impact of different K values: $K=1$ and $K=3$. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 thresholds in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each threshold. The results show that voting schemes ($K=3$) provide minor improvement on the performance. As a result, in the remaining of the study, we will choose $K=1$.}
 \end{figure}
 
@@ -25,7 +25,7 @@ In the second phase of evaluation, we implemented a \systemname~app and measured
 
 \begin{figure}[t]
 \centering
-\includegraphics [width=.75\columnwidth]{figure/roc_diff_size.eps}
+\includegraphics [width=.85\columnwidth]{figure/roc_diff_size.eps}
 \caption{The impact of training dataset size: 10, 20, and 30 samples. In this set of results, we varied the value of $n$ from 0.0 to 10.0 with an increment of 0.1, resulting in 100 thresholds in each case. We then plotted the TPR (y-axis) and FAR (x-axis) for each threshold. The results show that having 30 samples delivers the best performance without adding to the online authentication computing overhead.  As a result, in the remaining of the study, we will choose to have 30 samples.}
 %The variable here is $n$. Each (TPR, FAR) data point in the curve corresponds to a different value of $n$}
 \label{fig:roc_diff_size}
@@ -44,7 +44,7 @@ In the second phase of evaluation, we implemented a \systemname~app and measured
 
 \begin{figure}[t]
 \centering
-\includegraphics [width=.75\columnwidth]{figure/exp2_eer_vary_length.eps}
+\includegraphics [width=.85\columnwidth]{figure/exp2_eer_vary_length.eps}
 \caption{The EER value of \systemname~when users choose different music cue lengths (10 sec, 6 sec and 5
 sec). We have an EER value of 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue, which is better than results of many similar body-movement based authentication systems (such as those in~\cite{gafurov2006biometric,ahmed2015checksum,rogers2015approach}).}
 \label{fig:eer-length}
@@ -237,7 +237,7 @@ an arm-swing-based authentication system~\cite{ahmed2015checksum} delivers a TPR
 \begin{figure}
 \vspace{-1mm}
 \centering
-\includegraphics[width = .75\columnwidth]{figure/imitation_subject_movement.png}
+\includegraphics[width = .85\columnwidth]{figure/imitation_subject_movement.png}
 \caption{\label{fig:imitation_movement} Pictorial description of the nodding pattern employed by each target. Target (a) only moved his head in the vertical direction, and his nodding immediately follows each music beat (on-beat); target (b) only moved his head in the vertical direction, but there is often a delay between his nodding and the music beat (off-beat); target (c) occasionally combined shaking with nodding, and on-beat. As a result, the nodding patterns in (b) and (c) are slightly more complex than that in (a). }
 \vspace{-1mm}
 \end{figure}

@@ -1,14 +1,15 @@
 \section{Concluding Remarks}
 \label{sec:conc}
+As wearable devices are increasingly weaved into our everyday life, providing security to the data acquired by or accessed through these devices becomes critically important. In this study, we have developed a user authentication system that uses head-movement patterns for direct
+authentication to a wearable device. Compared to existing authentication solutions, the proposed solution delivers accurate authentication, is robust against imitation attacks, incurs low processing delays, and offers great convenience to users. 
 
-We developed a system that uses head-movement patterns of users for direct
-authentication to a wearable device. We developed a light-weight approach that 
-infers head-movements of users in response to music and generates signatures
-that are unique to every user.
-Our technique specifically uses the dynamic time-warping (DTW) tool to 
-generate a head-movement feature that contains the mean and standard 
-deviation of the DTW score of each user, determined over a multiple-user data 
-set. The matching is conducted based on a thresholding scheme.
+%We developed a light-weight approach that
+%infers head-movements of users in response to music and generates signatures
+%that are unique to every user.
+%Our technique specifically uses the dynamic time-warping (DTW) tool to
+%generate a head-movement feature that contains the mean and standard
+%deviation of the DTW score of each user, determined over a multiple-user data
+%set. The matching is conducted based on a thresholding scheme.
 %Experimental observations revealed that the head-movement signatures generated
 %using the dynamic time-warping tool, in response to the same music track, were
 %consistent in typical stationary environments such as user sitting or
@@ -16,27 +17,15 @@ set. The matching is conducted based on a thresholding scheme.
 %consistency in the head-movement signatures to develop two classification
 %algorithms, based on machine learning and adaptive thresholding, to
 %efficiently and accurately label user signatures.
-Through a 30 user based experiment based evaluation using accelerometer traces
-collected using our data collection app on Google Glass, we observed that the
-average true-acceptance rate of our approach is at 95.57$\%$ and the false
-acceptance rates (FAR) at 4.43$\%$. 
-From our evaluation over 30 subjects' data we observed that a 10 sec and $K=3$ 
-yield the least $EER$ of 3.97$\%$. We observed that the FAR can be reduced by 
-increasing the music cue duration or by using more samples for feature 
-extraction (use Top $K$ samples) or by increasing the training data set. 
-We implemented \systemname~on Google Glass and profiled the execution time of 
-the key system modules and observed response time of about 1.93 sec for a 10 
-sec music cue duration and reduces to 0.88 sec for a 5 sec music cue duration.
-Our profiling indicated that the most compute intensive part of the app (of 
-the order of few seconds) was the classifier that involved DTW computation. We 
-believe that such high compute times can be reduced through optimized 
-algorithms or through strategic techniques such as pipelining the data input 
-and execution process. 
-%We have also optimized our algorithms to 
-%minimize the processing latencies and power consumption, making them suitable 
+Through an extensive evaluation that involves 95 users, we observe that the
+average true acceptance rate of our approach is at 95.57$\%$ and the false
+acceptance rates at 4.43$\%$. We also observe that even simple head-movement patterns only allow less then 3\% of the imitation attacks to succeed. We have also implemented an app on Google Glass, and measured the end-to-end processing delay of less than 2 seconds for a 10-second data sample. As a result, we believe it is realistic for the proposed authentication system to be executed on resource-constrained devices such as smart-glass. We further believe the proposed method can help enable wider deployment of wearable devices and apps in our life.
+
+%We have also optimized our algorithms to
+%minimize the processing latencies and power consumption, making them suitable
 %for wearable devices.
-The multi-user data sets were validated and verified during the
-course of our evaluations and will be released for public use in near future.
+%The multi-user data sets were validated and verified during the
+%course of our evaluations and will be released for public use in near future.
 
 \iffalse
 In this paper, we present the design, implementation and evaluation
@@ -51,4 +40,4 @@ will be reasonably sufficient to serve a effective behavioral
 biometric for authentication. We believe this work will be the basis
 for using audio catalyst to enrich more useful human contextual
 applications.
-\fi
+\fi 
