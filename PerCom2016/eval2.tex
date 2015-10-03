@@ -1,4 +1,5 @@
-\subsection{Authentication Robustness of \systemname} After evaluating authentication accuracy for \systemname, we next study its robustness against attacks. For this purpose, we asked a number of participants (attackers) to imitate simple nodding patterns from three subjects (attack targets) after watching the targets's video for as long as they desire, and calculated their chances of successful imitation - i.e., the attacker is mistakenly accepted by \systemname. We note that nodding is the simplest head-movement pattern and easiest to imitate; hence, the results presented here represent the \emph{lower bound} robustness that \systemname~offers. In reality, users are more likely to employ more sophisticated head-movement patterns, which will be much harder to attack.
+
+\subsection{Authentication Robustness of \systemname} After evaluating authentication accuracy for \systemname, we next study its robustness. In this study, we focus on imitation attacks. For this purpose, we asked a number of subjects (attackers) to imitate simple nodding patterns from three subjects (targets) after watching the target's video for as long as they desire, and calculated their chances of successful imitation - i.e., the attacker is mistakenly accepted by \systemname. We note that nodding is the simplest head-movement pattern and easiest to imitate; hence, the results presented here represent the \emph{lower bound} robustness that \systemname~offers. In reality, users are more likely to employ more sophisticated head-movement patterns, which will be much harder to imitate.
 
 \subsubsection{Participants}
 We had a total of 37 volunteer participants, including 31 males and 6 females. The average age of the participants was 25.6 years with a standard deviation
@@ -8,10 +9,14 @@ of 6.6 years. The youngest participant was 22 years old while the eldest was 49 
 Our second experiment aimed at emulating a practical imitation attack scenario. In this experiment, three targets recorded video when they were nodding with a music cue. Note that the music is usually played via a bone conduction speaker or an earplug, and that it is difficult to use a camcorder to capture the music sound in a noisy environment. To address this concern, during recording, we set the speaker volume to maximum and conducted the recording in a quiet laboratory environment.
 
 We divided the attackers into three groups, and asked each group to imitated one target. In each session (consisting of 30 trials), the attacker could watch the video for as long as they wish. Our system provided a feedback after each trial so that the attackers could adjust their nodding pattern if they wanted. After the attacker had 30 trials,
-we ended the session no matter whether the attacker had succeeded or not. In each session, we noted the total number of successes the attacker had as well as the number of trail before the first successful attack. %This experiment was conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail.
+we ended the session no matter whether the attacker had succeeded or not. In each session, we noted the total number of successes the attacker had as well as the number of trails before the first successful imitation. %This experiment was conducted in quite space on campus. We will now discuss our evaluation results for both experiments in detail.
 
 \subsubsection{Results}
-Each of the three targets performed simple nodding in this experiment; though simple, their nodding patterns have varying complexity. As shown in Figure~\ref{fig:imitation_movement}, target $A$ moved his head vertically, each nodding on a music beat, with no noticeable horizontal movement; target $B$ also only moved his head in the vertical direction, but there was always a delay between his nodding and the corresponding music beat; target $C$ combined slight shaking along with nodding, and closely followed music beats. Among these three targets, $A$ is the easiest, while the other two are slightly more complex.
+Each of the three targets performed simple nodding in this experiment; though simple, their nodding patterns have varying complexity. As shown in Figure~\ref{fig:imitation_movement}, Target $A$ moved his head vertically, each nodding on a music beat, with no noticeable horizontal movement; target $B$ also only moved his head in the vertical direction, but there was always a delay between his nodding and the corresponding music beat; target $C$ combined slight shaking along with nodding, and closely followed music beats. Among these three targets, $A$ is the easiest, while the other two are slightly more complex.
+
+Table~\ref{tab:imitation} summarizes the results. Here, we use FAR to denote the successful imitation rate because a successful imitation is counted as a false acceptance in our system. The overall FAR of the experiment is 6.94\%, while the individual FARs for the three targets are 15.83\%, 2.77\% and 2.72\% accordingly.  Since target $A$ had the easiest nodding pattern, 7 out of 12 subjects could succeed at least once during their 30 trials, while for targets $B$ and $C$, the numbers are  3 out of 13 and 3 of 12, respectively. These results are very promising: when a user employs slightly more complex head-movement patterns, it becomes much harder for others to imitate (EER dropping from more than 15\% to around 2.7\%).
+
+
 
 \begin{table}[b]
 \centering
@@ -34,17 +39,14 @@ Overall & 38                                 & 13                               
 \end{table}
 
 
-Table~\ref{tab:imitation} summarizes the results. Here, we use FAR to denote the successful imitation rate because a successful imitation is also a false acceptance. The overall FAR of the experiment is 6.94\%, while the individual FARs for the three targets are 15.83\%, 2.77\% and 2.72\% accordingly.  Since target $A$ had the easiest nodding pattern, 7 out of 12 subjects could succeed at least once during their 30 trials, while for targets $B$ and $C$, the numbers are  3 out of 13 and 3 of 12, respectively. These results are promising: when a user employs slightly more complex head-movement patterns, it becomes much harder for others to attack.
-
 
 \subsection{Headbanger Google Glass App Implementation}\label{subsec:app}
 
 \begin{figure}[t]
 \centering
-\includegraphics [width=.75\columnwidth]{figure/software_arch.eps}
-\caption{Block diagram of software modules used in our \systemname~implementaion. Note that the remote server here is used only for running the machine learning algorithm for the one-time training and calibration phase.}
+\includegraphics [width=\columnwidth]{figure/software_arch.eps}
+\caption{Software modules of \systemname~implementation}
 \label{fig:glass-softwarearch}
-\vspace{-1mm}
 \end{figure}
 
 In the second phase of evaluation, we implemented \systemname~on Google glass
@@ -138,11 +140,11 @@ The processing latency is within 2 seconds for a 10-second data input, and is le
 %constrained device like Glass, are still not mature. However, the hope is that
 %such solutions will possibly catch up to speed in the near future and that our
 %approach is advancing one step in that direction.
-We also report the total latency breakdown for different software modules, and find that DTW computation is the main bottleneck. In our implementation, we used Fast DTW~\cite{salvador2007toward} which provides about 2x speed-up in DTW computation without compromising the authentication accuracy.
+We also report the total latency breakdown for different software modules, and find that DTW computation is the main bottleneck. In our implementation, we used Fast DTW~\cite{salvador2007toward} which decreases the computation complexity from $O(n^2)$ to $O(n)$  without compromising the authentication accuracy.
 %We can observe from Table~\ref{tab:glass} that the DTW computation
 %dramatically compute intensive than the other processes.
 
-As we discussed earlier, the processing latency can be further reduced, and it could be partially hidden if we pipeline the data processing and data input. As a result, we believe that it is realistic to run the \systemname~app on devices that have comparable computing capabilities as the Google Glass.
+As we discussed earlier, the processing latency can be further reduced, and it could be partially hidden if we pipeline the data processing and data input. As a result, we believe that our design of \systemname~is indeed \emph{light-weight} and it is realistic to run the \systemname~app on devices that have comparable computing capabilities as the Google Glass.
 %It is important to note that our current implementation uses a faster
 %version of the DTW algorithm called Fast DTW~\cite{salvador2007toward},
 %providing about 2x speed-up in DTW computation.
@@ -158,3 +160,4 @@ As we discussed earlier, the processing latency can be further reduced, and it c
 %Another example, may include cyber-foraging strategies to offload heavy
 %computation tasks, such as online training and classification, to the user's
 %Bluetooth paired smartphone or a nearby cloudlet~\cite{ha2014towards}.
+
