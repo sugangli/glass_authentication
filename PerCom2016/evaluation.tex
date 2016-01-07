@@ -1,7 +1,7 @@
-\section{Evaluation}\label{sec:results}
+participants\section{Evaluation}\label{sec:results}
 
 %In this section, we will present our evaluation results of the \systemname.
-We conducted comprehensive evaluation of \systemname~through laboratory studies involving
+We conducted comprehensive evaluation of \systemname~through laboratory studies with
 human subjects -- our studies were approved by the Institutional Review Board (IRB) of our
 institution. In the first phase of evaluation, we collected from volunteer participants accelerometer sensor
 readings with Google Glass. We analyzed these traces offline on a PC.
@@ -46,7 +46,7 @@ In the second phase of evaluation, we implemented a \systemname~app and measured
 \centering
 \includegraphics [width=.85\columnwidth]{figure/exp2_eer_vary_length.eps}
 \caption{The EER value of \systemname~when users choose different music cue lengths (10 sec, 6 sec and 5
-sec). We have an EER value of 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue, which is better than results of many similar body-movement based authentication systems (such as those in~\cite{gafurov2006biometric,ahmed2015checksum,rogers2015approach}).}
+sec). We have an EER value of 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue, which is better than results of many similar body-movement based authentication systems (such as those in~\cite{gafurov2006biometric,rogers2015approach}).}
 \label{fig:eer-length}
 \vspace{-1mm}
 \end{figure}
@@ -92,12 +92,12 @@ point. %; for example, feeling
 %if near-sighted, etcetera.
 The participants also could take a break for a minute after each trial.
 Each trial lasted for the duration of the music cue played on the Glass, and
-a total of 40 such trials were conducted for each of the 30 subjects.
+a total of 40 such trials were conducted for each of the 30 participants.
 The entire data collection effort lasted over a duration of 60 days, of which 15
-subjects conducted their trials in a single sitting over a period of two
+participants conducted their trials in a single sitting over a period of two
 hours, while the rest of the trails were spread over 3 days on average per
 subject.
-%while, half of the trials of the rest 10 subjects were spread over 2 days.
+%while, half of the trials of the rest 10 participants were spread over 2 days.
 %The experiment yielded three sets of data traces that each correspond to
 %the three music cue durations we selected.
 
@@ -198,7 +198,7 @@ Thirdly, Figure~\ref{fig:roc_diff_size} compares the performance of three traini
 After tuning system parameters to balance accuracy and computing overhead, we next calculate the EER value of the resulting~\systemname~system when users choose different music cue durations and present the results in Figure~\ref{fig:eer-length}. As soon as a user starts the authentication procedure, how long the user must wait before she receives the authentication result is an important quality-of-service metric, which we refer to as \emph{authentication latency}.  Authentication latency consists of two parts: data input latency and data processing latency, wherein the former is the time a user spends on listening to the music cue and making head movements while the latter is the time \systemname~spends on computing the authentication result. Between these two parts, data input latency is by far the bottleneck as the data processing latency can be easily reduced (by better algorithms and/or faster hardware) and/or hidden (by pipelining computing with data collection). Unfortunately, data input latency is hard to be reduced or hidden by the improvement in software or hardware. Recognizing that different users can tolerate different latencies and desire different levels of authentication accuracy, \systemname~allows the users to choose the music cue duration (which has the same length as the data input latency).
 
 From Figure~\ref{fig:eer-length}, we observe that the EER value of \systemname~is as low as 6.65\% with a 5-second music cue, and 4.43\% with a 10-second music cue. We take the viewpoint that such error rate is rather sufficient for personal head-worn devices that are not used in hostile environments. Also, the data input latency of 5-10 seconds is comparable with similar authentication systems. For example, a gait-based authentication system~\cite{gafurov2006biometric} delivers an EER of 7.3\% after observing the user for 20 meters;
-an arm-swing-based authentication system~\cite{ahmed2015checksum} delivers a TPR of 91.6\% and  a FAR of 5.5\%  with 5.7 seconds of processing latency; an eye-blinking-based authentication system~\cite{rogers2015approach} delivers the BAC=(TPR + FAR)/2 of 94.4\%, with a processing latency of 32 seconds.
+a pattern-swipe system~\cite{de2012touch} delivers at best a TPR of 98\% and a FAR of 50\%  with offline processing; an eye-blinking-based authentication system~\cite{rogers2015approach} delivers the BAC=(TPR + FAR)/2 of 94.4\%, with a processing latency of 32 seconds.
 %
 %In general, we observe from the results that the FAR can
 %be decreased by increasing the music cue duration.

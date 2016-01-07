@@ -7,8 +7,8 @@
 %Research in wearable computers can be dated back at least to the 1980s when
 %Steve Mann experimented with backpack computers and developed a prototype of
 %heads-up-display goggles~\cite{mann1997wearable}.
-Wearable devices have become pervasively available and are on the way to become an integral part of human
-lives~\cite{googleglass,smartwatch,fitbit}.  %This is thanks to the advances in hardware miniaturization technology, affordable
+%Wearable devices have become pervasively available and are on the way to become an integral part of human
+%lives~\cite{googleglass,smartwatch,fitbit}.  %This is thanks to the advances in hardware miniaturization technology, affordable
 %sensors and processor chips, and low-power computing.
 %In this paper we focus on special-purpose wearable devices that are worn close
 %to the body as opposed to the more general-purpose computing/communication
@@ -20,21 +20,30 @@ lives~\cite{googleglass,smartwatch,fitbit}.  %This is thanks to the advances in 
 %that are commercially available -- ranging from smart glasses, smart
 %necklaces, smart wristbands, to smart watches.
 %With the proliferation of such wearable devices, they can be expected to be subjected to malicious attacks and preserving the security and privacy of these devices will become increasingly important.
-These devices often collect data about the wearer and their
-surroundings; the collected data is personal in nature and
-sometimes related to the wearer's health. Security and privacy for such systems thus become critically important. While there has been work on limiting privacy
-threats
-~\cite{hoyle2015sensitive,hoyle2014privacy,jana2013scanner}, security solutions for wearable devices are seriously lagging behind.
+%These devices often collect data about the wearer and their
+%surroundings; the collected data is personal in nature and
+%sometimes related to the wearer's health. Security and privacy for such systems thus become critically important. While there has been work on limiting privacy
+%threats
+%~\cite{hoyle2015sensitive,hoyle2014privacy,jana2013scanner}, security solutions for wearable devices are seriously lagging behind.
 %however, to the best of our knowledge we are the first to address user
 %authentication directly with these devices.
-Any security solution for these devices has to strike an
-appropriate balance with user convenience, especially since users are interacting
-with an increasing number of wearables. A fundamental building
-block for safeguarding the security of user data acquired on or accessed
-through wearable devices is user authentication. %, since many
+%Any security solution for these devices has to strike an
+%appropriate balance with user convenience, especially since users are interacting
+%with an increasing number of wearables. A fundamental building
+%block for safeguarding the security of user data acquired on or accessed
+%through wearable devices is user authentication. %, since many
 %solutions are only effective as long as the device itself is authenticated to
 %the right user/owner.
-In this study, we thus focus on wearable device authentication techniques that are both efficient and convenient.
+%In this study, we thus focus on wearable device authentication techniques that are both efficient and convenient.
+
+Wearable devices are on the way to become an integral part of people's daily lives~\cite{googleglass,smartwatch,fitbit}.
+These devices collected data about the wearers, their surroundings and often even about their health.
+It is thus critical to the users' privacy, that this data is protected from unauthorized access. Although there has been work~\cite{hoyle2015sensitive,hoyle2014privacy,jana2013scanner} on limiting privacy
+threats from ubiquitous photography enabled by the wearable devices, robust usable and secure authentication systems
+leveraging the devices have not emerged.
+An authentication system for these devices has to strike an
+appropriate balance with user convenience, especially since users are interacting
+with an increasing number of wearables.
 
 \vspace{1mm}\noindent{\bf Authentication Challenge.}
 %User-authentication for wearable devices has so-far received relatively less
@@ -83,7 +92,7 @@ voice, etc.) requires specialized sensing hardware and processing resources
 that add cost, and many of these sensors are even larger than the size of wearables
 themselves.
 
-We therefore focus on a third class of direct authentication methods: relying upon the uniqueness of human behavior characteristics such as human walking gait, arm swings, typing patterns, body pulse beats, eye-blinks, etc. This way of authenticating users is often referred to as behavior-based authentication, and it has been studied in the context of authenticating smart phones and tablets~\cite{rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,bo2013silentsense,de2012touch}. The main advantage of using behavioral characteristics for mobile devices is that the signatures can be readily generated from raw data of built in sensors such as motion sensors, camera, microphones etc. Considering that cameras and microphones, as well as vision and audio processing algorithms, are quite energy-hungry, we thus focus on those behavioral characteristics that can be easily captured by sensors that require less power consumption, such as accelerometer. More specifically, we propose to authenticate wearable devices to users based on the following behavioral characteristic: our unique body movement patterns and their dependence on external stimuli that wearable devices can generate, such as vibrations and music.
+We therefore focus on a third class of direct authentication methods: relying upon the uniqueness of human behavior characteristics such as human walking gait, arm swings, typing patterns, body pulse beats, eye-blinks, etc. This way of authenticating users is often referred to as behavior-based authentication, and it has been studied in the context of authenticating smartphones and tablets~\cite{smartphoneauth,rahman2014bodybeat,cornelius2014wearable,stevenage1999visual,okumura2006study,monrose2000keystroke,jorgensen2011mouse,de2012touch}. The main advantage of using behavioral characteristics for mobile devices is that the signatures can be readily generated from raw data of built in sensors such as motion sensors, camera, microphones etc. Considering that cameras and microphones, as well as vision and audio processing algorithms, are quite energy-hungry, we thus focus on those behavioral characteristics that can be easily captured by sensors that require less power consumption, such as accelerometer. More specifically, we propose to authenticate wearable devices to users based on the following behavioral characteristic: our unique body movement patterns and their dependence on external stimuli that wearable devices can generate, such as vibrations and music.
 
 \vspace{1mm}\noindent{\bf Head-movement based authentication.} Body movement
 patterns have long been used by humans to discriminate between people. By
@@ -149,7 +158,7 @@ head-movement patterns of users based on the built-in accelerometer sensor readi
 %records and filters accelerometer sensor data. We use this data collection app
 %in our experiments to evaluate the system.
 Through comprehensive experiments
-involving 95 users and over
+involving 95 participants and over
 different system design parameters we show that head-movement patterns
 can generate accurate authentication results. Our approach effectively identifies a wearable device user, with average false
 acceptance rate of 4.43\% and an average true-positive rate of 95.57\%. Also, we show that our authentication method is quite robust: when a user slightly increases her head-movement complexity, it quickly becomes \emph{much harder} for attackers to imitate the movement pattern.
