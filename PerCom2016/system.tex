@@ -184,7 +184,7 @@ filter~\cite{challis1983design} and set a relaxed cut-off frequency of 10Hz.
 
 In this study, we build a distance-based classifier for its simplicity is well suited for wearable devices. There are various ways of computing distances between two signals; we have considered three popular distance-computing algorithms in this study -- Cosine (COS)distance, Correlation (COR)distance, and dynamic-time warping (DTW)distance.
 
-Suppose we have two time series $S_a = (s_1,s_2, ... ,s_n)$ and $S_b = (s_1, s_2, ..., s_n)$.  Their COS distance is calculated as $\frac{S_{a}\cdot S_{b}}{\left \| S_{a}\right \|\times \left \| S_{b} \right \|}$;   The COR distance is calculated by dividing their distance covariance by the product of their distance standard deviations; The DTW distance is defined as the distance when the optimal alignment between $S_a$ and $S_b$ has been determined by "warping" them non-linearly.   ~\cite{dtw}.
+Suppose we have two time series $S_a = (s_1,s_2, ... ,s_n)$ and $S_b = (s_1, s_2, ..., s_n)$.  Their COS distance is calculated as $\frac{S_{a}\cdot S_{b}}{\left \| S_{a}\right \|\times \left \| S_{b} \right \|}$;   The COR distance is calculated by dividing their distance covariance by the product of their distance standard deviations; The DTW distance is defined as the distance when the optimal alignment between $S_a$ and $S_b$ has been determined by "warping" them non-linearly~\cite{dtw}.
 %We generate a signature from the accelerometer signals using the
 %dynamic-time warping (DTW) tool~\cite{dtw}. DTW is generally used
 %as a similarity matching tool for time-domain analysis of
