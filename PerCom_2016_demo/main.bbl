@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{fitbit}
 Fitbit.
@@ -43,5 +43,12 @@ S.~Jana, A.~Narayanan, and V.~Shmatikov.
 \newblock A scanner darkly: Protecting user privacy from perceptual
   applications.
 \newblock In {\em IEEE SP}, 2013.
+
+\bibitem{percom16full}
+S.~Li, A.~Ashok, Y.~Zhang, C.~Xu, J.~Lindqvist, and M.~Gruteser.
+\newblock Whose move is it anyway? authenticating smart wearable devices using
+  unique head movement patterns.
+\newblock In {\em 2016 IEEE International Conference on Pervasive Computing and
+  Communications (PerCom'16)}, Mar. 2016.
 
 \end{thebibliography}
