@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{fitbit}
+Fitbit.
+\newblock \url{http://en.wikipedia.org/wiki/Fitbit}.
+
+\bibitem{gdk}
+Glass development kit.
+\newblock \url{https://developers.google.com/glass/develop/gdk}.
+
+\bibitem{googleglass}
+Google glass.
+\newblock \url{http://en.wikipedia.org/wiki/Google\_Glass}.
+
+\bibitem{pebble}
+Pebble.
+\newblock \url{https://www.pebble.com}.
+
+\bibitem{dtw}
+D.~J. Berndt and J.~Clifford.
+\newblock Using dynamic time warping to find patterns in time series.
+\newblock In {\em ACM KDD workshop}, 1994.
+
+\bibitem{challis1983design}
+R.~Challis and R.~Kitney.
+\newblock The design of digital filters for biomedical signal processing part
+  3: The design of butterworth and chebychev filters.
+\newblock {\em Journal of biomedical engineering}, 1983.
+
+\bibitem{hoyle2015sensitive}
+R.~Hoyle, R.~Templeman, D.~Anthony, D.~Crandall, and A.~Kapadia.
+\newblock Sensitive lifelogs: A privacy analysis of photos from wearable
+  cameras.
+\newblock 2015.
+
+\bibitem{hoyle2014privacy}
+R.~Hoyle, R.~Templeman, S.~Armes, D.~Anthony, D.~Crandall, and A.~Kapadia.
+\newblock Privacy behaviors of lifeloggers using wearable cameras.
+\newblock In {\em ACM UbiComp}, 2014.
+
+\bibitem{jana2013scanner}
+S.~Jana, A.~Narayanan, and V.~Shmatikov.
+\newblock A scanner darkly: Protecting user privacy from perceptual
+  applications.
+\newblock In {\em IEEE SP}, 2013.
+
+\end{thebibliography}

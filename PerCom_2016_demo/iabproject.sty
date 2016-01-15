@@ -1,0 +1,25 @@
+\RequirePackage{ifthen}
+\newcommand{\winstudent}[2][1]{%
+\ifthenelse{#1 > 1}{\setboolean{multistudents}{true}}{\setboolean{multistudents}{false}}%
+\newcommand{\winstudentname}{#2}}
+\newcommand{\winadvisor}[2][1]{%
+\ifthenelse{#1 > 1}{%
+\setboolean{multiprofs}{true}}{\setboolean{multiprofs}{false}}%
+\newcommand{\winprofname}{#2}}
+\newboolean{multistudents}
+\newboolean{multiprofs}
+\newcommand{\studenttitle}{\ifthenelse{%
+\boolean{multistudents}}{Students}{Student}}
+\newcommand{\proftitle}{\ifthenelse{%
+\boolean{multiprofs}}{Advisors}{Advisor}}
+\newcommand{\email}[1]{\mbox{\normalfont\em#1}}
+\newcommand{\wintitle}[2][Fall 2006]{\title{{\Large\bf  #2}%
+\\[0.4\baselineskip]%
+\normalsize WINLAB PROJECT SUMMARY\\
+\normalsize #1{} Research Review}}
+\author{\studenttitle:\quad\bf\begin{tabular}[t]{l}\winstudentname\end{tabular}
+\and
+\proftitle:\quad\bf\begin{tabular}[t]{l}\bf\winprofname\end{tabular}
+}
+\date{}
+\renewcommand{\textfraction}{0}
